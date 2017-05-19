@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>No title | HanderUp&#39;s Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="Android 6.0 之动态权限申请标签（空格分隔）： Android基础
+
+我们都知道 Android 中的权限在 AndroidManifest.xml 文件中配置，对于 Android 6.0 之前的 API，开发者只能将应用中可能会使用到的权限全部配置在 AndroidManifest.xml 中，然后用户在安装应用时，会有权限的提示，但是如果这个应用必须安装，并且它申请了涉及用户隐私和">
+<meta property="og:type" content="article">
+<meta property="og:title" content="No title">
+<meta property="og:url" content="http://yoursite.com/2017/05/19/Android 6.0 之动态权限申请/index.html">
+<meta property="og:site_name" content="HanderUp's Blog">
+<meta property="og:description" content="Android 6.0 之动态权限申请标签（空格分隔）： Android基础
+
+我们都知道 Android 中的权限在 AndroidManifest.xml 文件中配置，对于 Android 6.0 之前的 API，开发者只能将应用中可能会使用到的权限全部配置在 AndroidManifest.xml 中，然后用户在安装应用时，会有权限的提示，但是如果这个应用必须安装，并且它申请了涉及用户隐私和">
+<meta property="og:updated_time" content="2017-05-19T12:04:23.103Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="No title">
+<meta name="twitter:description" content="Android 6.0 之动态权限申请标签（空格分隔）： Android基础
+
+我们都知道 Android 中的权限在 AndroidManifest.xml 文件中配置，对于 Android 6.0 之前的 API，开发者只能将应用中可能会使用到的权限全部配置在 AndroidManifest.xml 中，然后用户在安装应用时，会有权限的提示，但是如果这个应用必须安装，并且它申请了涉及用户隐私和">
+    
+        <link rel="alternate" type="application/atom+xml" title="HanderUp&#39;s Blog" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="https://avatars2.githubusercontent.com/u/22523322?v=3&u=46aaa8d3f4583f2411b6a03632fa4272f7efe393&s=400">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="https://avatars2.githubusercontent.com/u/22523322?v=3&u=46aaa8d3f4583f2411b6a03632fa4272f7efe393&s=400">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">HanderUp</h5>
+          <a href="mailto:zhang929546724@foxmail.com" title="zhang929546724@foxmail.com" class="mail">zhang929546724@foxmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                所有文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/Categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/HanderUp" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                GitHub
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">No title</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">No title</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-05-19T12:05:16.533Z" itemprop="datePublished" class="page-time">
+  2017-05-19
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Android-6-0-之动态权限申请"><span class="post-toc-number">1.</span> <span class="post-toc-text">Android 6.0 之动态权限申请</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-Android 6.0 之动态权限申请"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">No title</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-05-19 20:05:16" datetime="2017-05-19T12:05:16.533Z"  itemprop="datePublished">2017-05-19</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="Android-6-0-之动态权限申请"><a href="#Android-6-0-之动态权限申请" class="headerlink" title="Android 6.0 之动态权限申请"></a>Android 6.0 之动态权限申请</h1><p>标签（空格分隔）： Android基础</p>
+<hr>
+<p>我们都知道 Android 中的权限在 AndroidManifest.xml 文件中配置，对于 Android 6.0 之前的 API，开发者只能将应用中可能会使用到的权限全部配置在 AndroidManifest.xml 中，然后用户在安装应用时，会有权限的提示，但是如果这个应用必须安装，并且它申请了涉及用户隐私和安全的危险权限，这样用户只能选择默默承受，但是对于 Android 6.0 及其之后的 API，开发者可以将危险权限采取动态申请的方式来配置，这样做的好处为，用户在进行某个涉及隐私或安全的操作时，系统会弹出提示框，让用户自己选择是否要申请该权限，这样便很好的控制了应用程序的安全性 。</p>
+<p><strong>具体操作如下：</strong></p>
+<p><strong>1.</strong> 首先还是在 AndroidMnifest.xml 文件中配置所需权限<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.CALL_PHONE"</span> /&gt;</span></div></pre></td></tr></table></figure></p>
+<p>这里我们使用打电话的权限，它属于危险权限</p>
+<p><strong>2.</strong> 然后在 MainActivity.java 文件中添加动态申请权限的代码<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">makeCall</span><span class="params">(View view)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (ContextCompat.checkSelfPermission(MainActivity.<span class="keyword">this</span>, </div><div class="line">            Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) &#123;</div><div class="line">        ActivityCompat.requestPermissions(MainActivity.<span class="keyword">this</span>,<span class="keyword">new</span> String[]&#123;Manifest.permission.CALL_PHONE&#125;,<span class="number">1</span>);</div><div class="line">    &#125;<span class="keyword">else</span> &#123;</div><div class="line">        call();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">call</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">try</span> &#123;</div><div class="line">        Intent intent = <span class="keyword">new</span> Intent(Intent.ACTION_CALL);</div><div class="line">        intent.setData(Uri.parse(<span class="string">"tel:10086"</span>));</div><div class="line">        startActivity(intent);</div><div class="line">    &#125; <span class="keyword">catch</span> (SecurityException e) &#123;</div><div class="line">        e.printStackTrace();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onRequestPermissionsResult</span><span class="params">(<span class="keyword">int</span> requestCode, @NonNull String[] permissions, @NonNull <span class="keyword">int</span>[] grantResults)</span> </span>&#123;</div><div class="line">    <span class="keyword">switch</span> (requestCode) &#123;</div><div class="line">        <span class="keyword">case</span> <span class="number">1</span>:</div><div class="line">            <span class="keyword">if</span> (grantResults.length &gt; <span class="number">0</span> &amp;&amp; grantResults[<span class="number">0</span>] == PackageManager.PERMISSION_GRANTED) &#123;</div><div class="line">                call();</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                Toast.makeText(<span class="keyword">this</span>, <span class="string">"权限被拒绝"</span>, Toast.LENGTH_SHORT).show();</div><div class="line">            &#125; </div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">default</span>:</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>分析上面代码：</strong></p>
+<ul>
+<li><p>第一步判断用户是否已经授权了权限，通过 <code>ContextCompat.checkSelfPermission()</code> 方法。</p>
+<blockquote>
+<p><code>checkSelfPermission()</code> 传两个参数<br> 第一是 Contenxt<br> 第二是 具体的权限名</p>
+</blockquote>
+</li>
+<li><p>将返回值和 <code>PackageManager.PERMISSION_GRANTED</code> 比较，相等说明用户已经授权，直接执行 <code>call()</code> 方法即可，不等则需要向用户申请授权，通过 <code>ActivityCompat.requestPermissions()</code> 方法动态申请权限</p>
+<blockquote>
+<p><code>requestPermissions()</code> 传三个参数<br> 第一是 Activity 的实例<br> 第二是 一个 String[]<br> 第三是 请求码（只要是唯一的值即可）</p>
+</blockquote>
+</li>
+<li><p>调用 <code>requestPermissions()</code> 后，系统会弹出一个申请权限的对话框，用户具体的选择会在 <code>onRequestPermissionsResult()</code> 方法中来处理，授权结果会封装在 <code>grantResults</code> 参数中，只需判断授权结果即可，用户同意直接调用 <code>call()</code> 方法，否则弹出提示框 。</p>
+</li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-05-19T12:04:23.103Z" itemprop="dateUpdated">2017-05-19 20:04:23</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2017/05/19/Android 6.0 之动态权限申请/" target="_blank" rel="external">http://yoursite.com/2017/05/19/Android 6.0 之动态权限申请/</a>
+        
+    </div>
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="https://avatars2.githubusercontent.com/u/22523322?v=3&u=46aaa8d3f4583f2411b6a03632fa4272f7efe393&s=400" alt="HanderUp">
+            HanderUp
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/05/19/Android 6.0 之动态权限申请/&title=《No title》 — HanderUp's Blog&pic=https://avatars2.githubusercontent.com/u/22523322?v=3&u=46aaa8d3f4583f2411b6a03632fa4272f7efe393&s=400" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/05/19/Android 6.0 之动态权限申请/&title=《No title》 — HanderUp's Blog&source=coding" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/05/19/Android 6.0 之动态权限申请/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《No title》 — HanderUp's Blog&url=http://yoursite.com/2017/05/19/Android 6.0 之动态权限申请/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/05/19/Android 6.0 之动态权限申请/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/05/19/Android 数据持久化/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">No title</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/05/19/ContentProvider 总结/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">No title</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>HanderUp &copy; 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/05/19/Android 6.0 之动态权限申请/&title=《No title》 — HanderUp's Blog&pic=https://avatars2.githubusercontent.com/u/22523322?v=3&u=46aaa8d3f4583f2411b6a03632fa4272f7efe393&s=400" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/05/19/Android 6.0 之动态权限申请/&title=《No title》 — HanderUp's Blog&source=coding" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/05/19/Android 6.0 之动态权限申请/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《No title》 — HanderUp's Blog&url=http://yoursite.com/2017/05/19/Android 6.0 之动态权限申请/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/05/19/Android 6.0 之动态权限申请/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACrklEQVR42u3aQXLjMAwEQP//097rHrbkGYBMvFXNU0qRJTYPBAXg9YrH+3Ekv/r7yvPfyW8PDzw8PLwLU09Iz1Nvrzy/t1huPDw8vGu82XSTFyQb+mw5np+Dh4eH9z285Ery31NHczw8PLzv5+2P1MlzkiM+Hh4e3u/yZo/Lc6f59fbYfSzXgoeHhzepWBXJgt/9+0p9Dw8PD29dVT9bDNs3B9SzxcPDw7vAawtU+bF1dv8sefG8ZHh4eHhnefuWpjxItO/ahxA8PDy8G7wkPZowZnfmZbA26fxqJ4eHh4e3qA3lm/gm7btpMmiXDw8PD+8eL9/E26arTYPCPsDg4eHhneXlrU75VNoQ0qaA8w8APDw8vJ/hzVIASZtU++Q2PHzojMDDw8M7xMsTEPmGvknO5l8AeXoCDw8P7ywvn8Sm0WqWGp41IrxmtTU8PDy8sqp+o0A1axSYleWGTVd4eHh4a96pdMDswD0LDwe6IfDw8PDK925emVwvDr7r43UU8fDw8PBuZRXqIn27fc/aEdq2Azw8PLwbvLb8P1uIfTPBcMnw8PDwLvBmgFOFtBsh4cN3Ax4eHt6a945H/vG/aYFtmxI+fCvg4eHhXeC1WYp8Em3mo22xqj8A8PDw8C7wZi0FM/yBjX4xTzw8PLw9r93Kk8RBu4nv7y9ar/Dw8PCO8toyVXL/Jhi04QQPDw/v53mzMn9e0GpTxm0B7B+/wsPDwzvKe5cjSbkmR/NZYrcOLXh4eHgXePuokqctkgaCWWKiXTg8PDy8PW9/wM1fNitrJYHhwxcDHh4e3gXeLP+ZP2dT+moDGB4eHt538vKD72zSs3QGHh4e3v/Ca4/Rm5Az7LrFw8PDu8BLtvu2+aktR7UNCofTuHh4eHhdFFgFj03ytw0SVwYeHh5eOv4AtmlobcsTfuwAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = 'HandlerUp's Bolg';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
