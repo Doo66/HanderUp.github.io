@@ -6,12 +6,12 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>HanderUp&#39;s Blog</title>
+  <title>Archives: 2017/5 | HanderUp&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="coding">
 <meta property="og:type" content="website">
 <meta property="og:title" content="HanderUp's Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/archives/2017/05/index.html">
 <meta property="og:site_name" content="HanderUp's Blog">
 <meta property="og:description" content="coding">
 <meta name="twitter:card" content="summary">
@@ -136,171 +136,41 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Intent 初级" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-    <div class="article-entry" itemprop="articleBody">
+    
       
-        <h1 id="Intent-初级"><a href="#Intent-初级" class="headerlink" title="Intent 初级"></a>Intent 初级</h1><p>标签（空格分隔）： Android基础</p>
-<hr>
-<p><strong>Intent</strong> 作为 <code>Android</code> 中意图，可以通过 <code>action</code> 和 <code>category</code> 两个主要的标签指定想要启动的组件。<strong>Intent</strong> 分为 <strong>显式</strong> 和 <strong>隐式</strong> 。</p>
-<h2 id="1-显式-Intent-启动另一个-Activity-，并传递数据"><a href="#1-显式-Intent-启动另一个-Activity-，并传递数据" class="headerlink" title="1. 显式 Intent 启动另一个 Activity ，并传递数据"></a>1. 显式 Intent 启动另一个 Activity ，并传递数据</h2><p>在程序代码中注册，并且只能启动本应用中的其他组件，不能跨应用启动组件。</p>
-<p>可以通过 Intent 传递参数给另一个 Activity<br>使用 Intent 启动一个 SendActivity :<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">EditText meditText;</div><div class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">static</span> String EXTRA_MESSAGE = <span class="string">"com.example.firstapp.MESSAGE"</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">StartSendActivity</span><span class="params">(View view)</span> </span>&#123;</div><div class="line">    Intent intent = <span class="keyword">new</span> Intent(<span class="keyword">this</span>,SendActivity.class);</div><div class="line">    String message = meditText.getText().toString();</div><div class="line">    intent.putExtra(EXTRA_MESSAGE,message); </div><div class="line">    startActivity(intent);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>使用 Intent 接收传递的参数：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">TextView mtextView;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">setText</span><span class="params">()</span> </span>&#123;</div><div class="line">    Intent intent = getIntent();</div><div class="line">    String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);</div><div class="line">    mtextView.setText(message);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="2-隐式-Intent"><a href="#2-隐式-Intent" class="headerlink" title="2. 隐式 Intent"></a>2. 隐式 Intent</h2><p>在 Android 中隐式启动 Intent 的方式最常见，因为隐式 Intent 可以跨应用启动不同组件，包括系统提供的组件和自己编写的应用中的组件都可以被启动。</p>
-<p><strong>隐式 Intent 可以在 AndroidManifest.xml 和 代码 中注册 主要定义 <code>action</code> 和 <code>category</code> 标签</strong><br><strong>1. 使用系统提供的 Intent</strong><br>常用的系统 <strong>Intent <code>action</code>：</strong><br><code>action</code>代表已经定义的动作，通过 setAction()方法或在 AndroidManifest.xml 中设置</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">系统 Intent</th>
-<th style="text-align:center">对应字符串</th>
-<th style="text-align:center">功能</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">ACTION_VIEW</td>
-<td style="text-align:center">android.intent.action.VIEW</td>
-<td style="text-align:center">显示指定数据/播放音乐</td>
-</tr>
-<tr>
-<td style="text-align:center">ACTION_DIAL</td>
-<td style="text-align:center">android.intent.action.DIAL</td>
-<td style="text-align:center">打开拨号面板</td>
-</tr>
-<tr>
-<td style="text-align:center">ACTION_CALL</td>
-<td style="text-align:center">android.intent.action.CALL</td>
-<td style="text-align:center">向指定号码打电话</td>
-</tr>
-<tr>
-<td style="text-align:center">ACTION_MAIN</td>
-<td style="text-align:center">android.intent.action.MAIN</td>
-<td style="text-align:center">应用程序入口</td>
-</tr>
-<tr>
-<td style="text-align:center">ACTION_EDIT</td>
-<td style="text-align:center">android.intent.action.EDIT</td>
-<td style="text-align:center">编辑指定数据</td>
-</tr>
-<tr>
-<td style="text-align:center">ACTION_SENDTO</td>
-<td style="text-align:center">android.intent.action.SENDTO</td>
-<td style="text-align:center">发送消息</td>
-</tr>
-<tr>
-<td style="text-align:center">ACTION_DELETE</td>
-<td style="text-align:center">android.intent.action.DELETE</td>
-<td style="text-align:center">删除数据/卸载应用</td>
-</tr>
-<tr>
-<td style="text-align:center">ACTION_INSERT</td>
-<td style="text-align:center">android.intent.action.INSERT</td>
-<td style="text-align:center">插入数据/安装应用</td>
-</tr>
-</tbody>
-</table>
-<p><strong>同时还需要设置 <code>category</code> 标签：</strong><br><code>category</code> 标签用于指定 action 被执行的环境，通过 addCategory()方法或在 AndroidManifest.xml 中设置</p>
-<p>具体使用如下：<br><strong>1. 在 AndroidManifest.xml 中注册</strong><br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;activity android:name=".SendActivity"</div><div class="line">    android:label="SendActivity"&gt;</div><div class="line">    &lt;intent-filter&gt;</div><div class="line">        &lt;action android:name="android.intent.action.VIEW"/&gt;             &lt;category android:name="android.intent.category.DEFAULT"/&gt;</div><div class="line">        &lt;data android:scheme="http"/&gt;</div><div class="line">    &lt;/intent-filter&gt;</div><div class="line">&lt;/activity&gt;</div></pre></td></tr></table></figure></p>
-<p><strong>2. 在代码中注册</strong><br>启动拨号面板示例：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">callPhone</span><span class="params">(View view)</span> </span>&#123;</div><div class="line">    Intent intent = <span class="keyword">new</span> Intent(Intent.ACTION_DIAL);</div><div class="line">    intent.setData(Uri.parse(<span class="string">"tel:13369100203"</span>));</div><div class="line">    startActivity(intent);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="3-使用-Intent-返回数据给上一个-Activity"><a href="#3-使用-Intent-返回数据给上一个-Activity" class="headerlink" title="3. 使用 Intent 返回数据给上一个 Activity"></a>3. 使用 Intent 返回数据给上一个 Activity</h2><p>首先在 FirstActivity 中使用 startActivityForResult() 方法启动 SendActivity , 代码如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">playMusice</span><span class="params">(View view)</span> </span>&#123;</div><div class="line">    Intent intent = <span class="keyword">new</span> Intent(<span class="string">"com.example.intenttest.ACTION_START"</span>);</div><div class="line">    startActivityForResult(intent, <span class="number">1</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>然后在 SendActivity 中设置按钮的点击事件，使用 Intent 传递数据 ， 也可以重写返回键的 onBackPressed() 方法 ， 代码如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onBackPressed</span><span class="params">()</span> </span>&#123;</div><div class="line">    Intent intent = <span class="keyword">new</span> Intent();</div><div class="line">    intent.putExtra(<span class="string">"data_return"</span>, <span class="string">"I'm layoutActivity"</span>);</div><div class="line">    setResult(RESULT_OK, intent);</div><div class="line">    finish();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>在 FirstActivity 中重写 onActivityResult() 方法，用来接收 SendActivity 传递的数据，代码如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onActivityResult</span><span class="params">(<span class="keyword">int</span> requestCode, <span class="keyword">int</span> resultCode, Intent data)</span> </span>&#123;</div><div class="line">    <span class="keyword">switch</span> (requestCode) &#123;</div><div class="line">        <span class="keyword">case</span> <span class="number">1</span>:</div><div class="line">            <span class="keyword">if</span> (resultCode == RESULT_OK) &#123;</div><div class="line">                String returnData = data.getStringExtra(<span class="string">"data_return"</span>);</div><div class="line">                Toast.makeText(<span class="keyword">this</span>, returnData, Toast.LENGTH_SHORT).show();</div><div class="line">            &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/05/19/Intent 初级/" class="archive-article-date">
+  	<time datetime="2017-05-19T09:49:05.263Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-19</time>
+</a>
+        </div>
+    	 
+        <div class="article-info info-on-right">
+          
+          
 
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/19/Intent 初级/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-
-
-
-
-
-
-
   
-    <article id="post-Android Studio 中 build.gradle文件详解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+    </div></section>
+  
+
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Android-Studio-中-build-gradle文件详解"><a href="#Android-Studio-中-build-gradle文件详解" class="headerlink" title="Android Studio 中 build.gradle文件详解"></a>Android Studio 中 build.gradle文件详解</h1><hr>
-<p>Tags: Android基础</p>
-<hr>
-<p>Android 项目中有两个 <code>build.gradle</code> 文件， 一个是在最外层目录下的， 一个是在 <code>app</code> 目录下的。 这两个文件对构建 Android Studio 项目都起了至关重要的作用，下面我们对这两个文件分别进行分析。</p>
-<h2 id="一、先来分析最外层目录下的-build-gradle-文件，-代码如下所示："><a href="#一、先来分析最外层目录下的-build-gradle-文件，-代码如下所示：" class="headerlink" title="一、先来分析最外层目录下的 build.gradle 文件， 代码如下所示："></a><strong>一、先来分析最外层目录下的 <code>build.gradle</code> 文件， 代码如下所示：</strong></h2><figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">buildscript</span> &#123;</div><div class="line">    <span class="keyword">repositories</span> &#123;</div><div class="line">        jcenter()</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">dependencies</span> &#123;</div><div class="line">        <span class="keyword">classpath</span> <span class="string">'com.android.tools.build:gradle:2.3.0'</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">allprojects</span> &#123;</div><div class="line">    <span class="keyword">repositories</span> &#123;</div><div class="line">        jcenter()</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>该文件中包含两个 <code>repositories</code> 两个闭包， 并且都声明了 <code>jcenter()</code> 这行配置， <code>jcenter</code> 是一个代码托管仓库， 通过声明了这行配置之后， 我们就可以在项目中轻松引用任何 <code>jcenter</code> 上的开源项目了。 </p>
-<p>其次， <code>dependencies</code> 闭包中使用 <code>classpath</code> 声明了一个 <code>Gradle</code> 插件， <code>Gradle</code> 插件并不是专门为构建 Android 项目而开发的， Java，C++ 等很多种项目都可以使用 <code>Gradle</code> 来构建。因此我们使用它来构建 Android 项目，则需要声明 <code>com.android.tools.build:gradle:2.3.0</code> 这个插件。 <code>2.3.0</code> 为 <code>Gradle</code> 插件的版本号。</p>
-<h2 id="二、下面我们再来看一下-app-目录下的-build-gradle-文件，-代码如下所示："><a href="#二、下面我们再来看一下-app-目录下的-build-gradle-文件，-代码如下所示：" class="headerlink" title="二、下面我们再来看一下 app 目录下的 build.gradle 文件， 代码如下所示："></a><strong>二、下面我们再来看一下 app 目录下的 <code>build.gradle</code> 文件， 代码如下所示：</strong></h2><figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">apply plugin: <span class="string">'com.android.application'</span></div><div class="line"></div><div class="line">android &#123;</div><div class="line">    compileSdkVersion <span class="number">23</span></div><div class="line">    buildToolsVersion <span class="string">'25.0.0'</span></div><div class="line">    defaultConfig &#123;</div><div class="line">        applicationId <span class="string">"com.example.administrator.myfirstapp"</span></div><div class="line">        minSdkVersion <span class="number">19</span></div><div class="line">        targetSdkVersion <span class="number">23</span></div><div class="line">        versionCode <span class="number">1</span></div><div class="line">        versionName <span class="string">"1.0"</span></div><div class="line">    &#125;</div><div class="line">    buildTypes &#123;</div><div class="line">        release &#123;</div><div class="line">            minifyEnabled <span class="keyword">false</span></div><div class="line">            proguardFiles getDefaultProguardFile(<span class="string">'proguard-android.txt'</span>), <span class="string">'proguard-rules.pro'</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">dependencies</span> &#123;</div><div class="line">    <span class="keyword">compile</span> <span class="keyword">fileTree</span>(dir: <span class="string">'libs'</span>, <span class="keyword">include</span>: [<span class="string">'*.jar'</span>])</div><div class="line">    <span class="keyword">compile</span> <span class="string">'com.android.support:appcompat-v7:23.4.0'</span></div><div class="line">    <span class="keyword">compile</span> <span class="string">'com.android.support.constraint:constraint-layout:1.0.0-beta4'</span></div><div class="line">    testCompile <span class="string">'junit:junit:4.12'</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="1-apply-plugin：应用插件"><a href="#1-apply-plugin：应用插件" class="headerlink" title="1. apply plugin：应用插件"></a><strong>1. apply plugin：应用插件</strong></h3><p>一般有两种值可选：</p>
-<blockquote>
-<p><code>com.android.application</code> ：表示这是一个应用程序模块<br><code>com.android.library</code> ：表示这是一个库模块</p>
-</blockquote>
-<p>应用程序模块和库模块的最大区别在于，一个是可以直接运行，一个只能作为代码库依附于别的应用程序模块运行。</p>
-<h3 id="2-android-闭包：用来配置项目构建的各种属性"><a href="#2-android-闭包：用来配置项目构建的各种属性" class="headerlink" title="2. android 闭包：用来配置项目构建的各种属性"></a><strong>2. android 闭包：用来配置项目构建的各种属性</strong></h3><blockquote>
-<p><code>compileSdkVersion</code> ：用于指定项目的编译版本<br><code>buildToolsVersion</code> ：用于指定项目构建工具的版本</p>
-</blockquote>
-<h3 id="2-1-defaultConfig-子闭包：对项目的更多细节进行配置"><a href="#2-1-defaultConfig-子闭包：对项目的更多细节进行配置" class="headerlink" title="2.1 defaultConfig 子闭包：对项目的更多细节进行配置"></a><strong>2.1 defaultConfig 子闭包：对项目的更多细节进行配置</strong></h3><blockquote>
-<p><code>applicationId</code>：用于指定项目的包名<br><code>minSdkVersion</code>：用于指定项目最低兼容的 Android 系统版本<br><code>targetSdkVersion</code>：指定的值表示你在该版本上已经做过了充分的测试，系统将会为你的应用程序启用一些最新的功能和特征<br><code>versionCode</code>：用于指定项目的版本号<br><code>versionName</code>：用于指定项目的版本名</p>
-</blockquote>
-<h3 id="2-2-buildTypes-子闭包：用于指定生成安装文件的相关配置"><a href="#2-2-buildTypes-子闭包：用于指定生成安装文件的相关配置" class="headerlink" title="2.2 buildTypes 子闭包：用于指定生成安装文件的相关配置"></a><strong>2.2 buildTypes 子闭包：用于指定生成安装文件的相关配置</strong></h3><p>通常只会有两个子闭包（<code>debug</code>闭包是可以忽略不写的，因此我们看到上面的代码中就只有一个 <code>release</code> 闭包）。</p>
-<p><code>debug</code>：测试版安装文件的配置<br><code>release</code>：正式版安装文件的配置爱</p>
-<blockquote>
-<p><code>minifyEnabled</code>：用于指定是否对项目的代码进行混淆， <code>true</code>  表示混淆， <code>false</code> 表示不混淆<br><code>proguardFiles</code>：用于指定混淆时使用的规则文件</p>
-</blockquote>
-<p><strong>proguardFiles：中的文件</strong><br><code>proguad-android.txt</code>：是在 Android SDK 目录下的，里面是所有项目通用的混淆规则<br><code>proguard-rules.pro</code>：是在当前项目的根目录下的，里面可以编写当前项目特有的混淆规则</p>
-<h3 id="3-dependencies-闭包：指定当前项目所有的依赖关系"><a href="#3-dependencies-闭包：指定当前项目所有的依赖关系" class="headerlink" title="3. dependencies 闭包：指定当前项目所有的依赖关系"></a><strong>3. dependencies 闭包：指定当前项目所有的依赖关系</strong></h3><p>Android Studio 项目一共有3中依赖关系：<code>本地依赖</code> <code>库依赖</code> <code>远程依赖</code><br><code>本地依赖</code>：可以对本地的 <code>Jar</code> 包或目录添加依赖关系<br><code>库依赖</code>：可以对项目中的库模块添加依赖关系<br><code>远程依赖</code>：可以对 <code>jcenter</code> 库上的开源项目添加依赖关系</p>
-<blockquote>
-<p><code>compile fileTree</code>：本地依赖声明<br><code>compile</code>：远程依赖声明<br><code>compile project</code>：库依赖</p>
-</blockquote>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/20/Android Studio 中 build.gradle文件详解/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-  
 
 
           </div>
@@ -322,9 +192,9 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
-		isArchive: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
