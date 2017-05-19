@@ -145,49 +145,6 @@
     <ul class="post-list">
     
         <li class="post-list-item fade">
-            <article id="post-启动同一应用中带返回值的另一个 Activity"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2017-05-19 20:05:16" datetime="2017-05-19T12:05:16.549Z"  itemprop="datePublished">2017-05-19</time>
-
-        
-
-
-        
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/05/19/启动同一应用中带返回值的另一个 Activity/">No title</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        启动同一应用中带返回值的另一个 Activity标签（空格分隔）： Activity启动模式
-
-通常在启动 带返回值的 Activity 时，我们使用 StartActivityForResult() 方法，然后通过 Intent 传递意图和数据，但是对于在同一应用中的 子 Activity 要调用 父 Acitivity 并返回数据给 父 Activity 时，可利用 Activity 的...
-    
-
-        <a href="/2017/05/19/启动同一应用中带返回值的另一个 Activity/" class="post-more waves-effect waves-button">
-            阅读全文…
-        </a>
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
             <article id="post-Fragment 初步学习总结"
   class="article-card article-type-post" itemprop="blogPost">
 
@@ -195,6 +152,8 @@
         <time class="post-time" title="2017-05-19 20:05:16" datetime="2017-05-19T12:05:16.546Z"  itemprop="datePublished">2017-05-19</time>
 
         
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Fragment/">Fragment</a></li></ul>
+
 
 
         
@@ -206,7 +165,7 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/05/19/Fragment 初步学习总结/">No title</a>
+      <a class="post-title-link" href="/2017/05/19/Fragment 初步学习总结/">Fragment 初步学习总结</a>
     </h3>
   
 
@@ -216,16 +175,20 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        Fragment 初步学习总结标签（空格分隔）： Android基础
-
-Fragment 在 Android 3.0 开始引入，主要用来解决兼容平板的问题，只开发一个应用解决平板和手机上的不同布局，合理利用屏幕空间。
+        Fragment 在 Android 3.0 开始引入，主要用来解决兼容平板的问题，只开发一个应用解决平板和手机上的不同布局，合理利用屏幕空间。
 一、 Fragment 的两种加载模式1、静态加载模式(1) 首先创建一个 left_fragment.xml ，用来展示 Fragment 的布局。
-123456789101...
+123456789101112&lt;LinearLayout xmlns:android="h...
     
 
         <a href="/2017/05/19/Fragment 初步学习总结/" class="post-more waves-effect waves-button">
             阅读全文…
         </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android基础/">Android基础</a></li></ul>
+
     </div>
     
 </article>
@@ -240,6 +203,8 @@ Fragment 在 Android 3.0 开始引入，主要用来解决兼容平板的问题�
         <time class="post-time" title="2017-05-19 20:05:16" datetime="2017-05-19T12:05:16.542Z"  itemprop="datePublished">2017-05-19</time>
 
         
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Broadcast/">Broadcast</a></li></ul>
+
 
 
         
@@ -251,7 +216,7 @@ Fragment 在 Android 3.0 开始引入，主要用来解决兼容平板的问题�
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/05/19/Broadcast 初步学习/">No title</a>
+      <a class="post-title-link" href="/2017/05/19/Broadcast 初步学习/">Broadcast 初步学习</a>
     </h3>
   
 
@@ -261,15 +226,20 @@ Fragment 在 Android 3.0 开始引入，主要用来解决兼容平板的问题�
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        Broadcast 初步学习标签（空格分隔）： Android基础
-
-Broadcast 的分类1. 普通广播（异步方式，同一时刻所有接收者都有可能接收到广播）2. 有序广播（按照顺序接收广播，优先级高的接收者先接收，并且可以截 断广播，优先级低的接收者就不能接收到广播）
-Broadcast 的注册方式1. 静态注册（在 AndroidManifest.xml 文件中注册）2. 动态注册（在...
+        Broadcast 的分类1. 普通广播（异步方式，同一时刻所有接收者都有可能接收到广播）2. 有序广播（按照顺序接收广播，优先级高的接收者先接收，并且可以截 断广播，优先级低的接收者就不能接收到广播）
+Broadcast 的注册方式1. 静态注册（在 AndroidManifest.xml 文件中注册）2. 动态注册（在代码中注册，必须取消注册才行）
+在程序内可以接收系统的广播，同时 Br...
     
 
         <a href="/2017/05/19/Broadcast 初步学习/" class="post-more waves-effect waves-button">
             阅读全文…
         </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android基础/">Android基础</a></li></ul>
+
     </div>
     
 </article>
@@ -284,6 +254,8 @@ Broadcast 的注册方式1. 静态注册（在 AndroidManifest.xml 文件中注�
         <time class="post-time" title="2017-05-19 20:05:16" datetime="2017-05-19T12:05:16.539Z"  itemprop="datePublished">2017-05-19</time>
 
         
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/数据持久化/">数据持久化</a></li></ul>
+
 
 
         
@@ -295,7 +267,7 @@ Broadcast 的注册方式1. 静态注册（在 AndroidManifest.xml 文件中注�
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/05/19/Android 数据持久化/">No title</a>
+      <a class="post-title-link" href="/2017/05/19/Android 数据持久化/">Android 数据持久化</a>
     </h3>
   
 
@@ -305,16 +277,15 @@ Broadcast 的注册方式1. 静态注册（在 AndroidManifest.xml 文件中注�
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        Android 数据持久化标签（空格分隔）： Android基础
-
-Android 数据持久化分类：
+        Android 数据持久化分类：
 
 SharedPerfences 存储
 文件存储
 SQLite 数据库存储
 
 以上不同方式的数据持久化方案根据应用场景的不同，各有优缺点，以下对不同类别的存储方式进行对比：
-1. SharedPerfences 存储SharedPerfences 存储是 Android 中最常见的存储方式，...
+1. SharedPerfences 存储SharedPerfences 存储是 Android 中最常见的存储方式，快捷方便，以键值对的方式存储为 xml 格式的文件
+SharedPe...
     
 
         <a href="/2017/05/19/Android 数据持久化/" class="post-more waves-effect waves-button">
@@ -322,47 +293,10 @@ SQLite 数据库存储
         </a>
     </div>
     
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-Android 6.0 之动态权限申请"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2017-05-19 20:05:16" datetime="2017-05-19T12:05:16.533Z"  itemprop="datePublished">2017-05-19</time>
-
+    <div class="post-footer">
         
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android基础/">Android基础</a></li></ul>
 
-
-        
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/05/19/Android 6.0 之动态权限申请/">No title</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        Android 6.0 之动态权限申请标签（空格分隔）： Android基础
-
-我们都知道 Android 中的权限在 AndroidManifest.xml 文件中配置，对于 Android 6.0 之前的 API，开发者只能将应用中可能会使用到的权限全部配置在 AndroidManifest.xml 中，然后用户在安装应用时，会有权限的提示，但是如果这个应用必须安装，并且它申请了涉及用户...
-    
-
-        <a href="/2017/05/19/Android 6.0 之动态权限申请/" class="post-more waves-effect waves-button">
-            阅读全文…
-        </a>
     </div>
     
 </article>
@@ -377,6 +311,8 @@ SQLite 数据库存储
         <time class="post-time" title="2017-05-19 20:05:16" datetime="2017-05-19T12:05:16.529Z"  itemprop="datePublished">2017-05-19</time>
 
         
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/ContentProvider/">ContentProvider</a></li></ul>
+
 
 
         
@@ -388,7 +324,7 @@ SQLite 数据库存储
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/05/19/ContentProvider 总结/">No title</a>
+      <a class="post-title-link" href="/2017/05/19/ContentProvider 总结/">ContentProvider 总结</a>
     </h3>
   
 
@@ -398,16 +334,20 @@ SQLite 数据库存储
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        ContentProvider 总结标签（空格分隔）： Android基础
-
-
+        
 上图为 ContentProvider 的具体实现过程，Other App1 和 Other App2 分别提供了 ContentProvider 来向外界暴露数据，方便其他应用程序来访问。
-对于不同的 ContentProvider 是由 ContentResolver 来进行管理的，其中 ContentRes...
+对于不同的 ContentProvider 是由 ContentResolver 来进行管理的，其中 ContentResolver 中的 CRUD 方法对应不同 ContentProvider 中的...
     
 
         <a href="/2017/05/19/ContentProvider 总结/" class="post-more waves-effect waves-button">
             阅读全文…
         </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android基础/">Android基础</a></li></ul>
+
     </div>
     
 </article>
@@ -422,6 +362,8 @@ SQLite 数据库存储
         <time class="post-time" title="2017-05-19 20:05:16" datetime="2017-05-19T12:05:16.524Z"  itemprop="datePublished">2017-05-19</time>
 
         
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/布局/">布局</a></li></ul>
+
 
 
         
@@ -433,7 +375,7 @@ SQLite 数据库存储
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/05/19/Android 中的布局/">No title</a>
+      <a class="post-title-link" href="/2017/05/19/Android 中的布局/">Android 中的布局</a>
     </h3>
   
 
@@ -443,9 +385,7 @@ SQLite 数据库存储
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        Android 中的布局标签（空格分隔）： Android基础
-
-Android 中的布局由常用的频率排序，如下表| 布局方式 | 使用频率等级 | 特点 || :—-: | :—-: | :—-: ||LinearLayout(线性布局)|5| 顺序排列，纵横两个方向，实现简单，多屏适配||RelativeLayout(相对布局)|5| 位置相对，对齐方式丰富，可以重叠，嵌套少，多屏适配|...
+        Android 中的布局由常用的频率排序，如下表| 布局方式 | 使用频率等级 | 特点 || :—-: | :—-: | :—-: ||LinearLayout(线性布局)|5| 顺序排列，纵横两个方向，实现简单，多屏适配||RelativeLayout(相对布局)|5| 位置相对，对齐方式丰富，可以重叠，嵌套少，多屏适配||FrameLayout(帧布局)|3|可以重叠，对齐方式丰富，多...
     
 
         <a href="/2017/05/19/Android 中的布局/" class="post-more waves-effect waves-button">
@@ -453,49 +393,10 @@ Android 中的布局由常用的频率排序，如下表| 布局方式 | 使用�
         </a>
     </div>
     
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-Intent 初级"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2017-05-19 17:49:05" datetime="2017-05-19T09:49:05.263Z"  itemprop="datePublished">2017-05-19</time>
-
+    <div class="post-footer">
         
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android基础/">Android基础</a></li></ul>
 
-
-        
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/05/19/Intent 初级/">No title</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        Intent 初级标签（空格分隔）： Android基础
-
-Intent 作为 Android 中意图，可以通过 action 和 category 两个主要的标签指定想要启动的组件。Intent 分为 显式 和 隐式 。
-1. 显式 Intent 启动另一个 Activity ，并传递数据在程序代码中注册，并且只能启动本应用中的其他组件，不能跨应用启动组件。
-可以通过 Intent 传递参...
-    
-
-        <a href="/2017/05/19/Intent 初级/" class="post-more waves-effect waves-button">
-            阅读全文…
-        </a>
     </div>
     
 </article>

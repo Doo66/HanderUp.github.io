@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-05-19T12:04:55.569Z</updated>
+  <updated>2017-05-19T12:13:40.490Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,53 +16,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="http://yoursite.com/2017/05/19/%E5%90%AF%E5%8A%A8%E5%90%8C%E4%B8%80%E5%BA%94%E7%94%A8%E4%B8%AD%E5%B8%A6%E8%BF%94%E5%9B%9E%E5%80%BC%E7%9A%84%E5%8F%A6%E4%B8%80%E4%B8%AA%20Activity/"/>
-    <id>http://yoursite.com/2017/05/19/启动同一应用中带返回值的另一个 Activity/</id>
-    <published>2017-05-19T12:05:16.549Z</published>
-    <updated>2017-05-19T12:04:55.569Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="启动同一应用中带返回值的另一个-Activity"><a href="#启动同一应用中带返回值的另一个-Activity" class="headerlink" title="启动同一应用中带返回值的另一个 Activity"></a>启动同一应用中带返回值的另一个 Activity</h1><p>标签（空格分隔）： Activity启动模式</p>
-<hr>
-<p>通常在启动 <strong>带返回值的 Activity</strong> 时，我们使用 <code>StartActivityForResult()</code> 方法，然后通过 <code>Intent</code> 传递意图和数据，但是对于在同一应用中的 <strong>子 <code>Activity</code></strong> 要调用 <strong>父 <code>Acitivity</code></strong> 并返回数据给 <strong>父 <code>Activity</code></strong> 时，可利用 <strong><code>Activity</code> 的启动模式和 <code>Intent</code> 的Flag</strong> 来实现数据的传递。</p>
-<p><strong>注意：</strong> <code>StartActivityForResult()</code> 的方式更适合不同应用之间通信。</p>
-<h2 id="具体应用场景中如下图"><a href="#具体应用场景中如下图" class="headerlink" title="具体应用场景中如下图"></a>具体应用场景中如下图</h2><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://raw.githubusercontent.com/HanderUp/SaveImg/4ffe12271217053455cf49c7d23ae08f618a6fc4/task.png" alt="task" title="">
-                </div>
-                <div class="image-caption">task</div>
-            </figure>
-<p>在任务栈中，我们启动了 MainActivity 、Activity A 、SecondActivity 、Activity B ，现在需要在 SecondActivity 中启动 MainActivity ，并返回数据给 MainActivity ，具体做法如下：</p>
-<p><strong>1. 在 AndroidManifest 文件中将 MainActivity 的 launchMode 属性设置为 SingleTop</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;activity android:name=<span class="string">".MainActivity"</span></div><div class="line">           android:launchMode=<span class="string">"singleTop"</span>&gt;</div></pre></td></tr></table></figure>
-<p><strong>2. 在 SecondActivity 中启动 MainActivity ，并传递数据</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Intent intent = <span class="keyword">new</span> Intent(<span class="keyword">this</span>, MainActivity.class);</div><div class="line">        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);</div><div class="line">        intent.putExtra(<span class="string">"second_data"</span>, <span class="string">"Hello MainActivity"</span>);</div><div class="line">        startActivity(intent);</div></pre></td></tr></table></figure>
-<p><strong>3. 在 MainActivity 中接收数据</strong></p>
-<p>接收数据具体为重写 <code>onNewIntent()</code> 方法</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onNewIntent</span><span class="params">(Intent intent)</span> </span>&#123;</div><div class="line">    <span class="keyword">super</span>.onNewIntent(intent);</div><div class="line">    String  str = intent.getStringExtra(<span class="string">"second_data"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><strong>具体过程分析：</strong><br>SecondActivity 启动 MainActivity 时，给 Intent 设置 <code>FLAG_ACTIVITY_CLEAR_TOP</code> Flag，<code>FLAG_ACTIVITY_CLEAR_TOP</code> 的具体用法为：启动目标 Activity 时，目标 Activity 的 <strong>launchMode</strong> 属性为默认，或者设置为 <code>standard</code> 时，目标 Activity 会和目标 Activity 之上的所有 Activity 一起被销毁，然后创建目标 Activity 的新实例，这里我们将目标 Activity 的 <strong>launchMode</strong> 设置为 <code>singleTop</code> 就能保证当前的目标 Activity 实例不被销毁，同时使用 <code>onNewIntent()</code> 接收传递的数据。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;启动同一应用中带返回值的另一个-Activity&quot;&gt;&lt;a href=&quot;#启动同一应用中带返回值的另一个-Activity&quot; class=&quot;headerlink&quot; title=&quot;启动同一应用中带返回值的另一个 Activity&quot;&gt;&lt;/a&gt;启动同一应用中带返回值的另一
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
+    <title>Fragment 初步学习总结</title>
     <link href="http://yoursite.com/2017/05/19/Fragment%20%E5%88%9D%E6%AD%A5%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
     <id>http://yoursite.com/2017/05/19/Fragment 初步学习总结/</id>
     <published>2017-05-19T12:05:16.546Z</published>
-    <updated>2017-05-19T12:04:43.059Z</updated>
+    <updated>2017-05-19T12:13:40.490Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Fragment-初步学习总结"><a href="#Fragment-初步学习总结" class="headerlink" title="Fragment 初步学习总结"></a>Fragment 初步学习总结</h1><p>标签（空格分隔）： Android基础</p>
-<hr>
-<p><strong>Fragment</strong> 在 Android 3.0 开始引入，主要用来解决兼容平板的问题，只开发一个应用解决平板和手机上的不同布局，合理利用屏幕空间。</p>
+    <content type="html"><![CDATA[<p><strong>Fragment</strong> 在 Android 3.0 开始引入，主要用来解决兼容平板的问题，只开发一个应用解决平板和手机上的不同布局，合理利用屏幕空间。</p>
 <h2 id="一、-Fragment-的两种加载模式"><a href="#一、-Fragment-的两种加载模式" class="headerlink" title="一、 Fragment 的两种加载模式"></a>一、 Fragment 的两种加载模式</h2><h3 id="1、静态加载模式"><a href="#1、静态加载模式" class="headerlink" title="1、静态加载模式"></a>1、静态加载模式</h3><p>(1) 首先创建一个 <code>left_fragment.xml</code> ，用来展示 <strong>Fragment</strong> 的布局。</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">LinearLayout</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></div><div class="line">    <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">    <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span></div><div class="line">    <span class="attr">android:orientation</span>=<span class="string">"vertical"</span>&gt;</div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">Button</span></span></div><div class="line">        <span class="attr">android:id</span>=<span class="string">"@+id/button1"</span></div><div class="line">        <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">        <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">        <span class="attr">android:text</span>=<span class="string">"Button 1"</span>/&gt;</div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>(2) 然后创建一个 <code>LeftFragment.java</code> 类，用来处理 <strong>Fragment</strong> 中的逻辑。</p>
@@ -89,23 +49,26 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Fragment-初步学习总结&quot;&gt;&lt;a href=&quot;#Fragment-初步学习总结&quot; class=&quot;headerlink&quot; title=&quot;Fragment 初步学习总结&quot;&gt;&lt;/a&gt;Fragment 初步学习总结&lt;/h1&gt;&lt;p&gt;标签（空格分隔）： Android基
+      &lt;p&gt;&lt;strong&gt;Fragment&lt;/strong&gt; 在 Android 3.0 开始引入，主要用来解决兼容平板的问题，只开发一个应用解决平板和手机上的不同布局，合理利用屏幕空间。&lt;/p&gt;
+&lt;h2 id=&quot;一、-Fragment-的两种加载模式&quot;&gt;&lt;a href=&quot;#一、-F
     
     </summary>
     
+      <category term="Fragment" scheme="http://yoursite.com/categories/Fragment/"/>
+    
+    
+      <category term="Android基础" scheme="http://yoursite.com/tags/Android%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
   <entry>
-    <title></title>
+    <title>Broadcast 初步学习</title>
     <link href="http://yoursite.com/2017/05/19/Broadcast%20%E5%88%9D%E6%AD%A5%E5%AD%A6%E4%B9%A0/"/>
     <id>http://yoursite.com/2017/05/19/Broadcast 初步学习/</id>
     <published>2017-05-19T12:05:16.542Z</published>
-    <updated>2017-05-19T12:04:36.561Z</updated>
+    <updated>2017-05-19T12:14:03.976Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Broadcast-初步学习"><a href="#Broadcast-初步学习" class="headerlink" title="Broadcast 初步学习"></a>Broadcast 初步学习</h1><p>标签（空格分隔）： Android基础</p>
-<hr>
-<p><strong>Broadcast 的分类</strong><br><strong>1.</strong> 普通广播（异步方式，同一时刻所有接收者都有可能接收到广播）<br><strong>2.</strong> 有序广播（按照顺序接收广播，优先级高的接收者先接收，并且可以截 断广播，优先级低的接收者就不能接收到广播）</p>
+    <content type="html"><![CDATA[<p><strong>Broadcast 的分类</strong><br><strong>1.</strong> 普通广播（异步方式，同一时刻所有接收者都有可能接收到广播）<br><strong>2.</strong> 有序广播（按照顺序接收广播，优先级高的接收者先接收，并且可以截 断广播，优先级低的接收者就不能接收到广播）</p>
 <p><strong>Broadcast 的注册方式</strong><br><strong>1.</strong> 静态注册（在 AndroidManifest.xml 文件中注册）<br><strong>2.</strong> 动态注册（在代码中注册，必须取消注册才行）</p>
 <p><strong>在程序内可以接收系统的广播，同时 Broadcast 可以跨应用传递，如果只定义在本应用内使用，可以使用 <code>本地广播</code></strong><br><strong>广播的传递通过 Intent</strong></p>
 <h2 id="发送和接收自定义广播"><a href="#发送和接收自定义广播" class="headerlink" title="发送和接收自定义广播"></a>发送和接收自定义广播</h2><p>###1. 普通广播<br><strong>静态注册方式</strong></p>
@@ -128,23 +91,25 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Broadcast-初步学习&quot;&gt;&lt;a href=&quot;#Broadcast-初步学习&quot; class=&quot;headerlink&quot; title=&quot;Broadcast 初步学习&quot;&gt;&lt;/a&gt;Broadcast 初步学习&lt;/h1&gt;&lt;p&gt;标签（空格分隔）： Android基础&lt;/p
+      &lt;p&gt;&lt;strong&gt;Broadcast 的分类&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;1.&lt;/strong&gt; 普通广播（异步方式，同一时刻所有接收者都有可能接收到广播）&lt;br&gt;&lt;strong&gt;2.&lt;/strong&gt; 有序广播（按照顺序接收广播，优先级高的接收者先接收，并且可以
     
     </summary>
     
+      <category term="Broadcast" scheme="http://yoursite.com/categories/Broadcast/"/>
+    
+    
+      <category term="Android基础" scheme="http://yoursite.com/tags/Android%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
   <entry>
-    <title></title>
+    <title>Android 数据持久化</title>
     <link href="http://yoursite.com/2017/05/19/Android%20%E6%95%B0%E6%8D%AE%E6%8C%81%E4%B9%85%E5%8C%96/"/>
     <id>http://yoursite.com/2017/05/19/Android 数据持久化/</id>
     <published>2017-05-19T12:05:16.539Z</published>
-    <updated>2017-05-19T12:04:30.320Z</updated>
+    <updated>2017-05-19T12:15:00.382Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Android-数据持久化"><a href="#Android-数据持久化" class="headerlink" title="Android 数据持久化"></a>Android 数据持久化</h1><p>标签（空格分隔）： Android基础</p>
-<hr>
-<p><strong>Android 数据持久化分类：</strong></p>
+    <content type="html"><![CDATA[<p><strong>Android 数据持久化分类：</strong></p>
 <ol>
 <li>SharedPerfences 存储</li>
 <li>文件存储</li>
@@ -209,64 +174,31 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Android-数据持久化&quot;&gt;&lt;a href=&quot;#Android-数据持久化&quot; class=&quot;headerlink&quot; title=&quot;Android 数据持久化&quot;&gt;&lt;/a&gt;Android 数据持久化&lt;/h1&gt;&lt;p&gt;标签（空格分隔）： Android基础&lt;/p&gt;
-&lt;h
+      &lt;p&gt;&lt;strong&gt;Android 数据持久化分类：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;SharedPerfences 存储&lt;/li&gt;
+&lt;li&gt;文件存储&lt;/li&gt;
+&lt;li&gt;SQLite 数据库存储&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;以上不同方式的数据持久化方案根据应用场景的
     
     </summary>
     
+      <category term="数据持久化" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E6%8C%81%E4%B9%85%E5%8C%96/"/>
+    
+    
+      <category term="Android基础" scheme="http://yoursite.com/tags/Android%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
   <entry>
-    <title></title>
-    <link href="http://yoursite.com/2017/05/19/Android%206.0%20%E4%B9%8B%E5%8A%A8%E6%80%81%E6%9D%83%E9%99%90%E7%94%B3%E8%AF%B7/"/>
-    <id>http://yoursite.com/2017/05/19/Android 6.0 之动态权限申请/</id>
-    <published>2017-05-19T12:05:16.533Z</published>
-    <updated>2017-05-19T12:04:23.103Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Android-6-0-之动态权限申请"><a href="#Android-6-0-之动态权限申请" class="headerlink" title="Android 6.0 之动态权限申请"></a>Android 6.0 之动态权限申请</h1><p>标签（空格分隔）： Android基础</p>
-<hr>
-<p>我们都知道 Android 中的权限在 AndroidManifest.xml 文件中配置，对于 Android 6.0 之前的 API，开发者只能将应用中可能会使用到的权限全部配置在 AndroidManifest.xml 中，然后用户在安装应用时，会有权限的提示，但是如果这个应用必须安装，并且它申请了涉及用户隐私和安全的危险权限，这样用户只能选择默默承受，但是对于 Android 6.0 及其之后的 API，开发者可以将危险权限采取动态申请的方式来配置，这样做的好处为，用户在进行某个涉及隐私或安全的操作时，系统会弹出提示框，让用户自己选择是否要申请该权限，这样便很好的控制了应用程序的安全性 。</p>
-<p><strong>具体操作如下：</strong></p>
-<p><strong>1.</strong> 首先还是在 AndroidMnifest.xml 文件中配置所需权限<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.CALL_PHONE"</span> /&gt;</span></div></pre></td></tr></table></figure></p>
-<p>这里我们使用打电话的权限，它属于危险权限</p>
-<p><strong>2.</strong> 然后在 MainActivity.java 文件中添加动态申请权限的代码<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">makeCall</span><span class="params">(View view)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (ContextCompat.checkSelfPermission(MainActivity.<span class="keyword">this</span>, </div><div class="line">            Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) &#123;</div><div class="line">        ActivityCompat.requestPermissions(MainActivity.<span class="keyword">this</span>,<span class="keyword">new</span> String[]&#123;Manifest.permission.CALL_PHONE&#125;,<span class="number">1</span>);</div><div class="line">    &#125;<span class="keyword">else</span> &#123;</div><div class="line">        call();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">call</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">try</span> &#123;</div><div class="line">        Intent intent = <span class="keyword">new</span> Intent(Intent.ACTION_CALL);</div><div class="line">        intent.setData(Uri.parse(<span class="string">"tel:10086"</span>));</div><div class="line">        startActivity(intent);</div><div class="line">    &#125; <span class="keyword">catch</span> (SecurityException e) &#123;</div><div class="line">        e.printStackTrace();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onRequestPermissionsResult</span><span class="params">(<span class="keyword">int</span> requestCode, @NonNull String[] permissions, @NonNull <span class="keyword">int</span>[] grantResults)</span> </span>&#123;</div><div class="line">    <span class="keyword">switch</span> (requestCode) &#123;</div><div class="line">        <span class="keyword">case</span> <span class="number">1</span>:</div><div class="line">            <span class="keyword">if</span> (grantResults.length &gt; <span class="number">0</span> &amp;&amp; grantResults[<span class="number">0</span>] == PackageManager.PERMISSION_GRANTED) &#123;</div><div class="line">                call();</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                Toast.makeText(<span class="keyword">this</span>, <span class="string">"权限被拒绝"</span>, Toast.LENGTH_SHORT).show();</div><div class="line">            &#125; </div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">default</span>:</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p><strong>分析上面代码：</strong></p>
-<ul>
-<li><p>第一步判断用户是否已经授权了权限，通过 <code>ContextCompat.checkSelfPermission()</code> 方法。</p>
-<blockquote>
-<p><code>checkSelfPermission()</code> 传两个参数<br> 第一是 Contenxt<br> 第二是 具体的权限名</p>
-</blockquote>
-</li>
-<li><p>将返回值和 <code>PackageManager.PERMISSION_GRANTED</code> 比较，相等说明用户已经授权，直接执行 <code>call()</code> 方法即可，不等则需要向用户申请授权，通过 <code>ActivityCompat.requestPermissions()</code> 方法动态申请权限</p>
-<blockquote>
-<p><code>requestPermissions()</code> 传三个参数<br> 第一是 Activity 的实例<br> 第二是 一个 String[]<br> 第三是 请求码（只要是唯一的值即可）</p>
-</blockquote>
-</li>
-<li><p>调用 <code>requestPermissions()</code> 后，系统会弹出一个申请权限的对话框，用户具体的选择会在 <code>onRequestPermissionsResult()</code> 方法中来处理，授权结果会封装在 <code>grantResults</code> 参数中，只需判断授权结果即可，用户同意直接调用 <code>call()</code> 方法，否则弹出提示框 。</p>
-</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Android-6-0-之动态权限申请&quot;&gt;&lt;a href=&quot;#Android-6-0-之动态权限申请&quot; class=&quot;headerlink&quot; title=&quot;Android 6.0 之动态权限申请&quot;&gt;&lt;/a&gt;Android 6.0 之动态权限申请&lt;/h1&gt;&lt;p&gt;标签
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
+    <title>ContentProvider 总结</title>
     <link href="http://yoursite.com/2017/05/19/ContentProvider%20%E6%80%BB%E7%BB%93/"/>
     <id>http://yoursite.com/2017/05/19/ContentProvider 总结/</id>
     <published>2017-05-19T12:05:16.529Z</published>
-    <updated>2017-05-19T12:04:15.682Z</updated>
+    <updated>2017-05-19T12:13:20.403Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="ContentProvider-总结"><a href="#ContentProvider-总结" class="headerlink" title="ContentProvider 总结"></a>ContentProvider 总结</h1><p>标签（空格分隔）： Android基础</p>
-<hr>
-<p><img src="https://raw.githubusercontent.com/HanderUp/SaveImg/master/ContentProvider_update.png" alt="ConentProvider原理图"></p>
+    <content type="html"><![CDATA[<p><img src="https://raw.githubusercontent.com/HanderUp/SaveImg/master/ContentProvider_update.png" alt="ConentProvider原理图"></p>
 <p>上图为 ContentProvider 的具体实现过程，Other App1 和 Other App2 分别提供了 ContentProvider 来向外界暴露数据，方便其他应用程序来访问。</p>
 <p>对于不同的 ContentProvider 是由 ContentResolver 来进行管理的，其中 ContentResolver 中的 CRUD 方法对应不同 ContentProvider 中的 CRUD 方法，他们之间通过 URI 来进行消息的传递，ContentResolver 和 ContentProvider 之间的关系为，ContentProvider 只是提供数据的，而 ContentResolver 是将从 ContentProvider 中操作的结果返回给需要数据的应用程序。</p>
 <p>##<strong>具体过程如下：</strong></p>
@@ -277,23 +209,26 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;ContentProvider-总结&quot;&gt;&lt;a href=&quot;#ContentProvider-总结&quot; class=&quot;headerlink&quot; title=&quot;ContentProvider 总结&quot;&gt;&lt;/a&gt;ContentProvider 总结&lt;/h1&gt;&lt;p&gt;标签（空格分
+      &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/HanderUp/SaveImg/master/ContentProvider_update.png&quot; alt=&quot;ConentProvider原理图&quot;&gt;&lt;/p&gt;
+&lt;p&gt;上图为 Conte
     
     </summary>
     
+      <category term="ContentProvider" scheme="http://yoursite.com/categories/ContentProvider/"/>
+    
+    
+      <category term="Android基础" scheme="http://yoursite.com/tags/Android%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
   <entry>
-    <title></title>
+    <title>Android 中的布局</title>
     <link href="http://yoursite.com/2017/05/19/Android%20%E4%B8%AD%E7%9A%84%E5%B8%83%E5%B1%80/"/>
     <id>http://yoursite.com/2017/05/19/Android 中的布局/</id>
     <published>2017-05-19T12:05:16.524Z</published>
-    <updated>2017-05-19T12:04:06.565Z</updated>
+    <updated>2017-05-19T12:14:32.045Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Android-中的布局"><a href="#Android-中的布局" class="headerlink" title="Android 中的布局"></a>Android 中的布局</h1><p>标签（空格分隔）： Android基础</p>
-<hr>
-<p>Android 中的布局由常用的频率排序，如下表<br>| 布局方式 | 使用频率等级 | 特点 |<br>| :—-: | :—-: | :—-: |<br>|LinearLayout(线性布局)|5| 顺序排列，纵横两个方向，实现简单，多屏适配|<br>|RelativeLayout(相对布局)|5| 位置相对，对齐方式丰富，可以重叠，嵌套少，多屏适配|<br>|FrameLayout(帧布局)|3|可以重叠，对齐方式丰富，多屏适配|<br>|TableLayout(表格布局)|2|多行多列，规则布局，简单的多屏适配|<br>|GridLayout(网格布局)|1|多行多列，不规则布局，可跨行列，多屏适配，SDK4.0出现|<br>|AbsoluteLayout(绝对布局)|0|绝对坐标，不利于多屏适配|</p>
+    <content type="html"><![CDATA[<p>Android 中的布局由常用的频率排序，如下表<br>| 布局方式 | 使用频率等级 | 特点 |<br>| :—-: | :—-: | :—-: |<br>|LinearLayout(线性布局)|5| 顺序排列，纵横两个方向，实现简单，多屏适配|<br>|RelativeLayout(相对布局)|5| 位置相对，对齐方式丰富，可以重叠，嵌套少，多屏适配|<br>|FrameLayout(帧布局)|3|可以重叠，对齐方式丰富，多屏适配|<br>|TableLayout(表格布局)|2|多行多列，规则布局，简单的多屏适配|<br>|GridLayout(网格布局)|1|多行多列，不规则布局，可跨行列，多屏适配，SDK4.0出现|<br>|AbsoluteLayout(绝对布局)|0|绝对坐标，不利于多屏适配|</p>
 <p>由于 <code>RelativeLayout</code> 和 <code>FrameLayout</code> 没有 <code>layout_weight</code> 这个属性，因此 Android 团队提供了<strong>百分比布局</strong>，百分比布局对 <code>RelativeLayout</code> 和 <code>FrameLayout</code> 进行了功能的扩展。提供了 <code>PercentRelativeLayout</code> 和 <code>PercentFrameLayout</code> 两种布局</p>
 <p><strong>使用百分比布局注意事项：</strong><br>在项目 <code>build.gradle</code> 中添加以下依赖包<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">dependencies</span>&#123;</div><div class="line">    <span class="keyword">compile</span> <span class="string">'com.android.support:percent:25.2.0'</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h2 id="一、-LinearLayout-中注意的事项："><a href="#一、-LinearLayout-中注意的事项：" class="headerlink" title="一、 LinearLayout 中注意的事项："></a>一、 LinearLayout 中注意的事项：</h2><ol>
@@ -305,97 +240,14 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Android-中的布局&quot;&gt;&lt;a href=&quot;#Android-中的布局&quot; class=&quot;headerlink&quot; title=&quot;Android 中的布局&quot;&gt;&lt;/a&gt;Android 中的布局&lt;/h1&gt;&lt;p&gt;标签（空格分隔）： Android基础&lt;/p&gt;
-&lt;hr&gt;
-&lt;
+      &lt;p&gt;Android 中的布局由常用的频率排序，如下表&lt;br&gt;| 布局方式 | 使用频率等级 | 特点 |&lt;br&gt;| :—-: | :—-: | :—-: |&lt;br&gt;|LinearLayout(线性布局)|5| 顺序排列，纵横两个方向，实现简单，多屏适配|&lt;br&gt;|Relativ
     
     </summary>
     
+      <category term="布局" scheme="http://yoursite.com/categories/%E5%B8%83%E5%B1%80/"/>
     
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://yoursite.com/2017/05/19/Intent%20%E5%88%9D%E7%BA%A7/"/>
-    <id>http://yoursite.com/2017/05/19/Intent 初级/</id>
-    <published>2017-05-19T09:49:05.263Z</published>
-    <updated>2017-05-19T09:48:59.024Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Intent-初级"><a href="#Intent-初级" class="headerlink" title="Intent 初级"></a>Intent 初级</h1><p>标签（空格分隔）： Android基础</p>
-<hr>
-<p><strong>Intent</strong> 作为 <code>Android</code> 中意图，可以通过 <code>action</code> 和 <code>category</code> 两个主要的标签指定想要启动的组件。<strong>Intent</strong> 分为 <strong>显式</strong> 和 <strong>隐式</strong> 。</p>
-<h2 id="1-显式-Intent-启动另一个-Activity-，并传递数据"><a href="#1-显式-Intent-启动另一个-Activity-，并传递数据" class="headerlink" title="1. 显式 Intent 启动另一个 Activity ，并传递数据"></a>1. 显式 Intent 启动另一个 Activity ，并传递数据</h2><p>在程序代码中注册，并且只能启动本应用中的其他组件，不能跨应用启动组件。</p>
-<p>可以通过 Intent 传递参数给另一个 Activity<br>使用 Intent 启动一个 SendActivity :<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">EditText meditText;</div><div class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">static</span> String EXTRA_MESSAGE = <span class="string">"com.example.firstapp.MESSAGE"</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">StartSendActivity</span><span class="params">(View view)</span> </span>&#123;</div><div class="line">    Intent intent = <span class="keyword">new</span> Intent(<span class="keyword">this</span>,SendActivity.class);</div><div class="line">    String message = meditText.getText().toString();</div><div class="line">    intent.putExtra(EXTRA_MESSAGE,message); </div><div class="line">    startActivity(intent);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>使用 Intent 接收传递的参数：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">TextView mtextView;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">setText</span><span class="params">()</span> </span>&#123;</div><div class="line">    Intent intent = getIntent();</div><div class="line">    String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);</div><div class="line">    mtextView.setText(message);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="2-隐式-Intent"><a href="#2-隐式-Intent" class="headerlink" title="2. 隐式 Intent"></a>2. 隐式 Intent</h2><p>在 Android 中隐式启动 Intent 的方式最常见，因为隐式 Intent 可以跨应用启动不同组件，包括系统提供的组件和自己编写的应用中的组件都可以被启动。</p>
-<p><strong>隐式 Intent 可以在 AndroidManifest.xml 和 代码 中注册 主要定义 <code>action</code> 和 <code>category</code> 标签</strong><br><strong>1. 使用系统提供的 Intent</strong><br>常用的系统 <strong>Intent <code>action</code>：</strong><br><code>action</code>代表已经定义的动作，通过 setAction()方法或在 AndroidManifest.xml 中设置</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">系统 Intent</th>
-<th style="text-align:center">对应字符串</th>
-<th style="text-align:center">功能</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">ACTION_VIEW</td>
-<td style="text-align:center">android.intent.action.VIEW</td>
-<td style="text-align:center">显示指定数据/播放音乐</td>
-</tr>
-<tr>
-<td style="text-align:center">ACTION_DIAL</td>
-<td style="text-align:center">android.intent.action.DIAL</td>
-<td style="text-align:center">打开拨号面板</td>
-</tr>
-<tr>
-<td style="text-align:center">ACTION_CALL</td>
-<td style="text-align:center">android.intent.action.CALL</td>
-<td style="text-align:center">向指定号码打电话</td>
-</tr>
-<tr>
-<td style="text-align:center">ACTION_MAIN</td>
-<td style="text-align:center">android.intent.action.MAIN</td>
-<td style="text-align:center">应用程序入口</td>
-</tr>
-<tr>
-<td style="text-align:center">ACTION_EDIT</td>
-<td style="text-align:center">android.intent.action.EDIT</td>
-<td style="text-align:center">编辑指定数据</td>
-</tr>
-<tr>
-<td style="text-align:center">ACTION_SENDTO</td>
-<td style="text-align:center">android.intent.action.SENDTO</td>
-<td style="text-align:center">发送消息</td>
-</tr>
-<tr>
-<td style="text-align:center">ACTION_DELETE</td>
-<td style="text-align:center">android.intent.action.DELETE</td>
-<td style="text-align:center">删除数据/卸载应用</td>
-</tr>
-<tr>
-<td style="text-align:center">ACTION_INSERT</td>
-<td style="text-align:center">android.intent.action.INSERT</td>
-<td style="text-align:center">插入数据/安装应用</td>
-</tr>
-</tbody>
-</table>
-<p><strong>同时还需要设置 <code>category</code> 标签：</strong><br><code>category</code> 标签用于指定 action 被执行的环境，通过 addCategory()方法或在 AndroidManifest.xml 中设置</p>
-<p>具体使用如下：<br><strong>1. 在 AndroidManifest.xml 中注册</strong><br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;activity android:name=".SendActivity"</div><div class="line">    android:label="SendActivity"&gt;</div><div class="line">    &lt;intent-filter&gt;</div><div class="line">        &lt;action android:name="android.intent.action.VIEW"/&gt;             &lt;category android:name="android.intent.category.DEFAULT"/&gt;</div><div class="line">        &lt;data android:scheme="http"/&gt;</div><div class="line">    &lt;/intent-filter&gt;</div><div class="line">&lt;/activity&gt;</div></pre></td></tr></table></figure></p>
-<p><strong>2. 在代码中注册</strong><br>启动拨号面板示例：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">callPhone</span><span class="params">(View view)</span> </span>&#123;</div><div class="line">    Intent intent = <span class="keyword">new</span> Intent(Intent.ACTION_DIAL);</div><div class="line">    intent.setData(Uri.parse(<span class="string">"tel:13369100203"</span>));</div><div class="line">    startActivity(intent);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="3-使用-Intent-返回数据给上一个-Activity"><a href="#3-使用-Intent-返回数据给上一个-Activity" class="headerlink" title="3. 使用 Intent 返回数据给上一个 Activity"></a>3. 使用 Intent 返回数据给上一个 Activity</h2><p>首先在 FirstActivity 中使用 startActivityForResult() 方法启动 SendActivity , 代码如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">playMusice</span><span class="params">(View view)</span> </span>&#123;</div><div class="line">    Intent intent = <span class="keyword">new</span> Intent(<span class="string">"com.example.intenttest.ACTION_START"</span>);</div><div class="line">    startActivityForResult(intent, <span class="number">1</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>然后在 SendActivity 中设置按钮的点击事件，使用 Intent 传递数据 ， 也可以重写返回键的 onBackPressed() 方法 ， 代码如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onBackPressed</span><span class="params">()</span> </span>&#123;</div><div class="line">    Intent intent = <span class="keyword">new</span> Intent();</div><div class="line">    intent.putExtra(<span class="string">"data_return"</span>, <span class="string">"I'm layoutActivity"</span>);</div><div class="line">    setResult(RESULT_OK, intent);</div><div class="line">    finish();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>在 FirstActivity 中重写 onActivityResult() 方法，用来接收 SendActivity 传递的数据，代码如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onActivityResult</span><span class="params">(<span class="keyword">int</span> requestCode, <span class="keyword">int</span> resultCode, Intent data)</span> </span>&#123;</div><div class="line">    <span class="keyword">switch</span> (requestCode) &#123;</div><div class="line">        <span class="keyword">case</span> <span class="number">1</span>:</div><div class="line">            <span class="keyword">if</span> (resultCode == RESULT_OK) &#123;</div><div class="line">                String returnData = data.getStringExtra(<span class="string">"data_return"</span>);</div><div class="line">                Toast.makeText(<span class="keyword">this</span>, returnData, Toast.LENGTH_SHORT).show();</div><div class="line">            &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Intent-初级&quot;&gt;&lt;a href=&quot;#Intent-初级&quot; class=&quot;headerlink&quot; title=&quot;Intent 初级&quot;&gt;&lt;/a&gt;Intent 初级&lt;/h1&gt;&lt;p&gt;标签（空格分隔）： Android基础&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;In
-    
-    </summary>
-    
+      <category term="Android基础" scheme="http://yoursite.com/tags/Android%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   

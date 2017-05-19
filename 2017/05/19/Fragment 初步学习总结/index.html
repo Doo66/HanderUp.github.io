@@ -13,35 +13,29 @@
     
     
     
-    <title>No title | HanderUp&#39;s Blog</title>
+    <title>Fragment 初步学习总结 | HanderUp&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="">
-    <meta name="description" content="Fragment 初步学习总结标签（空格分隔）： Android基础
-
-Fragment 在 Android 3.0 开始引入，主要用来解决兼容平板的问题，只开发一个应用解决平板和手机上的不同布局，合理利用屏幕空间。
+    <meta name="keywords" content="Android基础">
+    <meta name="description" content="Fragment 在 Android 3.0 开始引入，主要用来解决兼容平板的问题，只开发一个应用解决平板和手机上的不同布局，合理利用屏幕空间。
 一、 Fragment 的两种加载模式1、静态加载模式(1) 首先创建一个 left_fragment.xml ，用来展示 Fragment 的布局。
-123456789101112">
+123456789101112&amp;lt;LinearLayout xmlns:android=&quot;http">
 <meta property="og:type" content="article">
-<meta property="og:title" content="No title">
+<meta property="og:title" content="Fragment 初步学习总结">
 <meta property="og:url" content="http://yoursite.com/2017/05/19/Fragment 初步学习总结/index.html">
 <meta property="og:site_name" content="HanderUp's Blog">
-<meta property="og:description" content="Fragment 初步学习总结标签（空格分隔）： Android基础
-
-Fragment 在 Android 3.0 开始引入，主要用来解决兼容平板的问题，只开发一个应用解决平板和手机上的不同布局，合理利用屏幕空间。
+<meta property="og:description" content="Fragment 在 Android 3.0 开始引入，主要用来解决兼容平板的问题，只开发一个应用解决平板和手机上的不同布局，合理利用屏幕空间。
 一、 Fragment 的两种加载模式1、静态加载模式(1) 首先创建一个 left_fragment.xml ，用来展示 Fragment 的布局。
-123456789101112">
-<meta property="og:updated_time" content="2017-05-19T12:04:43.059Z">
+123456789101112&amp;lt;LinearLayout xmlns:android=&quot;http">
+<meta property="og:updated_time" content="2017-05-19T12:13:40.490Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="No title">
-<meta name="twitter:description" content="Fragment 初步学习总结标签（空格分隔）： Android基础
-
-Fragment 在 Android 3.0 开始引入，主要用来解决兼容平板的问题，只开发一个应用解决平板和手机上的不同布局，合理利用屏幕空间。
+<meta name="twitter:title" content="Fragment 初步学习总结">
+<meta name="twitter:description" content="Fragment 在 Android 3.0 开始引入，主要用来解决兼容平板的问题，只开发一个应用解决平板和手机上的不同布局，合理利用屏幕空间。
 一、 Fragment 的两种加载模式1、静态加载模式(1) 首先创建一个 left_fragment.xml ，用来展示 Fragment 的布局。
-123456789101112">
+123456789101112&amp;lt;LinearLayout xmlns:android=&quot;http">
     
         <link rel="alternate" type="application/atom+xml" title="HanderUp&#39;s Blog" href="/atom.xml">
     
@@ -118,7 +112,7 @@ Fragment 在 Android 3.0 开始引入，主要用来解决兼容平板的问题�
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">No title</div>
+        <div class="flex-col header-title ellipsis">Fragment 初步学习总结</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -140,13 +134,15 @@ Fragment 在 Android 3.0 开始引入，主要用来解决兼容平板的问题�
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">No title</h1>
+        <h1 class="title">Fragment 初步学习总结</h1>
         <h5 class="subtitle">
             
                 <time datetime="2017-05-19T12:05:16.546Z" itemprop="datePublished" class="page-time">
   2017-05-19
 </time>
 
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Fragment/">Fragment</a></li></ul>
 
             
         </h5>
@@ -163,7 +159,7 @@ Fragment 在 Android 3.0 开始引入，主要用来解决兼容平板的问题�
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Fragment-初步学习总结"><span class="post-toc-number">1.</span> <span class="post-toc-text">Fragment 初步学习总结</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一、-Fragment-的两种加载模式"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">一、 Fragment 的两种加载模式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1、静态加载模式"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">1、静态加载模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2、动态加载模式"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">2、动态加载模式</span></a></li></ol></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一、-Fragment-的两种加载模式"><span class="post-toc-number">1.</span> <span class="post-toc-text">一、 Fragment 的两种加载模式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1、静态加载模式"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">1、静态加载模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2、动态加载模式"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">2、动态加载模式</span></a></li></ol></li></ol>
         </nav>
     </aside>
     
@@ -171,11 +167,13 @@ Fragment 在 Android 3.0 开始引入，主要用来解决兼容平板的问题�
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">No title</h1>
+        <h1 class="post-card-title">Fragment 初步学习总结</h1>
         <div class="post-meta">
             <time class="post-time" title="2017-05-19 20:05:16" datetime="2017-05-19T12:05:16.546Z"  itemprop="datePublished">2017-05-19</time>
 
             
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Fragment/">Fragment</a></li></ul>
+
 
 
             
@@ -188,9 +186,7 @@ Fragment 在 Android 3.0 开始引入，主要用来解决兼容平板的问题�
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h1 id="Fragment-初步学习总结"><a href="#Fragment-初步学习总结" class="headerlink" title="Fragment 初步学习总结"></a>Fragment 初步学习总结</h1><p>标签（空格分隔）： Android基础</p>
-<hr>
-<p><strong>Fragment</strong> 在 Android 3.0 开始引入，主要用来解决兼容平板的问题，只开发一个应用解决平板和手机上的不同布局，合理利用屏幕空间。</p>
+            <p><strong>Fragment</strong> 在 Android 3.0 开始引入，主要用来解决兼容平板的问题，只开发一个应用解决平板和手机上的不同布局，合理利用屏幕空间。</p>
 <h2 id="一、-Fragment-的两种加载模式"><a href="#一、-Fragment-的两种加载模式" class="headerlink" title="一、 Fragment 的两种加载模式"></a>一、 Fragment 的两种加载模式</h2><h3 id="1、静态加载模式"><a href="#1、静态加载模式" class="headerlink" title="1、静态加载模式"></a>1、静态加载模式</h3><p>(1) 首先创建一个 <code>left_fragment.xml</code> ，用来展示 <strong>Fragment</strong> 的布局。</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">LinearLayout</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></div><div class="line">    <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">    <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span></div><div class="line">    <span class="attr">android:orientation</span>=<span class="string">"vertical"</span>&gt;</div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">Button</span></span></div><div class="line">        <span class="attr">android:id</span>=<span class="string">"@+id/button1"</span></div><div class="line">        <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">        <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">        <span class="attr">android:text</span>=<span class="string">"Button 1"</span>/&gt;</div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>(2) 然后创建一个 <code>LeftFragment.java</code> 类，用来处理 <strong>Fragment</strong> 中的逻辑。</p>
@@ -220,7 +216,7 @@ Fragment 在 Android 3.0 开始引入，主要用来解决兼容平板的问题�
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-05-19T12:04:43.059Z" itemprop="dateUpdated">2017-05-19 20:04:43</time>
+    最后更新时间：<time datetime="2017-05-19T12:13:40.490Z" itemprop="dateUpdated">2017-05-19 20:13:40</time>
 </span><br>
 
 
@@ -245,6 +241,8 @@ Fragment 在 Android 3.0 开始引入，主要用来解决兼容平板的问题�
 
         <div class="post-footer">
             
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android基础/">Android基础</a></li></ul>
+
 
             
 <div class="page-share-wrap">
@@ -253,7 +251,7 @@ Fragment 在 Android 3.0 开始引入，主要用来解决兼容平板的问题�
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/05/19/Fragment 初步学习总结/&title=《No title》 — HanderUp's Blog&pic=https://avatars2.githubusercontent.com/u/22523322?v=3&u=46aaa8d3f4583f2411b6a03632fa4272f7efe393&s=400" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/05/19/Fragment 初步学习总结/&title=《Fragment 初步学习总结》 — HanderUp's Blog&pic=https://avatars2.githubusercontent.com/u/22523322?v=3&u=46aaa8d3f4583f2411b6a03632fa4272f7efe393&s=400" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -263,7 +261,7 @@ Fragment 在 Android 3.0 开始引入，主要用来解决兼容平板的问题�
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/05/19/Fragment 初步学习总结/&title=《No title》 — HanderUp's Blog&source=coding" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/05/19/Fragment 初步学习总结/&title=《Fragment 初步学习总结》 — HanderUp's Blog&source=coding" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -273,7 +271,7 @@ Fragment 在 Android 3.0 开始引入，主要用来解决兼容平板的问题�
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《No title》 — HanderUp's Blog&url=http://yoursite.com/2017/05/19/Fragment 初步学习总结/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Fragment 初步学习总结》 — HanderUp's Blog&url=http://yoursite.com/2017/05/19/Fragment 初步学习总结/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
@@ -298,21 +296,14 @@ Fragment 在 Android 3.0 开始引入，主要用来解决兼容平板的问题�
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="/2017/05/19/启动同一应用中带返回值的另一个 Activity/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">No title</h4>
-      </a>
-    </div>
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
   
 
   
     <div class="waves-block waves-effect next">
       <a href="/2017/05/19/Broadcast 初步学习/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">No title</h4>
+        <h4 class="title">Broadcast 初步学习</h4>
       </a>
     </div>
   
@@ -404,7 +395,7 @@ Fragment 在 Android 3.0 开始引入，主要用来解决兼容平板的问题�
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/05/19/Fragment 初步学习总结/&title=《No title》 — HanderUp's Blog&pic=https://avatars2.githubusercontent.com/u/22523322?v=3&u=46aaa8d3f4583f2411b6a03632fa4272f7efe393&s=400" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/05/19/Fragment 初步学习总结/&title=《Fragment 初步学习总结》 — HanderUp's Blog&pic=https://avatars2.githubusercontent.com/u/22523322?v=3&u=46aaa8d3f4583f2411b6a03632fa4272f7efe393&s=400" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -414,7 +405,7 @@ Fragment 在 Android 3.0 开始引入，主要用来解决兼容平板的问题�
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/05/19/Fragment 初步学习总结/&title=《No title》 — HanderUp's Blog&source=coding" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/05/19/Fragment 初步学习总结/&title=《Fragment 初步学习总结》 — HanderUp's Blog&source=coding" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -424,7 +415,7 @@ Fragment 在 Android 3.0 开始引入，主要用来解决兼容平板的问题�
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《No title》 — HanderUp's Blog&url=http://yoursite.com/2017/05/19/Fragment 初步学习总结/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Fragment 初步学习总结》 — HanderUp's Blog&url=http://yoursite.com/2017/05/19/Fragment 初步学习总结/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
