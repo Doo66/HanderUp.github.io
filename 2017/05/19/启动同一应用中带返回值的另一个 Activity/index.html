@@ -13,30 +13,27 @@
     
     
     
-    <title>No title | HanderUp&#39;s Blog</title>
+    <title>启动同一应用中带返回值的另一个 Activity | HanderUp&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="">
-    <meta name="description" content="启动同一应用中带返回值的另一个 Activity标签（空格分隔）： Activity启动模式
-
-通常在启动 带返回值的 Activity 时，我们使用 StartActivityForResult() 方法，然后通过 Intent 传递意图和数据，但是对于在同一应用中的 子 Activity 要调用 父 Acitivity 并返回数据给 父 Activity 时，可利用 Activity 的启动模">
+    <meta name="keywords" content="Activity启动模式">
+    <meta name="description" content="通常在启动 带返回值的 Activity 时，我们使用 StartActivityForResult() 方法，然后通过 Intent 传递意图和数据，但是对于在同一应用中的 子 Activity 要调用 父 Acitivity 并返回数据给 父 Activity 时，可利用 Activity 的启动模式和 Intent 的Flag 来实现数据的传递。
+注意： StartActivityForRe">
 <meta property="og:type" content="article">
-<meta property="og:title" content="No title">
+<meta property="og:title" content="启动同一应用中带返回值的另一个 Activity">
 <meta property="og:url" content="http://yoursite.com/2017/05/19/启动同一应用中带返回值的另一个 Activity/index.html">
 <meta property="og:site_name" content="HanderUp's Blog">
-<meta property="og:description" content="启动同一应用中带返回值的另一个 Activity标签（空格分隔）： Activity启动模式
-
-通常在启动 带返回值的 Activity 时，我们使用 StartActivityForResult() 方法，然后通过 Intent 传递意图和数据，但是对于在同一应用中的 子 Activity 要调用 父 Acitivity 并返回数据给 父 Activity 时，可利用 Activity 的启动模">
+<meta property="og:description" content="通常在启动 带返回值的 Activity 时，我们使用 StartActivityForResult() 方法，然后通过 Intent 传递意图和数据，但是对于在同一应用中的 子 Activity 要调用 父 Acitivity 并返回数据给 父 Activity 时，可利用 Activity 的启动模式和 Intent 的Flag 来实现数据的传递。
+注意： StartActivityForRe">
 <meta property="og:image" content="https://raw.githubusercontent.com/HanderUp/SaveImg/4ffe12271217053455cf49c7d23ae08f618a6fc4/task.png">
-<meta property="og:updated_time" content="2017-05-19T12:04:55.569Z">
+<meta property="og:updated_time" content="2017-05-20T14:27:05.007Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="No title">
-<meta name="twitter:description" content="启动同一应用中带返回值的另一个 Activity标签（空格分隔）： Activity启动模式
-
-通常在启动 带返回值的 Activity 时，我们使用 StartActivityForResult() 方法，然后通过 Intent 传递意图和数据，但是对于在同一应用中的 子 Activity 要调用 父 Acitivity 并返回数据给 父 Activity 时，可利用 Activity 的启动模">
+<meta name="twitter:title" content="启动同一应用中带返回值的另一个 Activity">
+<meta name="twitter:description" content="通常在启动 带返回值的 Activity 时，我们使用 StartActivityForResult() 方法，然后通过 Intent 传递意图和数据，但是对于在同一应用中的 子 Activity 要调用 父 Acitivity 并返回数据给 父 Activity 时，可利用 Activity 的启动模式和 Intent 的Flag 来实现数据的传递。
+注意： StartActivityForRe">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/HanderUp/SaveImg/4ffe12271217053455cf49c7d23ae08f618a6fc4/task.png">
     
         <link rel="alternate" type="application/atom+xml" title="HanderUp&#39;s Blog" href="/atom.xml">
@@ -114,7 +111,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">No title</div>
+        <div class="flex-col header-title ellipsis">启动同一应用中带返回值的另一个 Activity</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -136,13 +133,15 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">No title</h1>
+        <h1 class="title">启动同一应用中带返回值的另一个 Activity</h1>
         <h5 class="subtitle">
             
                 <time datetime="2017-05-19T12:05:16.549Z" itemprop="datePublished" class="page-time">
   2017-05-19
 </time>
 
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Activity/">Activity</a></li></ul>
 
             
         </h5>
@@ -159,7 +158,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#启动同一应用中带返回值的另一个-Activity"><span class="post-toc-number">1.</span> <span class="post-toc-text">启动同一应用中带返回值的另一个 Activity</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#具体应用场景中如下图"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">具体应用场景中如下图</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#具体应用场景中如下图"><span class="post-toc-number">1.</span> <span class="post-toc-text">具体应用场景中如下图</span></a></li></ol>
         </nav>
     </aside>
     
@@ -167,11 +166,13 @@
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">No title</h1>
+        <h1 class="post-card-title">启动同一应用中带返回值的另一个 Activity</h1>
         <div class="post-meta">
             <time class="post-time" title="2017-05-19 20:05:16" datetime="2017-05-19T12:05:16.549Z"  itemprop="datePublished">2017-05-19</time>
 
             
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Activity/">Activity</a></li></ul>
+
 
 
             
@@ -184,9 +185,7 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h1 id="启动同一应用中带返回值的另一个-Activity"><a href="#启动同一应用中带返回值的另一个-Activity" class="headerlink" title="启动同一应用中带返回值的另一个 Activity"></a>启动同一应用中带返回值的另一个 Activity</h1><p>标签（空格分隔）： Activity启动模式</p>
-<hr>
-<p>通常在启动 <strong>带返回值的 Activity</strong> 时，我们使用 <code>StartActivityForResult()</code> 方法，然后通过 <code>Intent</code> 传递意图和数据，但是对于在同一应用中的 <strong>子 <code>Activity</code></strong> 要调用 <strong>父 <code>Acitivity</code></strong> 并返回数据给 <strong>父 <code>Activity</code></strong> 时，可利用 <strong><code>Activity</code> 的启动模式和 <code>Intent</code> 的Flag</strong> 来实现数据的传递。</p>
+            <p>通常在启动 <strong>带返回值的 Activity</strong> 时，我们使用 <code>StartActivityForResult()</code> 方法，然后通过 <code>Intent</code> 传递意图和数据，但是对于在同一应用中的 <strong>子 <code>Activity</code></strong> 要调用 <strong>父 <code>Acitivity</code></strong> 并返回数据给 <strong>父 <code>Activity</code></strong> 时，可利用 <strong><code>Activity</code> 的启动模式和 <code>Intent</code> 的Flag</strong> 来实现数据的传递。</p>
 <p><strong>注意：</strong> <code>StartActivityForResult()</code> 的方式更适合不同应用之间通信。</p>
 <h2 id="具体应用场景中如下图"><a href="#具体应用场景中如下图" class="headerlink" title="具体应用场景中如下图"></a>具体应用场景中如下图</h2><figure class="image-bubble">
                 <div class="img-lightbox">
@@ -211,7 +210,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-05-19T12:04:55.569Z" itemprop="dateUpdated">2017-05-19 20:04:55</time>
+    最后更新时间：<time datetime="2017-05-20T14:27:05.007Z" itemprop="dateUpdated">2017-05-20 22:27:05</time>
 </span><br>
 
 
@@ -236,6 +235,8 @@
 
         <div class="post-footer">
             
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Activity启动模式/">Activity启动模式</a></li></ul>
+
 
             
 <div class="page-share-wrap">
@@ -244,7 +245,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/05/19/启动同一应用中带返回值的另一个 Activity/&title=《No title》 — HanderUp's Blog&pic=https://avatars2.githubusercontent.com/u/22523322?v=3&u=46aaa8d3f4583f2411b6a03632fa4272f7efe393&s=400" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/05/19/启动同一应用中带返回值的另一个 Activity/&title=《启动同一应用中带返回值的另一个 Activity》 — HanderUp's Blog&pic=https://avatars2.githubusercontent.com/u/22523322?v=3&u=46aaa8d3f4583f2411b6a03632fa4272f7efe393&s=400" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -254,7 +255,7 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/05/19/启动同一应用中带返回值的另一个 Activity/&title=《No title》 — HanderUp's Blog&source=coding" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/05/19/启动同一应用中带返回值的另一个 Activity/&title=《启动同一应用中带返回值的另一个 Activity》 — HanderUp's Blog&source=coding" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -264,7 +265,7 @@
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《No title》 — HanderUp's Blog&url=http://yoursite.com/2017/05/19/启动同一应用中带返回值的另一个 Activity/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《启动同一应用中带返回值的另一个 Activity》 — HanderUp's Blog&url=http://yoursite.com/2017/05/19/启动同一应用中带返回值的另一个 Activity/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
@@ -296,7 +297,7 @@
     <div class="waves-block waves-effect next">
       <a href="/2017/05/19/Fragment 初步学习总结/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">No title</h4>
+        <h4 class="title">Fragment 初步学习总结</h4>
       </a>
     </div>
   
@@ -388,7 +389,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/05/19/启动同一应用中带返回值的另一个 Activity/&title=《No title》 — HanderUp's Blog&pic=https://avatars2.githubusercontent.com/u/22523322?v=3&u=46aaa8d3f4583f2411b6a03632fa4272f7efe393&s=400" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/05/19/启动同一应用中带返回值的另一个 Activity/&title=《启动同一应用中带返回值的另一个 Activity》 — HanderUp's Blog&pic=https://avatars2.githubusercontent.com/u/22523322?v=3&u=46aaa8d3f4583f2411b6a03632fa4272f7efe393&s=400" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -398,7 +399,7 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/05/19/启动同一应用中带返回值的另一个 Activity/&title=《No title》 — HanderUp's Blog&source=coding" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/05/19/启动同一应用中带返回值的另一个 Activity/&title=《启动同一应用中带返回值的另一个 Activity》 — HanderUp's Blog&source=coding" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -408,7 +409,7 @@
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《No title》 — HanderUp's Blog&url=http://yoursite.com/2017/05/19/启动同一应用中带返回值的另一个 Activity/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《启动同一应用中带返回值的另一个 Activity》 — HanderUp's Blog&url=http://yoursite.com/2017/05/19/启动同一应用中带返回值的另一个 Activity/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
