@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-05-21T01:26:56.671Z</updated>
+  <updated>2017-05-21T01:29:05.906Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,17 +16,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>Service初步总结</title>
     <link href="http://yoursite.com/2017/05/21/Service%20%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/"/>
     <id>http://yoursite.com/2017/05/21/Service 的基本用法/</id>
     <published>2017-05-21T01:23:32.466Z</published>
-    <updated>2017-05-21T01:26:56.671Z</updated>
+    <updated>2017-05-21T01:29:05.906Z</updated>
     
-    <content type="html"><![CDATA[<p>title: Service初步总结<br>tags:</p>
-<ul>
-<li>Service</li>
-</ul>
-<p>Service 是实现程序后台运行的解决方案，Service 并不是运行在单独的进程中的，而是依赖于创建 Service 时所在的应用程序进程。当某个应用程序进程被杀掉时，所有依赖于该进程的 Service 也会停止运行。服务默认是运行在主线程中的，所以需要我们在 Service 内部手动创建子线程来执行具体的任务。</p>
+    <content type="html"><![CDATA[<p>Service 是实现程序后台运行的解决方案，Service 并不是运行在单独的进程中的，而是依赖于创建 Service 时所在的应用程序进程。当某个应用程序进程被杀掉时，所有依赖于该进程的 Service 也会停止运行。服务默认是运行在主线程中的，所以需要我们在 Service 内部手动创建子线程来执行具体的任务。</p>
 <h2 id="Service-的基本用法"><a href="#Service-的基本用法" class="headerlink" title="Service 的基本用法"></a>Service 的基本用法</h2><p><strong>1. 定义一个Service</strong><br>定义一个 Service，直接继承 Service 即可，在子类中实现 onBind() 方法，其内部还有 onCreate() 方法、onStartCommand() 方法、onDestroy() 方法。分别在 Service 被创建时、被启动时、被销毁时调用。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyService</span> <span class="keyword">extends</span> <span class="title">Service</span> </span>&#123;</div><div class="line"></div><div class="line"><span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> IBinder <span class="title">onBind</span><span class="params">(Intent intent)</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><strong>2. 启动和停止Service</strong><br>在 MainActivity 中借助 Intent 来启动和停止 Service 。<br>对于 Service 来说：<br>如果是第一次启动则调用方法顺序为 onCreate() –&gt; onStartCommand()<br>如果已经启动一次则调用方法的顺序为 onStartCommand()<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View v)</span> </span>&#123;</div><div class="line">    <span class="keyword">switch</span> (v.getId()) &#123;</div><div class="line">        <span class="keyword">case</span> R.id.startService:</div><div class="line">            Intent startIntent = <span class="keyword">new</span> Intent(<span class="keyword">this</span>, MyService.class);</div><div class="line">            startService(startIntent);</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">case</span> R.id.stopService:</div><div class="line">            Intent stopIntent = <span class="keyword">new</span> Intent(<span class="keyword">this</span>, MyService.class);</div><div class="line">            stopService(stopIntent);</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
@@ -41,29 +37,23 @@
     
     <summary type="html">
     
-      &lt;p&gt;title: Service初步总结&lt;br&gt;tags:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Service&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Service 是实现程序后台运行的解决方案，Service 并不是运行在单独的进程中的，而是依赖于创建 Service 时所在的应用程序进程。当某
+      &lt;p&gt;Service 是实现程序后台运行的解决方案，Service 并不是运行在单独的进程中的，而是依赖于创建 Service 时所在的应用程序进程。当某个应用程序进程被杀掉时，所有依赖于该进程的 Service 也会停止运行。服务默认是运行在主线程中的，所以需要我们在 Serv
     
     </summary>
     
     
+      <category term="Service" scheme="http://yoursite.com/tags/Service/"/>
+    
   </entry>
   
   <entry>
-    <title></title>
+    <title>Android多线程编程</title>
     <link href="http://yoursite.com/2017/05/21/%E5%BC%82%E6%AD%A5%E6%B6%88%E6%81%AF%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6/"/>
     <id>http://yoursite.com/2017/05/21/异步消息处理机制/</id>
     <published>2017-05-21T01:23:19.841Z</published>
-    <updated>2017-05-21T01:27:10.314Z</updated>
+    <updated>2017-05-21T01:29:08.166Z</updated>
     
-    <content type="html"><![CDATA[<p>title: Android多线程编程<br>tags:</p>
-<ul>
-<li>多线程编程</li>
-</ul>
-<h2 id="异步消息处理机制"><a href="#异步消息处理机制" class="headerlink" title="异步消息处理机制"></a>异步消息处理机制</h2><p>对于 Android 的多线程来说，和 Java 中的多线程一样有两种基本的用法，分别是继承 Thread 和 实现 Runnable 类。<br>但是对于 Android，有自己的异步纤细处理机制，它由四个部分组成， Message、Handler、MessageQueue 和 Looper<br><strong>1.</strong> Message 是在线程之间传递的消息，可以携带少量信息<br><strong>2.</strong> Handler 主要是用于发送和处理消息的，发送使用 sendMessage()方法，处理消息使用 handleMessage()方法<br><strong>3.</strong> MessageQueue 是消息队列，主要存放 Handler 发送的消息<br><strong>4.</strong> Looper 用来管理 MessageQueue </p>
+    <content type="html"><![CDATA[<h2 id="异步消息处理机制"><a href="#异步消息处理机制" class="headerlink" title="异步消息处理机制"></a>异步消息处理机制</h2><p>对于 Android 的多线程来说，和 Java 中的多线程一样有两种基本的用法，分别是继承 Thread 和 实现 Runnable 类。<br>但是对于 Android，有自己的异步纤细处理机制，它由四个部分组成， Message、Handler、MessageQueue 和 Looper<br><strong>1.</strong> Message 是在线程之间传递的消息，可以携带少量信息<br><strong>2.</strong> Handler 主要是用于发送和处理消息的，发送使用 sendMessage()方法，处理消息使用 handleMessage()方法<br><strong>3.</strong> MessageQueue 是消息队列，主要存放 Handler 发送的消息<br><strong>4.</strong> Looper 用来管理 MessageQueue </p>
 <p><strong>注意：</strong> 每个线程只有一个 Looper 对象，每个Looper只有一个 MessageQueue，每个 MessageQueue 有 N 个 Message，每个 Message 最多指定一个 Handler 来处理</p>
 <p>Handler(N)：Looper(1)：MessageQueue(1)：Thread(1)</p>
 <p>使用异步消息处理机制来更新 UI<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> UPDATE_TEXT = <span class="number">1</span>;</div><div class="line">    TextView text;</div><div class="line">    </div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</div><div class="line">        setContentView(R.layout.activity_main);</div><div class="line">        text = (TextView) findViewById(R.id.change_text);</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// 在Handler中处理子线程发送来的消息</span></div><div class="line">    Handler handler = <span class="keyword">new</span> Handler() &#123;</div><div class="line">        <span class="meta">@Override</span></div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">handleMessage</span><span class="params">(Message msg)</span></span>&#123;</div><div class="line">            <span class="keyword">switch</span>(msg.what)&#123;</div><div class="line">                <span class="keyword">case</span> UPDATE_TEXT:</div><div class="line">                    text.setText(<span class="string">"Nice to meet you"</span>);</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//在子线程中发送消息</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">changeText</span><span class="params">(View v)</span></span>&#123;</div><div class="line">        <span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable()&#123;</div><div class="line">            Message msg = <span class="keyword">new</span> Message();</div><div class="line">            msg.what = UPDATE_TEXT;</div><div class="line">            handler.sendMessage(msg);</div><div class="line">        &#125;).start();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
@@ -73,14 +63,12 @@
     
     <summary type="html">
     
-      &lt;p&gt;title: Android多线程编程&lt;br&gt;tags:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;多线程编程&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;异步消息处理机制&quot;&gt;&lt;a href=&quot;#异步消息处理机制&quot; class=&quot;headerlink&quot; title=&quot;异步消息处理机制&quot;&gt;&lt;/a&gt;
+      &lt;h2 id=&quot;异步消息处理机制&quot;&gt;&lt;a href=&quot;#异步消息处理机制&quot; class=&quot;headerlink&quot; title=&quot;异步消息处理机制&quot;&gt;&lt;/a&gt;异步消息处理机制&lt;/h2&gt;&lt;p&gt;对于 Android 的多线程来说，和 Java 中的多线程一样有两种基本的用法，分别是继承
     
     </summary>
     
+    
+      <category term="多线程编程" scheme="http://yoursite.com/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B/"/>
     
   </entry>
   

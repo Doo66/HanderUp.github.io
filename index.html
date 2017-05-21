@@ -163,7 +163,7 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/05/21/Service 的基本用法/">No title</a>
+      <a class="post-title-link" href="/2017/05/21/Service 的基本用法/">Service初步总结</a>
     </h3>
   
 
@@ -173,17 +173,19 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        title: Service初步总结tags:
-
-Service
-
-Service 是实现程序后台运行的解决方案，Service 并不是运行在单独的进程中的，而是依赖于创建 Service 时所在的应用程序进程。当某个应用程序进程被杀掉时，所有依赖于该进程的 Service 也会停止运行。服务默认是运行在主线程中的，所以需要我们在 Service 内部手动创建子线程来执行具体的任务。
-Ser...
+        Service 是实现程序后台运行的解决方案，Service 并不是运行在单独的进程中的，而是依赖于创建 Service 时所在的应用程序进程。当某个应用程序进程被杀掉时，所有依赖于该进程的 Service 也会停止运行。服务默认是运行在主线程中的，所以需要我们在 Service 内部手动创建子线程来执行具体的任务。
+Service 的基本用法1. 定义一个Service定义一个 Servi...
     
 
         <a href="/2017/05/21/Service 的基本用法/" class="post-more waves-effect waves-button">
             阅读全文…
         </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Service/">Service</a></li></ul>
+
     </div>
     
 </article>
@@ -209,7 +211,7 @@ Ser...
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/05/21/异步消息处理机制/">No title</a>
+      <a class="post-title-link" href="/2017/05/21/异步消息处理机制/">Android多线程编程</a>
     </h3>
   
 
@@ -219,16 +221,18 @@ Ser...
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        title: Android多线程编程tags:
-
-多线程编程
-
-异步消息处理机制对于 Android 的多线程来说，和 Java 中的多线程一样有两种基本的用法，分别是继承 Thread 和 实现 Runnable 类。但是对于 Android，有自己的异步纤细处理机制，它由四个部分组成， Message、Handler、MessageQueue 和 Looper1. Message 是在...
+        异步消息处理机制对于 Android 的多线程来说，和 Java 中的多线程一样有两种基本的用法，分别是继承 Thread 和 实现 Runnable 类。但是对于 Android，有自己的异步纤细处理机制，它由四个部分组成， Message、Handler、MessageQueue 和 Looper1. Message 是在线程之间传递的消息，可以携带少量信息2. Handler 主要是用...
     
 
         <a href="/2017/05/21/异步消息处理机制/" class="post-more waves-effect waves-button">
             阅读全文…
         </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/多线程编程/">多线程编程</a></li></ul>
+
     </div>
     
 </article>
