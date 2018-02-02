@@ -1,26 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    
-
-    
-
-    
-
-
-
-    <meta charset="utf-8">
-    
-    
-    
-    <title>HanderUp&#39;s Blog</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
-    <meta name="theme-color" content="#3F51B5">
-    
-    
-    <meta name="keywords" content="undefined">
-    <meta name="description" content="coding">
+  <meta charset="utf-8">
+  
+  <title>HanderUp&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  
+  <meta name="description" content="coding">
 <meta property="og:type" content="website">
 <meta property="og:title" content="HanderUp's Blog">
 <meta property="og:url" content="http://yoursite.com/page/3/index.html">
@@ -29,418 +18,604 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HanderUp's Blog">
 <meta name="twitter:description" content="coding">
-    
-        <link rel="alternate" type="application/atom+xml" title="HanderUp&#39;s Blog" href="/atom.xml">
-    
-    <link rel="shortcut icon" href="https://avatars2.githubusercontent.com/u/22523322?v=3&u=46aaa8d3f4583f2411b6a03632fa4272f7efe393&s=400">
-    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
-    <script>window.lazyScripts=[]</script>
+  
+    <link rel="alternate" href="/atom.xml" title="HanderUp&#39;s Blog" type="application/atom+xml">
+  
+
+  
+
+  <link rel="icon" href="/css/images/mylogo.jpg">
+  <link rel="apple-touch-icon" href="/css/images/mylogo.jpg">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+  <script src="/js/bootstrap.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+
+  
+    <link rel="stylesheet" href="/css/home.css" >
+  
+
+  
+
+  
+
+  
+  
+  
+    <link rel="stylesheet" href="/css/vdonate.css" >
+  
+
 </head>
 
-<body>
-    <div id="loading" class="active"></div>
 
-    <aside id="menu"  >
-  <div class="inner flex-row-vertical">
-    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
-        <i class="icon icon-lg icon-close"></i>
-    </a>
-    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
-      <div class="brand">
-        <a href="/" class="avatar waves-effect waves-circle waves-light">
-          <img src="https://avatars2.githubusercontent.com/u/22523322?v=3&u=46aaa8d3f4583f2411b6a03632fa4272f7efe393&s=400">
-        </a>
-        <hgroup class="introduce">
-          <h5 class="nickname">HanderUp</h5>
-          <a href="mailto:zhang929546724@foxmail.com" title="zhang929546724@foxmail.com" class="mail">zhang929546724@foxmail.com</a>
-        </hgroup>
-      </div>
-    </div>
-    <div class="scroll-wrap flex-col">
-      <ul class="nav">
+
+  <body>
+
+
+  
+    <header id="header">
+
+	<!-- 背景图模式 -->
+	
+
+    
+      <div id="intrologo" class="intro-logo" style="background-position:center; background-repeat:no-repeat; background-image: url(); background-size: auto 100%;">
+
+      <!-- Support rolling -->  
         
-            <li class="waves-block waves-effect">
-              <a href="/"  >
-                <i class="icon icon-lg icon-home"></i>
-                主页
-              </a>
-            </li>
+        <section class="awSlider">
+          <div class="carousel slide carousel-fade " data-ride="carousel">
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+               
+                  
+                    <div class="item active">
+                  
+                    <img id="carousel-img0" src="/css/images/home-bg.jpg">
+                  </div>
+
+                  <!-- 自适应大图 -->
+                  <script>
+                      var img0 = new Image();
+                      var imageTag0 = document.getElementById("carousel-img0");
+                      img0.src = imageTag0.src;
+                      img0.onload=function(){
+                        if (img0.width / img0.height <= document.body.clientWidth / document.body.clientHeight) {
+                          imageTag0.style.width = document.body.clientWidth + "px";
+                        } else {
+                          imageTag0.style.height = document.body.clientHeight + "px";
+                          imageTag0.style.marginLeft = -(document.body.clientHeight * img0.width / img0.height - document.body.clientWidth) / 2 + "px";
+                        }
+                      };
+                  </script>
+                
+                  
+                    <div class="item">
+                  
+                    <img id="carousel-img1" src="/css/images/sample.jpg">
+                  </div>
+
+                  <!-- 自适应大图 -->
+                  <script>
+                      var img1 = new Image();
+                      var imageTag1 = document.getElementById("carousel-img1");
+                      img1.src = imageTag1.src;
+                      img1.onload=function(){
+                        if (img1.width / img1.height <= document.body.clientWidth / document.body.clientHeight) {
+                          imageTag1.style.width = document.body.clientWidth + "px";
+                        } else {
+                          imageTag1.style.height = document.body.clientHeight + "px";
+                          imageTag1.style.marginLeft = -(document.body.clientHeight * img1.width / img1.height - document.body.clientWidth) / 2 + "px";
+                        }
+                      };
+                  </script>
+                
+                  
+                    <div class="item">
+                  
+                    <img id="carousel-img2" src="https://source.unsplash.com/collection/954550/1920x1080">
+                  </div>
+
+                  <!-- 自适应大图 -->
+                  <script>
+                      var img2 = new Image();
+                      var imageTag2 = document.getElementById("carousel-img2");
+                      img2.src = imageTag2.src;
+                      img2.onload=function(){
+                        if (img2.width / img2.height <= document.body.clientWidth / document.body.clientHeight) {
+                          imageTag2.style.width = document.body.clientWidth + "px";
+                        } else {
+                          imageTag2.style.height = document.body.clientHeight + "px";
+                          imageTag2.style.marginLeft = -(document.body.clientHeight * img2.width / img2.height - document.body.clientWidth) / 2 + "px";
+                        }
+                      };
+                  </script>
+                
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href=".carousel" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Geri</span>
+            </a>
+            <a class="right carousel-control" href=".carousel" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">İleri</span>
+            </a>
+          </div>
+        </section>
+        <script>
+          $('section.awSlider .carousel').carousel({
+              pause: '',
+              interval: 5000
+          });
+          var startImage = $('section.awSlider .item.active > img').attr('src');
+          $('section.awSlider .carousel').on('slid.bs.carousel', function () {
+              var bscn = $(this).find('.item.active > img').attr('src');
+              $('section.awSlider > img').attr('src', bscn);
+          });
+        </script>
+      
+
+    
+ 
+
+
+    <canvas width="100%" height="100%"></canvas>
+    <script>
+      var c = document.getElementsByTagName('canvas')[0],
+          x = c.getContext('2d'),
+          w = window.innerWidth,
+          h = window.innerHeight,
+          pr = window.devicePixelRatio || 1,
+          f = 90,
+          q,
+          m = Math,
+          r = 0,
+          u = m.PI*2,
+          v = m.cos,
+          z = m.random
+      c.width = w*pr
+      c.height = h*pr
+      x.scale(pr, pr)
+      x.globalAlpha = 0.6
+
+      <!-- 折线Polyline背景 -->
+      
+    </script>
+    
+
+    
+      <div id="homelogo" class="homelogo" style="background: rgba(255,255,255,1);"> 
+    
+
         
-            <li class="waves-block waves-effect">
-              <a href="/archives"  >
-                <i class="icon icon-lg icon-archives"></i>
-                所有文章
-              </a>
-            </li>
+          <div class="homelogoback"  style="border: 1px solid #404040;" >
+            <h1><a href="#content" id="logo">HanderUp&#39;s Blog</a></h1>
+            <h3>coding</h3>
+            <h5>HanderUp</h5>
+            <!-- <p><a href="https://github.com/iTimeTraveler" target="_blank">Github</a></p> -->
+          </div>
         
-            <li class="waves-block waves-effect">
-              <a href="/tags"  >
-                <i class="icon icon-lg icon-tags"></i>
-                标签
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/categories"  >
-                <i class="icon icon-lg icon-th-list"></i>
-                分类
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="https://github.com/HanderUp" target="_blank" >
-                <i class="icon icon-lg icon-github"></i>
-                GitHub
-              </a>
-            </li>
-        
-      </ul>
+    
     </div>
   </div>
-</aside>
 
-    <main id="main">
-        <header class="top-header" id="header">
-    <div class="flex-row">
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
-          <i class="icon icon-lg icon-navicon"></i>
-        </a>
-        <div class="flex-col header-title ellipsis">HanderUp&#39;s Blog</div>
-        
-        <div class="search-wrap" id="search-wrap">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
-                <i class="icon icon-lg icon-chevron-left"></i>
-            </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
-                <i class="icon icon-lg icon-search"></i>
-            </a>
-        </div>
-        
-        
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
-            <i class="icon icon-lg icon-share-alt"></i>
-        </a>
-        
-    </div>
-</header>
-<header class="content-header index-header">
+  <!-- 自适应主页背景大图 -->
+  
 
-    <div class="container fade-scale">
-        <h1 class="title">HanderUp&#39;s Blog</h1>
-        <h5 class="subtitle">
-            
-                
-            
-        </h5>
-    </div>
+ <!-- home_logo_image居中 -->
+ 
+    <script>
+        var homelogodiv = document.getElementById("homelogo");
+        if (document.all.homelogo.offsetWidth > document.body.clientWidth) {
+          homelogodiv.style.width = document.body.clientWidth + "px";
+          homelogodiv.style.marginLeft = document.body.clientWidth * -0.5 + "px";
+        } else {
+          homelogodiv.style.width = homelogodiv.clientWidth  + "px";
+          homelogodiv.style.marginLeft = (homelogodiv.clientWidth)  * -0.5 + "px";
+        }
+    </script>
+  
 
-    
-
+  <div class="intro-navigate">
+      <p class="navigater-list">
+        
+          <a id="beautifont" class="main-nav-link" href="/">首页</a>
+        
+          <a id="beautifont" class="main-nav-link" href="/archives">归档</a>
+        
+          <a id="beautifont" class="main-nav-link" href="/categories">分类</a>
+        
+          <a id="beautifont" class="main-nav-link" href="/tags">标签</a>
+        
+          <a id="beautifont" class="main-nav-link" href="/about">关于</a>
+        
+      </p>
+  </div>
 
 </header>
-
-<div class="container body-wrap">
-
-    <ul class="post-list">
-    
-        <li class="post-list-item fade">
-            <article id="post-Android 6.0 之动态权限申请"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2017-05-19 20:05:16" datetime="2017-05-19T12:05:16.533Z"  itemprop="datePublished">2017-05-19</time>
-
-        
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/权限/">权限</a></li></ul>
-
-
-
-        
-
-    </div>
-
-    
-
-
   
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/05/19/Android 6.0 之动态权限申请/">Android 6.0 之动态权限申请</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        我们都知道 Android 中的权限在 AndroidManifest.xml 文件中配置，对于 Android 6.0 之前的 API，开发者只能将应用中可能会使用到的权限全部配置在 AndroidManifest.xml 中，然后用户在安装应用时，会有权限的提示，但是如果这个应用必须安装，并且它申请了涉及用户隐私和安全的危险权限，这样用户只能选择默默承受，但是对于 Android 6.0...
-    
-
-        <a href="/2017/05/19/Android 6.0 之动态权限申请/" class="post-more waves-effect waves-button">
-            阅读全文…
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android基础/">Android基础</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/动态添加权限/">动态添加权限</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-ContentProvider 总结"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2017-05-19 20:05:16" datetime="2017-05-19T12:05:16.529Z"  itemprop="datePublished">2017-05-19</time>
-
-        
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/ContentProvider/">ContentProvider</a></li></ul>
-
-
-
-        
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/05/19/ContentProvider 总结/">ContentProvider 总结</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        
-上图为 ContentProvider 的具体实现过程，Other App1 和 Other App2 分别提供了 ContentProvider 来向外界暴露数据，方便其他应用程序来访问。
-对于不同的 ContentProvider 是由 ContentResolver 来进行管理的，其中 ContentResolver 中的 CRUD 方法对应不同 ContentProvider 中的...
-    
-
-        <a href="/2017/05/19/ContentProvider 总结/" class="post-more waves-effect waves-button">
-            阅读全文…
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android基础/">Android基础</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-Android 中的布局"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2017-05-19 20:05:16" datetime="2017-05-19T12:05:16.524Z"  itemprop="datePublished">2017-05-19</time>
-
-        
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/布局/">布局</a></li></ul>
-
-
-
-        
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/05/19/Android 中的布局/">Android 中的布局</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        Android 中的布局由常用的频率排序，如下表| 布局方式 | 使用频率等级 | 特点 ||:—-:|:—-:|:—-:||LinearLayout(线性布局)|5| 顺序排列，纵横两个方向，实现简单，多屏适配||RelativeLayout(相对布局)|5| 位置相对，对齐方式丰富，可以重叠，嵌套少，多屏适配||FrameLayout(帧布局)|3|可以重叠，对齐方式丰富，多屏适配||T...
-    
-
-        <a href="/2017/05/19/Android 中的布局/" class="post-more waves-effect waves-button">
-            阅读全文…
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android基础/">Android基础</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-    </ul>
-
-    
-<nav id="page-nav">
-    <div class="inner">
-    <a class="extend prev" rel="prev" href="/page/2/">上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">下一页</a>
-    </div>
-</nav>
-
-
-</div>
-
-        <footer class="footer">
-    <div class="top">
-        
-<p>
-    <span id="busuanzi_container_site_uv" style='display:none'>
-        站点总访客数：<span id="busuanzi_value_site_uv"></span>
-    </span>
-    <span id="busuanzi_container_site_pv" style='display:none'>
-        站点总访问量：<span id="busuanzi_value_site_pv"></span>
-    </span>
-</p>
-
-
-        <p>
+  <div id="container">
+    <div id="wrap">
+      
             
-                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
-            
-            <span>博客内容遵循<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
-        </p>
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;">
+  
+    <article id="post-Android 6.0 之动态权限申请"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/05/19/Android 6.0 之动态权限申请/">Android 6.0 之动态权限申请</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/05/19/Android 6.0 之动态权限申请/" class="article-date">
+	  <time datetime="2017-05-19T12:05:16.533Z" itemprop="datePublished">2017-05-19</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/权限/">权限</a>
+
+      
     </div>
-    <div class="bottom">
-        <p>
-            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
-            <span>HanderUp &copy; 2017</span>
-        </p>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>我们都知道 Android 中的权限在 AndroidManifest.xml 文件中配置，对于 Android 6.0 之前的 API，开发者只能将应用中可能会使用到的权限全部配置在 AndroidManifest.xml 中，然后用户在安装应用时，会有权限的提示，但是如果这个应用必须安装，并且它申请了涉及用户隐私和安全的危险权限，这样用户只能选择默默承受，但是对于 Android 6.0 及其之后的 API，开发者可以将危险权限采取动态申请的方式来配置，这样做的好处为，用户在进行某个涉及隐私或安全的操作时，系统会弹出提示框，让用户自己选择是否要申请该权限，这样便很好的控制了应用程序的安全性 。</p>
+<p><strong>具体操作如下：</strong></p>
+<p><strong>1.</strong> 首先还是在 AndroidMnifest.xml 文件中配置所需权限<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.CALL_PHONE"</span> /&gt;</span></div></pre></td></tr></table></figure></p>
+<p>这里我们使用打电话的权限，它属于危险权限</p>
+<p><strong>2.</strong> 然后在 MainActivity.java 文件中添加动态申请权限的代码<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">makeCall</span><span class="params">(View view)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (ContextCompat.checkSelfPermission(MainActivity.<span class="keyword">this</span>, </div><div class="line">            Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) &#123;</div><div class="line">        ActivityCompat.requestPermissions(MainActivity.<span class="keyword">this</span>,<span class="keyword">new</span> String[]&#123;Manifest.permission.CALL_PHONE&#125;,<span class="number">1</span>);</div><div class="line">    &#125;<span class="keyword">else</span> &#123;</div><div class="line">        call();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">call</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">try</span> &#123;</div><div class="line">        Intent intent = <span class="keyword">new</span> Intent(Intent.ACTION_CALL);</div><div class="line">        intent.setData(Uri.parse(<span class="string">"tel:10086"</span>));</div><div class="line">        startActivity(intent);</div><div class="line">    &#125; <span class="keyword">catch</span> (SecurityException e) &#123;</div><div class="line">        e.printStackTrace();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onRequestPermissionsResult</span><span class="params">(<span class="keyword">int</span> requestCode, @NonNull String[] permissions, @NonNull <span class="keyword">int</span>[] grantResults)</span> </span>&#123;</div><div class="line">    <span class="keyword">switch</span> (requestCode) &#123;</div><div class="line">        <span class="keyword">case</span> <span class="number">1</span>:</div><div class="line">            <span class="keyword">if</span> (grantResults.length &gt; <span class="number">0</span> &amp;&amp; grantResults[<span class="number">0</span>] == PackageManager.PERMISSION_GRANTED) &#123;</div><div class="line">                call();</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                Toast.makeText(<span class="keyword">this</span>, <span class="string">"权限被拒绝"</span>, Toast.LENGTH_SHORT).show();</div><div class="line">            &#125; </div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">default</span>:</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>分析上面代码：</strong></p>
+<ul>
+<li><p>第一步判断用户是否已经授权了权限，通过 <code>ContextCompat.checkSelfPermission()</code> 方法。</p>
+<blockquote>
+<p><code>checkSelfPermission()</code> 传两个参数<br> 第一是 Contenxt<br> 第二是 具体的权限名</p>
+</blockquote>
+</li>
+<li><p>将返回值和 <code>PackageManager.PERMISSION_GRANTED</code> 比较，相等说明用户已经授权，直接执行 <code>call()</code> 方法即可，不等则需要向用户申请授权，通过 <code>ActivityCompat.requestPermissions()</code> 方法动态申请权限</p>
+<blockquote>
+<p><code>requestPermissions()</code> 传三个参数<br> 第一是 Activity 的实例<br> 第二是 一个 String[]<br> 第三是 请求码（只要是唯一的值即可）</p>
+</blockquote>
+</li>
+<li><p>调用 <code>requestPermissions()</code> 后，系统会弹出一个申请权限的对话框，用户具体的选择会在 <code>onRequestPermissionsResult()</code> 方法中来处理，授权结果会封装在 <code>grantResults</code> 参数中，只需判断授权结果即可，用户同意直接调用 <code>call()</code> 方法，否则弹出提示框 。</p>
+</li>
+</ul>
+
+      
     </div>
+    <footer class="article-footer">
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android基础/">Android基础</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/动态添加权限/">动态添加权限</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-ContentProvider 总结"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/05/19/ContentProvider 总结/">ContentProvider 总结</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/05/19/ContentProvider 总结/" class="article-date">
+	  <time datetime="2017-05-19T12:05:16.529Z" itemprop="datePublished">2017-05-19</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/ContentProvider/">ContentProvider</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://raw.githubusercontent.com/HanderUp/SaveImg/master/ContentProvider_update.png" alt="ConentProvider原理图"></p>
+<p>上图为 ContentProvider 的具体实现过程，Other App1 和 Other App2 分别提供了 ContentProvider 来向外界暴露数据，方便其他应用程序来访问。</p>
+<p>对于不同的 ContentProvider 是由 ContentResolver 来进行管理的，其中 ContentResolver 中的 CRUD 方法对应不同 ContentProvider 中的 CRUD 方法，他们之间通过 URI 来进行消息的传递，ContentResolver 和 ContentProvider 之间的关系为，ContentProvider 只是提供数据的，而 ContentResolver 是将从 ContentProvider 中操作的结果返回给需要数据的应用程序。</p>
+<p>##<strong>具体过程如下：</strong></p>
+<p><strong>1.</strong> 以查询数据为例，在 MainActivity.java 中添加如下代码<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String TAG = <span class="string">"MainActivity"</span>;</div><div class="line"><span class="comment">// 此处URI与提供数据应用程序的&lt;provider&gt;属性 android:authorities 要一致</span></div><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String URI = <span class="string">"content://com.example.sqlitetest.provider/book"</span>;</div><div class="line"></div><div class="line"><span class="comment">// 查询数据</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">queryData</span><span class="params">(View view)</span> </span>&#123;</div><div class="line">    Uri uri = Uri.parse(URI);</div><div class="line">    Cursor cursor = getContentResolver().query(uri, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div><div class="line">    <span class="keyword">if</span> (cursor != <span class="keyword">null</span>) &#123;</div><div class="line">        <span class="keyword">while</span> (cursor.moveToNext()) &#123;</div><div class="line">            String name = cursor.getString(cursor.getColumnIndex(<span class="string">"name"</span>));</div><div class="line">            String author = cursor.getString(cursor.getColumnIndex(<span class="string">"author"</span>));</div><div class="line">            <span class="keyword">int</span> pages = cursor.getInt(cursor.getColumnIndex(<span class="string">"pages"</span>));</div><div class="line">            <span class="keyword">double</span> price = cursor.getDouble(cursor.getColumnIndex(<span class="string">"price"</span>));</div><div class="line"></div><div class="line">            Log.d(TAG, name);</div><div class="line">            Log.d(TAG, author);</div><div class="line">            Log.d(TAG, pages + <span class="string">""</span>);</div><div class="line">            Log.d(TAG, price + <span class="string">""</span>);</div><div class="line">        &#125;</div><div class="line">        cursor.close();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>2.</strong> 创建 DabaseProvider.java 继承 ContentProvider，并重写查询方法<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DatabaseProvider</span> <span class="keyword">extends</span> <span class="title">ContentProvider</span> </span>&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> BOOK_DIR = <span class="number">0</span>;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> BOOK_ITEM = <span class="number">1</span>;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> CATEGORY_DIR = <span class="number">2</span>;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> CATEGORY_ITEM = <span class="number">3</span>;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String AUTHORITY = <span class="string">"com.example.sqlitetest.provider"</span>;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> UriMatcher uriMatcher;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> MyDatabaseHelper dbHelper;</div><div class="line"></div><div class="line">    <span class="keyword">static</span> &#123;</div><div class="line">        uriMatcher = <span class="keyword">new</span> UriMatcher(UriMatcher.NO_MATCH);</div><div class="line">        uriMatcher.addURI(AUTHORITY, <span class="string">"book"</span>, BOOK_DIR);</div><div class="line">        uriMatcher.addURI(AUTHORITY, <span class="string">"book/#"</span>, BOOK_ITEM);</div><div class="line">        uriMatcher.addURI(AUTHORITY, <span class="string">"category"</span>, CATEGORY_DIR);</div><div class="line">        uriMatcher.addURI(AUTHORITY, <span class="string">"catagory/#"</span>, CATEGORY_ITEM);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onCreate</span><span class="params">()</span> </span>&#123;</div><div class="line">        dbHelper = <span class="keyword">new</span> MyDatabaseHelper(getContext(), <span class="string">"BookStore.db"</span>, <span class="keyword">null</span>, <span class="number">2</span>);</div><div class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="meta">@Nullable</span></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> Cursor <span class="title">query</span><span class="params">(@NonNull Uri uri, @Nullable String[] projection, @Nullable String selection, @Nullable String[] selectionArgs, @Nullable String sortOrder)</span> </span>&#123;</div><div class="line">        <span class="comment">// 查询数据</span></div><div class="line">        SQLiteDatabase db = dbHelper.getReadableDatabase();</div><div class="line">        Cursor cursor = <span class="keyword">null</span>;</div><div class="line">        <span class="keyword">switch</span> (uriMatcher.match(uri)) &#123;</div><div class="line">            <span class="keyword">case</span> BOOK_DIR:</div><div class="line">                cursor = db.query(<span class="string">"Book"</span>, projection, selection, selectionArgs, <span class="keyword">null</span>, <span class="keyword">null</span>, sortOrder);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> BOOK_ITEM:</div><div class="line">                String bookId = uri.getPathSegments().get(<span class="number">1</span>);</div><div class="line">                cursor = db.query(<span class="string">"Book"</span>, projection, <span class="string">"id = ?"</span>, <span class="keyword">new</span> String[]&#123;bookId&#125;, <span class="keyword">null</span>, <span class="keyword">null</span>, sortOrder);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> CATEGORY_DIR:</div><div class="line">                cursor = db.query(<span class="string">"Category"</span>, projection, selection, selectionArgs, <span class="keyword">null</span>, <span class="keyword">null</span>, sortOrder);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> CATEGORY_ITEM:</div><div class="line">                String categoryId = uri.getPathSegments().get(<span class="number">1</span>);</div><div class="line">                cursor = db.query(<span class="string">"Category"</span>, projection, <span class="string">"id = ?"</span>, <span class="keyword">new</span> String[]&#123;categoryId&#125;, <span class="keyword">null</span>, <span class="keyword">null</span>, sortOrder);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> cursor;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>3.</strong> 最后在 AndroidMnifest.xml 中设置 <code>&lt;provider&gt;</code><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">provider</span></span></div><div class="line">    <span class="attr">android:name</span>=<span class="string">"com.example.sqlitetest.DatabaseProvider"</span></div><div class="line">    <span class="attr">android:authorities</span>=<span class="string">"com.example.sqlitetest.provider"</span></div><div class="line">    <span class="attr">android:exported</span>=<span class="string">"true"</span>&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">provider</span>&gt;</span></div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android基础/">Android基础</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-Android 中的布局"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/05/19/Android 中的布局/">Android 中的布局</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/05/19/Android 中的布局/" class="article-date">
+	  <time datetime="2017-05-19T12:05:16.524Z" itemprop="datePublished">2017-05-19</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/布局/">布局</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Android 中的布局由常用的频率排序，如下表<br>| 布局方式 | 使用频率等级 | 特点 |<br>|:—-:|:—-:|:—-:|<br>|LinearLayout(线性布局)|5| 顺序排列，纵横两个方向，实现简单，多屏适配|<br>|RelativeLayout(相对布局)|5| 位置相对，对齐方式丰富，可以重叠，嵌套少，多屏适配|<br>|FrameLayout(帧布局)|3|可以重叠，对齐方式丰富，多屏适配|<br>|TableLayout(表格布局)|2|多行多列，规则布局，简单的多屏适配|<br>|GridLayout(网格布局)|1|多行多列，不规则布局，可跨行列，多屏适配，SDK4.0出现|<br>|AbsoluteLayout(绝对布局)|0|绝对坐标，不利于多屏适配|</p>
+<p>由于 <code>RelativeLayout</code> 和 <code>FrameLayout</code> 没有 <code>layout_weight</code> 这个属性，因此 Android 团队提供了<strong>百分比布局</strong>，百分比布局对 <code>RelativeLayout</code> 和 <code>FrameLayout</code> 进行了功能的扩展。提供了 <code>PercentRelativeLayout</code> 和 <code>PercentFrameLayout</code> 两种布局</p>
+<p><strong>使用百分比布局注意事项：</strong><br>在项目 <code>build.gradle</code> 中添加以下依赖包<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">dependencies</span>&#123;</div><div class="line">    <span class="keyword">compile</span> <span class="string">'com.android.support:percent:25.2.0'</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="一、-LinearLayout-中注意的事项："><a href="#一、-LinearLayout-中注意的事项：" class="headerlink" title="一、 LinearLayout 中注意的事项："></a>一、 LinearLayout 中注意的事项：</h2><ol>
+<li>LinearLayout 中的属性 <code>Layout_gravity</code> 和 <code>gravity</code>的区别： <code>Layout_gravity</code>：表示组件相对于父容器的位置 。<br><code>gravity</code>：表示组件内部内容相对于组件的位置 。</li>
+<li>当属性 <code>orientation=&quot;horizontal&quot;</code> 时，只有垂直方向上的属性有效，同样的 <code>orientation=&quot;vertical&quot;</code> 时，只有水平方向上的属性有效 。</li>
+</ol>
+<h2 id="二、-RelativeLayout-中的属性"><a href="#二、-RelativeLayout-中的属性" class="headerlink" title="二、 RelativeLayout 中的属性"></a>二、 RelativeLayout 中的属性</h2><p><strong>第一类：属性值为 <code>true</code> 或 <code>false</code></strong><br>|属性|说明|<br>|:—-:|:—-:|<br>|android:layout_centerHrizontal|水平居中|<br>|android:layout_centerVertical|垂直居中|<br>|android:layout_centerInparent|相对父元素完全居中|<br>|android:layout_alignParentTop|贴紧父元素的上边缘|<br>|android:layout_alignParentBottom|贴紧父元素的下边缘|<br>|android:layout_alignParentLeft|贴紧父元素的左边缘|<br>|android:layout_alignParentRight|贴紧父元素的右边缘|<br><strong>第二类：属性值必须为id的引用名 “@id/id-name”</strong><br>|属性|说明|<br>|:—-:|:—-:|<br>|android:layout_above|在某元素的上方|<br>|android:layout_below|在某元素的下方|<br>|android:layout_toLeftOf|在某元素的左方|<br>|android:layout_toRightOf|在某元素的右方|<br>|android:layout_alignTop|本元素的上边缘和某元素的上边缘对齐|<br>|android:layout_alignBottom|本元素的下边缘和某元素的下边缘对齐|<br>|android:layout_alignLeft|本元素的左边缘和某元素的左边缘对齐|<br>|android:layout_alignRight|本元素的右边缘和某元素的右边缘对齐|<br><strong>第三类：属性值为具体的像素值，如 30 dip，40 px</strong><br>|属性|说明|<br>|:—-:|:—-:|<br>|android:layout_marginTop|距离某元素上边缘的距离|<br>|android:layout_marginBottom|距离某元素下边缘的距离|<br>|android:layout_marginLeft|距离某元素左边缘的距离|<br>|android:layout_marginRight|距离某元素右边缘的距离|</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android基础/">Android基础</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/2/">&laquo; 上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">下一页 &raquo;</a>
+  </nav>
+
+</section>
+        
+      </div>
+      
+        <div align="center" style="margin-top: 30px;"><hr class="hr" style="margin:0px; height:3px;"></div>
+      
+      <footer id="footer">
+  
+
+  <div class="container">
+      	<div class="row">
+	      <p> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/iTimeTraveler/hexo-theme-hiker" target="_blank">Hexo-theme-hiker</a> </p>
+	      <p id="copyRightEn">Copyright &copy; 2013 - 2018 HanderUp&#39;s Blog All Rights Reserved.</p>
+	      
+	      
+    		<p class="busuanzi_uv">
+				访客数 : <span id="busuanzi_value_site_uv"></span> |  
+				访问量 : <span id="busuanzi_value_site_pv"></span>
+		    </p>
+  		   
+		</div>
+
+		
+  </div>
 </footer>
 
-    </main>
-    <div class="mask" id="mask"></div>
-<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
+<!-- min height -->
 
-
-<div class="global-share" id="globalShare">
-    <ul class="reset share-icons">
-      <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/page/3/&title=HanderUp's Blog&pic=https://avatars2.githubusercontent.com/u/22523322?v=3&u=46aaa8d3f4583f2411b6a03632fa4272f7efe393&s=400" data-title="微博">
-          <i class="icon icon-weibo"></i>
-        </a>
-      </li>
-      <li>
-        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
-          <i class="icon icon-weixin"></i>
-        </a>
-      </li>
-      <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/page/3/&title=HanderUp's Blog&source=coding" data-title=" QQ">
-          <i class="icon icon-qq"></i>
-        </a>
-      </li>
-      <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/page/3/" data-title=" Facebook">
-          <i class="icon icon-facebook"></i>
-        </a>
-      </li>
-      <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=HanderUp's Blog&url=http://yoursite.com/page/3/&via=http://yoursite.com" data-title=" Twitter">
-          <i class="icon icon-twitter"></i>
-        </a>
-      </li>
-      <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/page/3/" data-title=" Google+">
-          <i class="icon icon-google-plus"></i>
-        </a>
-      </li>
-    </ul>
- </div>
-
-
-<div class="page-modal wx-share" id="wxShare">
-    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAAByUlEQVR42u3ay4oCMRAFUP//px2Y1YDT8VblYQsnKxG6c3RxSVXl8YjX83f9/fy6xk9dPfvYsXBxcae5z+G64r4+m/zIq6cSAy4u7nluvtlM2oy5SRTi4uLejTveYPxNHo64uLjfxc1ZyZtxcXHvz505lIzbH9VDz7JaDRcXd4Lba5iu/by9v4uLi7toKpGsXmz1dsfFxT3DTcYhebbMRGQh4HBxcT/KrVKqw9fxvpff4OLibuZWL1WsanPkF7b+OZHh4uJu5ibtziRoqiOWavcj2gYXF3cpN2+MjuMmD6b8/bi4uJ/iFo4XiyYd1VIKFxf3U9z8eNHsvrTaKG9OZLi4uNu48/Tqe6pHH1xc3JPcXnGSFDy9gUrhtgguLu427kwrZL4TkxdFuLi457kzR5ZeYZMEaLm/i4uLu5nbu1SRj1XyauwNGhcX9wi3dzFrFa58xMHFxd3AbTYmplsh+fWvyy4OLi7uNm4v+ZKA68UiLi7ufbgzJU0ebdWGaTRqxcXF3czthVf1Z+ShiYuL+13c6oWtfHBbuJ6Fi4t7G261Ybq2WMLFxT3PrY5XZ2IrCqyrvxIXF/cIt9cwzYOsWvDkgxxcXNwN3B+86U3U8JkgVgAAAABJRU5ErkJggg==" alt="微信分享二维码">
-</div>
-
-
-
-
-    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 <script>
-var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+    var allheader = document.getElementById("allheader");
 
+    wrapdiv.style.minHeight = document.body.offsetHeight + "px";
+    if (allheader != null) {
+      contentdiv.style.minHeight = document.body.offsetHeight - allheader.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    } else {
+      contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    }
+</script>
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
 
+<!-- mathjax config similar to math.stackexchange -->
 
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
 </script>
 
-<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
 
-
-<div class="search-panel" id="search-panel">
-    <ul class="search-result" id="search-result"></ul>
-</div>
-<template id="search-tpl">
-<li class="item">
-    <a href="{path}" class="waves-block waves-effect">
-        <div class="title ellipsis" title="{title}">{title}</div>
-        <div class="flex-row flex-middle">
-            <div class="tags ellipsis">
-                {tags}
-            </div>
-            <time class="flex-col time">{date}</time>
-        </div>
-    </a>
-</li>
-</template>
-
-<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
-
-
-
-
-
-
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-
-
-<script>
-(function() {
-    var OriginTitile = document.title, titleTime;
-    document.addEventListener('visibilitychange', function() {
-        if (document.hidden) {
-            document.title = 'HandlerUp's Bolg';
-            clearTimeout(titleTime);
-        } else {
-            document.title = '(つェ⊂)咦!又好了!';
-            titleTime = setTimeout(function() {
-                document.title = OriginTitile;
-            },2000);
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
         }
     });
-})();
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
 
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
+
+<script src="/js/scripts.js"></script>
+
+
+  <script src="/js/home.js"></script>
+
+
+
+
+
+
+
+
+
+
+	<div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="myModalLabel">设置</h2>
+      </div>
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+
+
+      <div class="modal-body">
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="javascript:setFontSize();" aria-expanded="true" aria-controls="collapseOne">
+              正文字号大小
+            </a>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            您已调整页面字体大小
+          </div>
+        </div>
+      
+
+
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" onclick="javascript:setBackground();" aria-expanded="true" aria-controls="collapseTwo">
+              夜间护眼模式
+            </a>
+        </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            夜间模式已经开启，再次单击按钮即可关闭 
+          </div>
+        </div>
+
+        <div>
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关 于&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </div>
+         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            HanderUp&#39;s Blog
+          </div>
+          <div class="panel-body">
+            Copyright © 2018 HanderUp All Rights Reserved.
+          </div>
+        </div>
+      </div>
+
+
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <div class="modal-footer">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+  
 </body>
 </html>

@@ -1,26 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    
-
-    
-
-    
-
-
-
-    <meta charset="utf-8">
-    
-    
-    
-    <title>启动同一应用中带返回值的另一个 Activity | HanderUp&#39;s Blog</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
-    <meta name="theme-color" content="#3F51B5">
-    
-    
-    <meta name="keywords" content="Activity启动模式">
-    <meta name="description" content="通常在启动 带返回值的 Activity 时，我们使用 StartActivityForResult() 方法，然后通过 Intent 传递意图和数据，但是对于在同一应用中的 子 Activity 要调用 父 Acitivity 并返回数据给 父 Activity 时，可利用 Activity 的启动模式和 Intent 的Flag 来实现数据的传递。
+  <meta charset="utf-8">
+  
+  <title>启动同一应用中带返回值的另一个 activity | HanderUp&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="Activity启动模式" />
+  
+  
+  
+  
+  <meta name="description" content="通常在启动 带返回值的 Activity 时，我们使用 StartActivityForResult() 方法，然后通过 Intent 传递意图和数据，但是对于在同一应用中的 子 Activity 要调用 父 Acitivity 并返回数据给 父 Activity 时，可利用 Activity 的启动模式和 Intent 的Flag 来实现数据的传递。
 注意： StartActivityForRe">
 <meta property="og:type" content="article">
 <meta property="og:title" content="启动同一应用中带返回值的另一个 Activity">
@@ -35,165 +26,181 @@
 <meta name="twitter:description" content="通常在启动 带返回值的 Activity 时，我们使用 StartActivityForResult() 方法，然后通过 Intent 传递意图和数据，但是对于在同一应用中的 子 Activity 要调用 父 Acitivity 并返回数据给 父 Activity 时，可利用 Activity 的启动模式和 Intent 的Flag 来实现数据的传递。
 注意： StartActivityForRe">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/HanderUp/SaveImg/4ffe12271217053455cf49c7d23ae08f618a6fc4/task.png">
-    
-        <link rel="alternate" type="application/atom+xml" title="HanderUp&#39;s Blog" href="/atom.xml">
-    
-    <link rel="shortcut icon" href="https://avatars2.githubusercontent.com/u/22523322?v=3&u=46aaa8d3f4583f2411b6a03632fa4272f7efe393&s=400">
-    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
-    <script>window.lazyScripts=[]</script>
+  
+    <link rel="alternate" href="/atom.xml" title="HanderUp&#39;s Blog" type="application/atom+xml">
+  
+
+  
+
+  <link rel="icon" href="/css/images/mylogo.jpg">
+  <link rel="apple-touch-icon" href="/css/images/mylogo.jpg">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+  <script src="/js/bootstrap.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+
+  
+    <link rel="stylesheet" href="/css/dialog.css">
+  
+
+  
+
+  
+    <link rel="stylesheet" href="/css/header-post.css" >
+  
+
+  
+  
+  
+    <link rel="stylesheet" href="/css/vdonate.css" >
+  
+
 </head>
 
-<body>
-    <div id="loading" class="active"></div>
 
-    <aside id="menu" class="hide" >
-  <div class="inner flex-row-vertical">
-    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
-        <i class="icon icon-lg icon-close"></i>
-    </a>
-    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
-      <div class="brand">
-        <a href="/" class="avatar waves-effect waves-circle waves-light">
-          <img src="https://avatars2.githubusercontent.com/u/22523322?v=3&u=46aaa8d3f4583f2411b6a03632fa4272f7efe393&s=400">
-        </a>
-        <hgroup class="introduce">
-          <h5 class="nickname">HanderUp</h5>
-          <a href="mailto:zhang929546724@foxmail.com" title="zhang929546724@foxmail.com" class="mail">zhang929546724@foxmail.com</a>
-        </hgroup>
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+  <div id="container">
+    <div id="wrap">
+      
+        <header>
+
+    <div id="allheader" class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="navbar-inner">
+          
+          <div class="container"> 
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            
+              <a class="brand" style="
+                 margin-top: 0px;"  
+                href="#" data-toggle="modal" data-target="#myModal" >
+                  <img width="124px" height="124px" alt="Hike News" src="/css/images/mylogo.jpg">
+              </a>
+            
+            
+            <div class="navbar-collapse collapse">
+              <ul class="hnav navbar-nav">
+                
+                  <li> <a class="main-nav-link" href="/">首页</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/archives">归档</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/categories">分类</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/tags">标签</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/about">关于</a> </li>
+                
+                  <li><div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(无标题)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div></li>
+            </div>
+          </div>
+                
       </div>
     </div>
-    <div class="scroll-wrap flex-col">
-      <ul class="nav">
-        
-            <li class="waves-block waves-effect">
-              <a href="/"  >
-                <i class="icon icon-lg icon-home"></i>
-                主页
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/archives"  >
-                <i class="icon icon-lg icon-archives"></i>
-                所有文章
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/tags"  >
-                <i class="icon icon-lg icon-tags"></i>
-                标签
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/categories"  >
-                <i class="icon icon-lg icon-th-list"></i>
-                分类
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="https://github.com/HanderUp" target="_blank" >
-                <i class="icon icon-lg icon-github"></i>
-                GitHub
-              </a>
-            </li>
-        
-      </ul>
-    </div>
-  </div>
-</aside>
-
-    <main id="main">
-        <header class="top-header" id="header">
-    <div class="flex-row">
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
-          <i class="icon icon-lg icon-navicon"></i>
-        </a>
-        <div class="flex-col header-title ellipsis">启动同一应用中带返回值的另一个 Activity</div>
-        
-        <div class="search-wrap" id="search-wrap">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
-                <i class="icon icon-lg icon-chevron-left"></i>
-            </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
-                <i class="icon icon-lg icon-search"></i>
-            </a>
-        </div>
-        
-        
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
-            <i class="icon icon-lg icon-share-alt"></i>
-        </a>
-        
-    </div>
-</header>
-<header class="content-header post-header">
-
-    <div class="container fade-scale">
-        <h1 class="title">启动同一应用中带返回值的另一个 Activity</h1>
-        <h5 class="subtitle">
-            
-                <time datetime="2017-05-19T12:05:16.549Z" itemprop="datePublished" class="page-time">
-  2017-05-19
-</time>
-
-
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Activity/">Activity</a></li></ul>
-
-            
-        </h5>
-    </div>
-
-    
-
 
 </header>
 
 
-<div class="container body-wrap">
+
+      
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-启动同一应用中带返回值的另一个 Activity" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
     
-    <aside class="post-widget">
-        <nav class="post-toc-wrap" id="post-toc">
-            <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#具体应用场景中如下图"><span class="post-toc-number">1.</span> <span class="post-toc-text">具体应用场景中如下图</span></a></li></ol>
-        </nav>
-    </aside>
     
-<article id="post-启动同一应用中带返回值的另一个 Activity"
-  class="post-article article-type-post fade" itemprop="blogPost">
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      启动同一应用中带返回值的另一个 Activity
+    </h1>
+  
 
-    <div class="post-card">
-        <h1 class="post-card-title">启动同一应用中带返回值的另一个 Activity</h1>
-        <div class="post-meta">
-            <time class="post-time" title="2017-05-19 20:05:16" datetime="2017-05-19T12:05:16.549Z"  itemprop="datePublished">2017-05-19</time>
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/05/19/启动同一应用中带返回值的另一个 Activity/" class="article-date">
+	  <time datetime="2017-05-19T12:05:16.549Z" itemprop="datePublished">2017-05-19</time>
+	</a>
 
-            
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Activity/">Activity</a></li></ul>
+      
+    <a class="article-category-link" href="/categories/Activity/">Activity</a>
 
+      
+	<a class="article-views">
+	<span id="busuanzi_container_page_pv">
+		阅读量<span id="busuanzi_value_page_pv"></span>
+	</span>
+	</a>
 
-
-            
-<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
-    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
-</span>
-
-
-            
-
-        </div>
-        <div class="post-content" id="post-content" itemprop="postContent">
-            <p>通常在启动 <strong>带返回值的 Activity</strong> 时，我们使用 <code>StartActivityForResult()</code> 方法，然后通过 <code>Intent</code> 传递意图和数据，但是对于在同一应用中的 <strong>子 <code>Activity</code></strong> 要调用 <strong>父 <code>Acitivity</code></strong> 并返回数据给 <strong>父 <code>Activity</code></strong> 时，可利用 <strong><code>Activity</code> 的启动模式和 <code>Intent</code> 的Flag</strong> 来实现数据的传递。</p>
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>通常在启动 <strong>带返回值的 Activity</strong> 时，我们使用 <code>StartActivityForResult()</code> 方法，然后通过 <code>Intent</code> 传递意图和数据，但是对于在同一应用中的 <strong>子 <code>Activity</code></strong> 要调用 <strong>父 <code>Acitivity</code></strong> 并返回数据给 <strong>父 <code>Activity</code></strong> 时，可利用 <strong><code>Activity</code> 的启动模式和 <code>Intent</code> 的Flag</strong> 来实现数据的传递。</p>
 <p><strong>注意：</strong> <code>StartActivityForResult()</code> 的方式更适合不同应用之间通信。</p>
-<h2 id="具体应用场景中如下图"><a href="#具体应用场景中如下图" class="headerlink" title="具体应用场景中如下图"></a>具体应用场景中如下图</h2><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://raw.githubusercontent.com/HanderUp/SaveImg/4ffe12271217053455cf49c7d23ae08f618a6fc4/task.png" alt="task" title="">
-                </div>
-                <div class="image-caption">task</div>
-            </figure>
+<h2 id="具体应用场景中如下图"><a href="#具体应用场景中如下图" class="headerlink" title="具体应用场景中如下图"></a>具体应用场景中如下图</h2><p><img src="https://raw.githubusercontent.com/HanderUp/SaveImg/4ffe12271217053455cf49c7d23ae08f618a6fc4/task.png" alt="task"></p>
 <p>在任务栈中，我们启动了 MainActivity 、Activity A 、SecondActivity 、Activity B ，现在需要在 SecondActivity 中启动 MainActivity ，并返回数据给 MainActivity ，具体做法如下：</p>
 <p><strong>1. 在 AndroidManifest 文件中将 MainActivity 的 launchMode 属性设置为 SingleTop</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;activity android:name=<span class="string">".MainActivity"</span></div><div class="line">           android:launchMode=<span class="string">"singleTop"</span>&gt;</div></pre></td></tr></table></figure>
@@ -204,297 +211,271 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onNewIntent</span><span class="params">(Intent intent)</span> </span>&#123;</div><div class="line">    <span class="keyword">super</span>.onNewIntent(intent);</div><div class="line">    String  str = intent.getStringExtra(<span class="string">"second_data"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><strong>具体过程分析：</strong><br>SecondActivity 启动 MainActivity 时，给 Intent 设置 <code>FLAG_ACTIVITY_CLEAR_TOP</code> Flag，<code>FLAG_ACTIVITY_CLEAR_TOP</code> 的具体用法为：启动目标 Activity 时，目标 Activity 的 <strong>launchMode</strong> 属性为默认，或者设置为 <code>standard</code> 时，目标 Activity 会和目标 Activity 之上的所有 Activity 一起被销毁，然后创建目标 Activity 的新实例，这里我们将目标 Activity 的 <strong>launchMode</strong> 设置为 <code>singleTop</code> 就能保证当前的目标 Activity 实例不被销毁，同时使用 <code>onNewIntent()</code> 接收传递的数据。</p>
 
-        </div>
-
-        <blockquote class="post-copyright">
-    <div class="content">
-        
-<span class="post-time">
-    最后更新时间：<time datetime="2017-05-21T01:32:35.027Z" itemprop="dateUpdated">2017-05-21 09:32:35</time>
-</span><br>
-
-
-        
-        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2017/05/19/启动同一应用中带返回值的另一个 Activity/" target="_blank" rel="external">http://yoursite.com/2017/05/19/启动同一应用中带返回值的另一个 Activity/</a>
-        
+      
     </div>
-    <footer>
-        <a href="http://yoursite.com">
-            <img src="https://avatars2.githubusercontent.com/u/22523322?v=3&u=46aaa8d3f4583f2411b6a03632fa4272f7efe393&s=400" alt="HanderUp">
-            HanderUp
-        </a>
+    <footer class="article-footer">
+      
+        <div id="donation_div"></div>
+
+<script src="/js/vdonate.js"></script>
+<script>
+var a = new Donate({
+  title: '如果觉得我的文章对您有用，请随意打赏。您的支持将鼓励我继续创作!', // 可选参数，打赏标题
+  btnText: '打赏支持', // 可选参数，打赏按钮文字
+  el: document.getElementById('donation_div'),
+  wechatImage: 'https://raw.githubusercontent.com/iTimeTraveler/iTimeTraveler.github.io/site/source/about/donate/images/WeChanQR.png',
+  alipayImage: 'https://raw.githubusercontent.com/iTimeTraveler/iTimeTraveler.github.io/site/source/about/donate/images/AliPayQR.jpg'
+});
+</script>
+      
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Activity启动模式/">Activity启动模式</a></li></ul>
+
     </footer>
-</blockquote>
-
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/05/21/Android多线程编程/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
         
-<div class="page-reward">
-    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
-</div>
-
-
-
-        <div class="post-footer">
-            
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Activity启动模式/">Activity启动模式</a></li></ul>
-
-
-            
-<div class="page-share-wrap">
-    
-
-<div class="page-share" id="pageShare">
-    <ul class="reset share-icons">
-      <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/05/19/启动同一应用中带返回值的另一个 Activity/&title=《启动同一应用中带返回值的另一个 Activity》 — HanderUp's Blog&pic=https://avatars2.githubusercontent.com/u/22523322?v=3&u=46aaa8d3f4583f2411b6a03632fa4272f7efe393&s=400" data-title="微博">
-          <i class="icon icon-weibo"></i>
-        </a>
-      </li>
-      <li>
-        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
-          <i class="icon icon-weixin"></i>
-        </a>
-      </li>
-      <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/05/19/启动同一应用中带返回值的另一个 Activity/&title=《启动同一应用中带返回值的另一个 Activity》 — HanderUp's Blog&source=coding" data-title=" QQ">
-          <i class="icon icon-qq"></i>
-        </a>
-      </li>
-      <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/05/19/启动同一应用中带返回值的另一个 Activity/" data-title=" Facebook">
-          <i class="icon icon-facebook"></i>
-        </a>
-      </li>
-      <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《启动同一应用中带返回值的另一个 Activity》 — HanderUp's Blog&url=http://yoursite.com/2017/05/19/启动同一应用中带返回值的另一个 Activity/&via=http://yoursite.com" data-title=" Twitter">
-          <i class="icon icon-twitter"></i>
-        </a>
-      </li>
-      <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/05/19/启动同一应用中带返回值的另一个 Activity/" data-title=" Google+">
-          <i class="icon icon-google-plus"></i>
-        </a>
-      </li>
-    </ul>
- </div>
-
-
-
-    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
-        <i class="icon icon-share-alt icon-lg"></i>
+          Android多线程编程
+        
+      </div>
     </a>
-</div>
-
-
-
-        </div>
-    </div>
-
-    
-<nav class="post-nav flex-row flex-justify-between">
   
-    <div class="waves-block waves-effect prev">
-      <a href="/2017/05/21/Android多线程编程/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">Android多线程编程</h4>
-      </a>
-    </div>
   
-
-  
-    <div class="waves-block waves-effect next">
-      <a href="/2017/05/19/Fragment 初步学习总结/" id="post-next" class="post-nav-link">
-        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">Fragment 初步学习总结</h4>
-      </a>
-    </div>
+    <a href="/2017/05/19/Fragment 初步学习总结/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">Fragment 初步学习总结</div>
+    </a>
   
 </nav>
 
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
 </article>
 
-<div id="reward" class="page-modal reward-lay">
-    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <h3 class="reward-title">
-        <i class="icon icon-quote-left"></i>
-        谢谢大爷~
-        <i class="icon icon-quote-right"></i>
-    </h3>
-    <ul class="reward-items">
-        
-        <li>
-            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
-            <p>微信</p>
-        </li>
-        
+<!-- Table of Contents -->
 
-        
-        <li>
-            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
-            <p>支付宝</p>
-        </li>
-        
-    </ul>
-</div>
-
-
-
-</div>
-
-        <footer class="footer">
-    <div class="top">
-        
-<p>
-    <span id="busuanzi_container_site_uv" style='display:none'>
-        站点总访客数：<span id="busuanzi_value_site_uv"></span>
-    </span>
-    <span id="busuanzi_container_site_pv" style='display:none'>
-        站点总访问量：<span id="busuanzi_value_site_pv"></span>
-    </span>
-</p>
-
-
-        <p>
-            
-                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
-            
-            <span>博客内容遵循<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
-        </p>
+  <aside id="toc-sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#具体应用场景中如下图"><span class="nav-number">1.</span> <span class="nav-text">具体应用场景中如下图</span></a></li></ol>
+    
     </div>
-    <div class="bottom">
-        <p>
-            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
-            <span>HanderUp &copy; 2017</span>
-        </p>
-    </div>
+  </aside>
+</section>
+        
+      </div>
+      
+      <footer id="footer">
+  
+
+  <div class="container">
+      	<div class="row">
+	      <p> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/iTimeTraveler/hexo-theme-hiker" target="_blank">Hexo-theme-hiker</a> </p>
+	      <p id="copyRightEn">Copyright &copy; 2013 - 2018 HanderUp&#39;s Blog All Rights Reserved.</p>
+	      
+	      
+    		<p class="busuanzi_uv">
+				访客数 : <span id="busuanzi_value_site_uv"></span> |  
+				访问量 : <span id="busuanzi_value_site_pv"></span>
+		    </p>
+  		   
+		</div>
+
+		
+  </div>
 </footer>
 
-    </main>
-    <div class="mask" id="mask"></div>
-<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
+<!-- min height -->
 
-
-<div class="global-share" id="globalShare">
-    <ul class="reset share-icons">
-      <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/05/19/启动同一应用中带返回值的另一个 Activity/&title=《启动同一应用中带返回值的另一个 Activity》 — HanderUp's Blog&pic=https://avatars2.githubusercontent.com/u/22523322?v=3&u=46aaa8d3f4583f2411b6a03632fa4272f7efe393&s=400" data-title="微博">
-          <i class="icon icon-weibo"></i>
-        </a>
-      </li>
-      <li>
-        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
-          <i class="icon icon-weixin"></i>
-        </a>
-      </li>
-      <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/05/19/启动同一应用中带返回值的另一个 Activity/&title=《启动同一应用中带返回值的另一个 Activity》 — HanderUp's Blog&source=coding" data-title=" QQ">
-          <i class="icon icon-qq"></i>
-        </a>
-      </li>
-      <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/05/19/启动同一应用中带返回值的另一个 Activity/" data-title=" Facebook">
-          <i class="icon icon-facebook"></i>
-        </a>
-      </li>
-      <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《启动同一应用中带返回值的另一个 Activity》 — HanderUp's Blog&url=http://yoursite.com/2017/05/19/启动同一应用中带返回值的另一个 Activity/&via=http://yoursite.com" data-title=" Twitter">
-          <i class="icon icon-twitter"></i>
-        </a>
-      </li>
-      <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/05/19/启动同一应用中带返回值的另一个 Activity/" data-title=" Google+">
-          <i class="icon icon-google-plus"></i>
-        </a>
-      </li>
-    </ul>
- </div>
-
-
-<div class="page-modal wx-share" id="wxShare">
-    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAADLElEQVR42u3awY7iQAwEUP7/p1lpriuGKneQiOflhJBI+nUOhe1+POLr+XO9+v736/dfJc9N7vb4xIWNjY19E3ay6P9vnSwi5+WbnqwzegHY2NjY69jJw15h2gcn25pHVHIfbGxsbOykJEhKiJPtSMIVGxsbGzsPsFmwJa2lloeNjY2N3RYPeePp9+04v8+sEMLGxsbex5416L/z8wfn29jY2NhfyX4eXyfjhLw51QbhmzVjY2NjL2KfH6w5+dM/O/Qza2k98soGGxsb+1bsZKGfa9m0A4N29PtyI7CxsbHXsfMFnSwxyY621Jm9MGxsbOxN7JOC4WS0kGxHUoTkr+dxnq7Y2NjYX8zObzFrJ+VxddJCSoIwGg9gY2Nj34rdPiwfFeRlTBtpbXPqzYgXGxsb++bsFj8bD8xKkfYF1IUKNjY29lL2Vb2XohIKvmlHBVH4YWNjY69gX1V+XBAnASAfIUfvGRsbG3sdOw+DWQHTNoxONuvNOrGxsbEXsfOltA2mqw5K5gE5PHKEjY2NvZTdgts2U0udbW7dUcPGxsa+Ibtt/c9gswM6+Ta14wRsbGzsTexZzJwXAO0Qt8jhuNDCxsbG3sFui4qT8iM/dpMXPLMCBhsbG3srO4+Tqw7fzLpfbXBiY2Nj72bPDr6cHJRph7hRIJXHg7CxsbF3s2cjgbzwSMIpiag8IN8osLGxsW/OnjXx24edlCUn4fryt9jY2NiL2PlN2yJhNiRor6MjO9jY2NhL2XmctMODvDZqN66NWGxsbOyt7FksnbSW2hIij6uojYWNjY29iJ0sKH9YsmUJr92OYTRiY2NjL2If/a0PBrd5CZG/gHZUjI2Njb2bnTysLTzy0LpgcDsabGBjY2Pfnf0srzzSWmTRBorLnpd3w8bGxl7EPj8ckzeGZgduZls8bCphY2Nj35bdhtbJQZx8ADwrTophMDY2NvY69nlozRr0s/ZQW6I88hEJNjY29h9gz8qGvOnT/nZYnGBjY2P/SfasVLjqEE8ectGzsLGxsdexZ4HRHvGZRU6ynvwVYmNjY+9jzwa9eXtotlmzgUQdY9jY2Nj3Zv8DssQwE+i7AosAAAAASUVORK5CYII=" alt="微信分享二维码">
-</div>
-
-
-
-
-    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 <script>
-var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+    var allheader = document.getElementById("allheader");
 
+    wrapdiv.style.minHeight = document.body.offsetHeight + "px";
+    if (allheader != null) {
+      contentdiv.style.minHeight = document.body.offsetHeight - allheader.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    } else {
+      contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    }
+</script>
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
 
+<!-- mathjax config similar to math.stackexchange -->
 
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
 </script>
 
-<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
 
-
-<div class="search-panel" id="search-panel">
-    <ul class="search-result" id="search-result"></ul>
-</div>
-<template id="search-tpl">
-<li class="item">
-    <a href="{path}" class="waves-block waves-effect">
-        <div class="title ellipsis" title="{title}">{title}</div>
-        <div class="flex-row flex-middle">
-            <div class="tags ellipsis">
-                {tags}
-            </div>
-            <time class="flex-col time">{date}</time>
-        </div>
-    </a>
-</li>
-</template>
-
-<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
-
-
-
-
-
-
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-
-
-<script>
-(function() {
-    var OriginTitile = document.title, titleTime;
-    document.addEventListener('visibilitychange', function() {
-        if (document.hidden) {
-            document.title = 'HandlerUp's Bolg';
-            clearTimeout(titleTime);
-        } else {
-            document.title = '(つェ⊂)咦!又好了!';
-            titleTime = setTimeout(function() {
-                document.title = OriginTitile;
-            },2000);
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
         }
     });
-})();
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
 
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
+
+<script src="/js/scripts.js"></script>
+
+
+
+
+  <script src="/js/dialog.js"></script>
+
+
+
+
+
+
+
+
+	<div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="myModalLabel">设置</h2>
+      </div>
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+
+
+      <div class="modal-body">
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="javascript:setFontSize();" aria-expanded="true" aria-controls="collapseOne">
+              正文字号大小
+            </a>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            您已调整页面字体大小
+          </div>
+        </div>
+      
+
+
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" onclick="javascript:setBackground();" aria-expanded="true" aria-controls="collapseTwo">
+              夜间护眼模式
+            </a>
+        </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            夜间模式已经开启，再次单击按钮即可关闭 
+          </div>
+        </div>
+
+        <div>
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关 于&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </div>
+         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            HanderUp&#39;s Blog
+          </div>
+          <div class="panel-body">
+            Copyright © 2018 HanderUp All Rights Reserved.
+          </div>
+        </div>
+      </div>
+
+
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <div class="modal-footer">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+  
+    <a id="menu-switch"><i class="fa fa-bars fa-lg"></i></a>
+  
 </body>
 </html>

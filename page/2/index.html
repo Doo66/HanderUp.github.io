@@ -1,26 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    
-
-    
-
-    
-
-
-
-    <meta charset="utf-8">
-    
-    
-    
-    <title>HanderUp&#39;s Blog</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
-    <meta name="theme-color" content="#3F51B5">
-    
-    
-    <meta name="keywords" content="undefined">
-    <meta name="description" content="coding">
+  <meta charset="utf-8">
+  
+  <title>HanderUp&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  
+  <meta name="description" content="coding">
 <meta property="og:type" content="website">
 <meta property="og:title" content="HanderUp's Blog">
 <meta property="og:url" content="http://yoursite.com/page/2/index.html">
@@ -29,428 +18,672 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HanderUp's Blog">
 <meta name="twitter:description" content="coding">
-    
-        <link rel="alternate" type="application/atom+xml" title="HanderUp&#39;s Blog" href="/atom.xml">
-    
-    <link rel="shortcut icon" href="https://avatars2.githubusercontent.com/u/22523322?v=3&u=46aaa8d3f4583f2411b6a03632fa4272f7efe393&s=400">
-    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
-    <script>window.lazyScripts=[]</script>
+  
+    <link rel="alternate" href="/atom.xml" title="HanderUp&#39;s Blog" type="application/atom+xml">
+  
+
+  
+
+  <link rel="icon" href="/css/images/mylogo.jpg">
+  <link rel="apple-touch-icon" href="/css/images/mylogo.jpg">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+  <script src="/js/bootstrap.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+
+  
+    <link rel="stylesheet" href="/css/home.css" >
+  
+
+  
+
+  
+
+  
+  
+  
+    <link rel="stylesheet" href="/css/vdonate.css" >
+  
+
 </head>
 
-<body>
-    <div id="loading" class="active"></div>
 
-    <aside id="menu"  >
-  <div class="inner flex-row-vertical">
-    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
-        <i class="icon icon-lg icon-close"></i>
-    </a>
-    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
-      <div class="brand">
-        <a href="/" class="avatar waves-effect waves-circle waves-light">
-          <img src="https://avatars2.githubusercontent.com/u/22523322?v=3&u=46aaa8d3f4583f2411b6a03632fa4272f7efe393&s=400">
-        </a>
-        <hgroup class="introduce">
-          <h5 class="nickname">HanderUp</h5>
-          <a href="mailto:zhang929546724@foxmail.com" title="zhang929546724@foxmail.com" class="mail">zhang929546724@foxmail.com</a>
-        </hgroup>
-      </div>
-    </div>
-    <div class="scroll-wrap flex-col">
-      <ul class="nav">
+
+  <body>
+
+
+  
+    <header id="header">
+
+	<!-- 背景图模式 -->
+	
+
+    
+      <div id="intrologo" class="intro-logo" style="background-position:center; background-repeat:no-repeat; background-image: url(); background-size: auto 100%;">
+
+      <!-- Support rolling -->  
         
-            <li class="waves-block waves-effect">
-              <a href="/"  >
-                <i class="icon icon-lg icon-home"></i>
-                主页
-              </a>
-            </li>
+        <section class="awSlider">
+          <div class="carousel slide carousel-fade " data-ride="carousel">
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+               
+                  
+                    <div class="item active">
+                  
+                    <img id="carousel-img0" src="/css/images/home-bg.jpg">
+                  </div>
+
+                  <!-- 自适应大图 -->
+                  <script>
+                      var img0 = new Image();
+                      var imageTag0 = document.getElementById("carousel-img0");
+                      img0.src = imageTag0.src;
+                      img0.onload=function(){
+                        if (img0.width / img0.height <= document.body.clientWidth / document.body.clientHeight) {
+                          imageTag0.style.width = document.body.clientWidth + "px";
+                        } else {
+                          imageTag0.style.height = document.body.clientHeight + "px";
+                          imageTag0.style.marginLeft = -(document.body.clientHeight * img0.width / img0.height - document.body.clientWidth) / 2 + "px";
+                        }
+                      };
+                  </script>
+                
+                  
+                    <div class="item">
+                  
+                    <img id="carousel-img1" src="/css/images/sample.jpg">
+                  </div>
+
+                  <!-- 自适应大图 -->
+                  <script>
+                      var img1 = new Image();
+                      var imageTag1 = document.getElementById("carousel-img1");
+                      img1.src = imageTag1.src;
+                      img1.onload=function(){
+                        if (img1.width / img1.height <= document.body.clientWidth / document.body.clientHeight) {
+                          imageTag1.style.width = document.body.clientWidth + "px";
+                        } else {
+                          imageTag1.style.height = document.body.clientHeight + "px";
+                          imageTag1.style.marginLeft = -(document.body.clientHeight * img1.width / img1.height - document.body.clientWidth) / 2 + "px";
+                        }
+                      };
+                  </script>
+                
+                  
+                    <div class="item">
+                  
+                    <img id="carousel-img2" src="https://source.unsplash.com/collection/954550/1920x1080">
+                  </div>
+
+                  <!-- 自适应大图 -->
+                  <script>
+                      var img2 = new Image();
+                      var imageTag2 = document.getElementById("carousel-img2");
+                      img2.src = imageTag2.src;
+                      img2.onload=function(){
+                        if (img2.width / img2.height <= document.body.clientWidth / document.body.clientHeight) {
+                          imageTag2.style.width = document.body.clientWidth + "px";
+                        } else {
+                          imageTag2.style.height = document.body.clientHeight + "px";
+                          imageTag2.style.marginLeft = -(document.body.clientHeight * img2.width / img2.height - document.body.clientWidth) / 2 + "px";
+                        }
+                      };
+                  </script>
+                
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href=".carousel" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Geri</span>
+            </a>
+            <a class="right carousel-control" href=".carousel" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">İleri</span>
+            </a>
+          </div>
+        </section>
+        <script>
+          $('section.awSlider .carousel').carousel({
+              pause: '',
+              interval: 5000
+          });
+          var startImage = $('section.awSlider .item.active > img').attr('src');
+          $('section.awSlider .carousel').on('slid.bs.carousel', function () {
+              var bscn = $(this).find('.item.active > img').attr('src');
+              $('section.awSlider > img').attr('src', bscn);
+          });
+        </script>
+      
+
+    
+ 
+
+
+    <canvas width="100%" height="100%"></canvas>
+    <script>
+      var c = document.getElementsByTagName('canvas')[0],
+          x = c.getContext('2d'),
+          w = window.innerWidth,
+          h = window.innerHeight,
+          pr = window.devicePixelRatio || 1,
+          f = 90,
+          q,
+          m = Math,
+          r = 0,
+          u = m.PI*2,
+          v = m.cos,
+          z = m.random
+      c.width = w*pr
+      c.height = h*pr
+      x.scale(pr, pr)
+      x.globalAlpha = 0.6
+
+      <!-- 折线Polyline背景 -->
+      
+    </script>
+    
+
+    
+      <div id="homelogo" class="homelogo" style="background: rgba(255,255,255,1);"> 
+    
+
         
-            <li class="waves-block waves-effect">
-              <a href="/archives"  >
-                <i class="icon icon-lg icon-archives"></i>
-                所有文章
-              </a>
-            </li>
+          <div class="homelogoback"  style="border: 1px solid #404040;" >
+            <h1><a href="#content" id="logo">HanderUp&#39;s Blog</a></h1>
+            <h3>coding</h3>
+            <h5>HanderUp</h5>
+            <!-- <p><a href="https://github.com/iTimeTraveler" target="_blank">Github</a></p> -->
+          </div>
         
-            <li class="waves-block waves-effect">
-              <a href="/tags"  >
-                <i class="icon icon-lg icon-tags"></i>
-                标签
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/categories"  >
-                <i class="icon icon-lg icon-th-list"></i>
-                分类
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="https://github.com/HanderUp" target="_blank" >
-                <i class="icon icon-lg icon-github"></i>
-                GitHub
-              </a>
-            </li>
-        
-      </ul>
+    
     </div>
   </div>
-</aside>
 
-    <main id="main">
-        <header class="top-header" id="header">
-    <div class="flex-row">
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
-          <i class="icon icon-lg icon-navicon"></i>
-        </a>
-        <div class="flex-col header-title ellipsis">HanderUp&#39;s Blog</div>
-        
-        <div class="search-wrap" id="search-wrap">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
-                <i class="icon icon-lg icon-chevron-left"></i>
-            </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
-                <i class="icon icon-lg icon-search"></i>
-            </a>
-        </div>
-        
-        
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
-            <i class="icon icon-lg icon-share-alt"></i>
-        </a>
-        
-    </div>
-</header>
-<header class="content-header index-header">
+  <!-- 自适应主页背景大图 -->
+  
 
-    <div class="container fade-scale">
-        <h1 class="title">HanderUp&#39;s Blog</h1>
-        <h5 class="subtitle">
-            
-                
-            
-        </h5>
-    </div>
+ <!-- home_logo_image居中 -->
+ 
+    <script>
+        var homelogodiv = document.getElementById("homelogo");
+        if (document.all.homelogo.offsetWidth > document.body.clientWidth) {
+          homelogodiv.style.width = document.body.clientWidth + "px";
+          homelogodiv.style.marginLeft = document.body.clientWidth * -0.5 + "px";
+        } else {
+          homelogodiv.style.width = homelogodiv.clientWidth  + "px";
+          homelogodiv.style.marginLeft = (homelogodiv.clientWidth)  * -0.5 + "px";
+        }
+    </script>
+  
 
-    
-
+  <div class="intro-navigate">
+      <p class="navigater-list">
+        
+          <a id="beautifont" class="main-nav-link" href="/">首页</a>
+        
+          <a id="beautifont" class="main-nav-link" href="/archives">归档</a>
+        
+          <a id="beautifont" class="main-nav-link" href="/categories">分类</a>
+        
+          <a id="beautifont" class="main-nav-link" href="/tags">标签</a>
+        
+          <a id="beautifont" class="main-nav-link" href="/about">关于</a>
+        
+      </p>
+  </div>
 
 </header>
-
-<div class="container body-wrap">
-
-    <ul class="post-list">
-    
-        <li class="post-list-item fade">
-            <article id="post-Fragment 初步学习总结"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2017-05-19 20:05:16" datetime="2017-05-19T12:05:16.546Z"  itemprop="datePublished">2017-05-19</time>
-
-        
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Fragment/">Fragment</a></li></ul>
-
-
-
-        
-
-    </div>
-
-    
-
-
   
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/05/19/Fragment 初步学习总结/">Fragment 初步学习总结</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        Fragment 在 Android 3.0 开始引入，主要用来解决兼容平板的问题，只开发一个应用解决平板和手机上的不同布局，合理利用屏幕空间。
-一、 Fragment 的两种加载模式1、静态加载模式(1) 首先创建一个 left_fragment.xml ，用来展示 Fragment 的布局。
-123456789101112&lt;LinearLayout xmlns:android="h...
-    
-
-        <a href="/2017/05/19/Fragment 初步学习总结/" class="post-more waves-effect waves-button">
-            阅读全文…
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android基础/">Android基础</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-Broadcast 初步学习"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2017-05-19 20:05:16" datetime="2017-05-19T12:05:16.542Z"  itemprop="datePublished">2017-05-19</time>
-
-        
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Broadcast/">Broadcast</a></li></ul>
-
-
-
-        
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/05/19/Broadcast 初步学习/">Broadcast 初步学习</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        Broadcast 的分类1. 普通广播（异步方式，同一时刻所有接收者都有可能接收到广播）2. 有序广播（按照顺序接收广播，优先级高的接收者先接收，并且可以截 断广播，优先级低的接收者就不能接收到广播）
-Broadcast 的注册方式1. 静态注册（在 AndroidManifest.xml 文件中注册）2. 动态注册（在代码中注册，必须取消注册才行）
-在程序内可以接收系统的广播，同时 Br...
-    
-
-        <a href="/2017/05/19/Broadcast 初步学习/" class="post-more waves-effect waves-button">
-            阅读全文…
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android基础/">Android基础</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-Android 数据持久化"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2017-05-19 20:05:16" datetime="2017-05-19T12:05:16.539Z"  itemprop="datePublished">2017-05-19</time>
-
-        
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/数据持久化/">数据持久化</a></li></ul>
-
-
-
-        
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/05/19/Android 数据持久化/">Android 数据持久化</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        Android 数据持久化分类：
-
-SharedPerfences 存储
-文件存储
-SQLite 数据库存储
-
-以上不同方式的数据持久化方案根据应用场景的不同，各有优缺点，以下对不同类别的存储方式进行对比：
-1. SharedPerfences 存储SharedPerfences 存储是 Android 中最常见的存储方式，快捷方便，以键值对的方式存储为 xml 格式的文件
-SharedPe...
-    
-
-        <a href="/2017/05/19/Android 数据持久化/" class="post-more waves-effect waves-button">
-            阅读全文…
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android基础/">Android基础</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-    </ul>
-
-    
-<nav id="page-nav">
-    <div class="inner">
-    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">下一页</a>
-    </div>
-</nav>
-
-
-</div>
-
-        <footer class="footer">
-    <div class="top">
-        
-<p>
-    <span id="busuanzi_container_site_uv" style='display:none'>
-        站点总访客数：<span id="busuanzi_value_site_uv"></span>
-    </span>
-    <span id="busuanzi_container_site_pv" style='display:none'>
-        站点总访问量：<span id="busuanzi_value_site_pv"></span>
-    </span>
-</p>
-
-
-        <p>
+  <div id="container">
+    <div id="wrap">
+      
             
-                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
-            
-            <span>博客内容遵循<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
-        </p>
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;">
+  
+    <article id="post-Fragment 初步学习总结"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/05/19/Fragment 初步学习总结/">Fragment 初步学习总结</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/05/19/Fragment 初步学习总结/" class="article-date">
+	  <time datetime="2017-05-19T12:05:16.546Z" itemprop="datePublished">2017-05-19</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Fragment/">Fragment</a>
+
+      
     </div>
-    <div class="bottom">
-        <p>
-            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
-            <span>HanderUp &copy; 2017</span>
-        </p>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>Fragment</strong> 在 Android 3.0 开始引入，主要用来解决兼容平板的问题，只开发一个应用解决平板和手机上的不同布局，合理利用屏幕空间。</p>
+<h2 id="一、-Fragment-的两种加载模式"><a href="#一、-Fragment-的两种加载模式" class="headerlink" title="一、 Fragment 的两种加载模式"></a>一、 Fragment 的两种加载模式</h2><h3 id="1、静态加载模式"><a href="#1、静态加载模式" class="headerlink" title="1、静态加载模式"></a>1、静态加载模式</h3><p>(1) 首先创建一个 <code>left_fragment.xml</code> ，用来展示 <strong>Fragment</strong> 的布局。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">LinearLayout</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></div><div class="line">    <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">    <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span></div><div class="line">    <span class="attr">android:orientation</span>=<span class="string">"vertical"</span>&gt;</div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">Button</span></span></div><div class="line">        <span class="attr">android:id</span>=<span class="string">"@+id/button1"</span></div><div class="line">        <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">        <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">        <span class="attr">android:text</span>=<span class="string">"Button 1"</span>/&gt;</div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>(2) 然后创建一个 <code>LeftFragment.java</code> 类，用来处理 <strong>Fragment</strong> 中的逻辑。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LeftFragment</span> <span class="keyword">extends</span> <span class="title">Fragment</span> </span>&#123;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> View <span class="title">onCreateView</span><span class="params">(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)</span> </span>&#123;</div><div class="line">    </div><div class="line">    View view = inflater.inflate(R.layout.left_fragment, container, <span class="keyword">false</span>);</div><div class="line">    <span class="keyword">return</span> view;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>(3) 最后在 <code>activity.xml</code> 中加入 <code>&lt;fragment&gt;</code> 标签。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;fragment</div><div class="line">    android:id=<span class="string">"@+id/left_fragment"</span></div><div class="line">    android:name=<span class="string">"com.example.fragmenttest.LeftFragment"</span></div><div class="line">    android:layout_width=<span class="string">"match_parent"</span></div><div class="line">    android:layout_height=<span class="string">"match_parent"</span> /&gt;</div></pre></td></tr></table></figure>
+<h3 id="2、动态加载模式"><a href="#2、动态加载模式" class="headerlink" title="2、动态加载模式"></a>2、动态加载模式</h3><p>对于动态加载 <strong>Fragment</strong> ，采用 <code>&lt;FramLayout&gt;</code> 布局来动态加载不同的 <code>&lt;fragment&gt;</code> 布局，具体如下：</p>
+<p>(1)创建两个 <strong>fragment</strong> 布局，分别为 <code>right_fragment.xml</code> 和 <code>another_right_fragment.xml</code></p>
+<p><strong>right_fragment.xml</strong><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">LinearLayout</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></div><div class="line">    <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">    <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span></div><div class="line">    <span class="attr">android:orientation</span>=<span class="string">"vertical"</span></div><div class="line">    <span class="attr">android:background</span>=<span class="string">"#00ff00"</span>&gt;</div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">        <span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></div><div class="line">        <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">        <span class="attr">android:layout_gravity</span>=<span class="string">"center_horizontal"</span></div><div class="line">        <span class="attr">android:textSize</span>=<span class="string">"30sp"</span></div><div class="line">        <span class="attr">android:text</span>=<span class="string">"This is RightFragment"</span>/&gt;</div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p><strong>another_right_fragment.xml</strong><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">LinearLayout</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></div><div class="line">    <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">    <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span></div><div class="line">    <span class="attr">android:orientation</span>=<span class="string">"vertical"</span></div><div class="line">    <span class="attr">android:background</span>=<span class="string">"#ffff00"</span>&gt;</div><div class="line">    </div><div class="line">    <span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">        <span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></div><div class="line">        <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">        <span class="attr">android:layout_gravity</span>=<span class="string">"center_horizontal"</span></div><div class="line">        <span class="attr">android:textSize</span>=<span class="string">"30sp"</span></div><div class="line">        <span class="attr">android:text</span>=<span class="string">"This is anotherFragment"</span>/&gt;</div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>(2)创建 <code>RightFragment.java</code> 类和 <code>AnotherRightFragment.java</code> 类<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RightFragment</span> <span class="keyword">extends</span> <span class="title">Fragment</span> </span>&#123;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> View <span class="title">onCreateView</span><span class="params">(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)</span> </span>&#123;</div><div class="line">        View view = inflater.inflate(R.layout.right_fragment, container, <span class="keyword">false</span>);</div><div class="line">        <span class="keyword">return</span> view;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AnotherRightFragment</span> <span class="keyword">extends</span> <span class="title">Fragment</span> </span>&#123;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> View <span class="title">onCreateView</span><span class="params">(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)</span> </span>&#123;</div><div class="line">        View view = inflater.inflate(R.layout.another_right_fragment, container, <span class="keyword">false</span>);</div><div class="line">        <span class="keyword">return</span> view;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>(3)为了在平板中加载不同的 <code>activity_main.xml</code> 文件，我们需要在重新创建一个文件件用来专门存放加载平板的 <code>activity_main.xml</code>文件，具体为在 <strong>res</strong> 文件夹下新建 <strong>layout-large</strong> 文件夹，在 <strong>layout-large</strong> 下创建 <strong>activity_main.xml</strong></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">LinearLayout</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></div><div class="line">    <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">    <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span></div><div class="line">    <span class="attr">android:orientation</span>=<span class="string">"horizontal"</span>&gt;</div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">fragment</span></span></div><div class="line">        <span class="attr">android:id</span>=<span class="string">"@+id/left_fragment"</span></div><div class="line">        <span class="attr">android:name</span>=<span class="string">"com.example.fragmenttest.LeftFragment"</span></div><div class="line">        <span class="attr">android:layout_width</span>=<span class="string">"0dp"</span></div><div class="line">        <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span></div><div class="line">        <span class="attr">android:layout_weight</span>=<span class="string">"1"</span> /&gt;</div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">FrameLayout</span></span></div><div class="line">        <span class="attr">android:id</span>=<span class="string">"@+id/right_layout"</span></div><div class="line">        <span class="attr">android:layout_width</span>=<span class="string">"0dp"</span></div><div class="line">        <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span></div><div class="line">        <span class="attr">android:layout_weight</span>=<span class="string">"3"</span> /&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>(4)在 <strong>MainActivity.java</strong> 类中处理动态加载的逻辑</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//MainActivity 实现 OnClickListener 接口</span></div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View view)</span> </span>&#123;</div><div class="line">    <span class="keyword">switch</span> (view.getId()) &#123;</div><div class="line">        <span class="keyword">case</span> R.id.button1:</div><div class="line">            replaceFragment(<span class="keyword">new</span> RightFragment());</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">case</span> R.id.button2:</div><div class="line">            replaceFragment(<span class="keyword">new</span> AnotherRightFragment());</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">replaceFragment</span><span class="params">(Fragment fragment)</span> </span>&#123;</div><div class="line">    FragmentManager fragmentManager = getFragmentManager();</div><div class="line">    FragmentTransaction transaction = fragmentManager.beginTransaction();</div><div class="line">    transaction.replace(R.id.right_layout, fragment);</div><div class="line">    transaction.addToBackStack(<span class="keyword">null</span>);</div><div class="line">    transaction.commit();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>其中使用到了 <strong>FragmentManager</strong> 和 <strong>FragmentTransaction</strong> 类 </p>
+<ol>
+<li>在 Android 3.0 之后使用 <strong>getFragmentManager()</strong> 获得<strong>FragmentManager</strong> 对象</li>
+<li><strong>FragmentTransaction</strong> 用来处理 <strong>Fragment</strong> 的动态加载事务，包含 <code>show()</code> 、 <code>hide()</code> 、<code>add()</code> 、 <code>replace()</code> 、<code>remove()</code> 、 <code>commit()</code> 等方法。</li>
+<li><code>addToBackStack()</code> 模拟返回栈，按 <strong>Back</strong> 键不会直接退出当前 <strong>Activity</strong>，而是返回上一 <strong>Fragment</strong> 。</li>
+</ol>
+
+      
     </div>
+    <footer class="article-footer">
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android基础/">Android基础</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-Broadcast 初步学习"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/05/19/Broadcast 初步学习/">Broadcast 初步学习</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/05/19/Broadcast 初步学习/" class="article-date">
+	  <time datetime="2017-05-19T12:05:16.542Z" itemprop="datePublished">2017-05-19</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Broadcast/">Broadcast</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>Broadcast 的分类</strong><br><strong>1.</strong> 普通广播（异步方式，同一时刻所有接收者都有可能接收到广播）<br><strong>2.</strong> 有序广播（按照顺序接收广播，优先级高的接收者先接收，并且可以截 断广播，优先级低的接收者就不能接收到广播）</p>
+<p><strong>Broadcast 的注册方式</strong><br><strong>1.</strong> 静态注册（在 AndroidManifest.xml 文件中注册）<br><strong>2.</strong> 动态注册（在代码中注册，必须取消注册才行）</p>
+<p><strong>在程序内可以接收系统的广播，同时 Broadcast 可以跨应用传递，如果只定义在本应用内使用，可以使用 <code>本地广播</code></strong><br><strong>广播的传递通过 Intent</strong></p>
+<h2 id="发送和接收自定义广播"><a href="#发送和接收自定义广播" class="headerlink" title="发送和接收自定义广播"></a>发送和接收自定义广播</h2><p>###1. 普通广播<br><strong>静态注册方式</strong></p>
+<p>首先，创建一个 MyBroadcastReceiver 类继承 BroadcastReceiver，这个类是广播接收者，用于事件处理，重写 <code>onReceive()</code>方法即可<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyBroadcastReceiver</span> <span class="keyword">extends</span> <span class="title">BroadcastReceiver</span> </span>&#123;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onReceive</span><span class="params">(Context context, Intent intent)</span> </span>&#123;</div><div class="line">        Toast.makeText(context, <span class="string">"自定义普通广播静态注册"</span>, Toast.LENGTH_SHORT).show();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>然后，在 <strong>AndroidManifest.xml</strong> 文件中注册广播<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">receiver</span> <span class="attr">android:name</span>=<span class="string">".MyBroadcastReceiver"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">intent-filter</span> <span class="attr">android:priority</span>=<span class="string">"100"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">action</span> <span class="attr">android:name</span>=<span class="string">"com.example.broadcasttest.MY_BROADCAST"</span> /&gt;</span>                    </div><div class="line">    <span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">receiver</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>最后，在需要发送广播的地方发送相应的广播<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Intent intent = <span class="keyword">new</span> Intent(<span class="string">"com.example.broadcasttest.MY_BROADCAST"</span>);</div><div class="line">sendBroadcast(intent);</div></pre></td></tr></table></figure></p>
+<p><strong>动态注册方式</strong><br>动态注册广播使用的是内部类的方式</p>
+<p>首先，创建内部类 MyBroadcastReceiver 继承 BroadcastReceiver<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyBroadcastReceiver</span> <span class="keyword">extends</span> <span class="title">BroadcastReceiver</span> </span>&#123;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onReceive</span><span class="params">(Context context, Intent intent)</span> </span>&#123;</div><div class="line">        Toast.makeText(context, <span class="string">"自定义普通广播动态注册"</span>, Toast.LENGTH_SHORT).show();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>然后，在注册广播<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">MyBroadcastReceiver receiver;    </div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</div><div class="line">    <span class="keyword">super</span>.onCreate(savedInstanceState);</div><div class="line">    setContentView(R.layout.activity_main);</div><div class="line">    IntentFilter intentFilter=<span class="keyword">new</span> IntentFilter(<span class="string">"com.example.testbroadcast.SEND_BROADCAST"</span>);</div><div class="line">    receiver = <span class="keyword">new</span> MyBroadcastReceiver();</div><div class="line">    <span class="comment">// 注册广播</span></div><div class="line">    registerReceiver(receiver,intentFilter);    </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>并且不能忘记取消注册<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onDestroy</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">super</span>.onDestroy();</div><div class="line">    <span class="comment">// 取消注册</span></div><div class="line">    unregisterReceiver(receiver);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>发送广播<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Intent intent = <span class="keyword">new</span> Intent(<span class="string">"com.example.testbroadcast.SEND_BROADCAST"</span>);    </div><div class="line">sendBroadcast(intent);</div></pre></td></tr></table></figure></p>
+<p>###2. 有序广播<br><strong>注意事项：</strong><br>有序广播需要给广播接收者设置优先级，在动态方式中通过<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">intentFilter.setPriority(<span class="number">100</span>);</div></pre></td></tr></table></figure></p>
+<p>在静态方式中通过 <code>intent-filter</code> 标签的属性 <code>priority</code> 来设置<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">intent-filter</span> <span class="attr">android:priority</span>=<span class="string">"100"</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p><strong>有序广播的截断</strong><br>在优先级高的广播接收者中使用<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">abortBroadcast();</div></pre></td></tr></table></figure></p>
+<p>###3. 本地广播<br>本地广播和普通广播还有有序广播的区别在于，使用了 <code>LocalBroadcastManager</code> 来管理接收者，使用内部类的方式</p>
+<p><strong>注册接收者</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> MyBroadcastReceiver receiver;</div><div class="line"><span class="keyword">private</span> LocalBroadcastManager localBroadcastManager;</div><div class="line"><span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</div><div class="line">        setContentView(R.layout.activity_main);</div><div class="line">        localBroadcastManager = LocalBroadcastManager.getInstance(<span class="keyword">this</span>);</div><div class="line">        intentFilter = <span class="keyword">new</span> IntentFilter(<span class="string">"com.example.broadcasttest.SEND_BROADCAST"</span>);</div><div class="line">        receiver = <span class="keyword">new</span> LocalBroadcastReceiver();</div><div class="line">        localBroadcastManager.registerReceiver(receiver, intentFilter);</div></pre></td></tr></table></figure></p>
+<p><strong>取消注册</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onDestroy</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">super</span>.onDestroy();</div><div class="line">    localBroadcastManager.unregisterReceiver(localBroadcastReceiver);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>发送广播</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Intent intent=<span class="keyword">new</span> Intent(<span class="string">"com.example.broadcasttest.LOCAL_BROADCAST"</span>);</div><div class="line">localBroadcastManager.sendBroadcast(intent);</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android基础/">Android基础</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-Android 数据持久化"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/05/19/Android 数据持久化/">Android 数据持久化</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/05/19/Android 数据持久化/" class="article-date">
+	  <time datetime="2017-05-19T12:05:16.539Z" itemprop="datePublished">2017-05-19</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/数据持久化/">数据持久化</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>Android 数据持久化分类：</strong></p>
+<ol>
+<li>SharedPerfences 存储</li>
+<li>文件存储</li>
+<li>SQLite 数据库存储</li>
+</ol>
+<p>以上不同方式的数据持久化方案根据应用场景的不同，各有优缺点，以下对不同类别的存储方式进行对比：</p>
+<h2 id="1-SharedPerfences-存储"><a href="#1-SharedPerfences-存储" class="headerlink" title="1. SharedPerfences 存储"></a>1. SharedPerfences 存储</h2><p>SharedPerfences 存储是 Android 中最常见的存储方式，快捷方便，以键值对的方式存储为 <code>xml</code> 格式的文件</p>
+<p><strong>SharedPerfences 存储数据的三大步骤：</strong><br>① 获得一个 SharedPerfences 对象（有三种方式）</p>
+<ul>
+<li><p>Context 类中的 getSharedPreferences() 方法 </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 参数1：存储数据的文件名，文件被存储在 /data/data/&lt;packagename&gt;/shared_prefs/ 目录下</span></div><div class="line"><span class="comment">// 参数2：用于指定操作模式</span></div><div class="line">SharedPreferences sp = getSharedPreferences(<span class="string">"data"</span>, MODE_PRIVATE);</div></pre></td></tr></table></figure>
+</li>
+<li><p>Activity 类中的 getPreferences() 方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 只接收一个操作模式参数，使用当前 Activity 的类名作为文件名</span></div><div class="line">SharedPreferences sp = getPreferences(MODE_PRIVATE);</div></pre></td></tr></table></figure>
+</li>
+<li><p>PreferenceManager 类中的 getSharedPreferenes() 方法（静态方法）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 接收一个 Context 参数，使用当前应用程序的包名作为文件名</span></div><div class="line"> SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(<span class="keyword">this</span>);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>② 调用 SharedPreferences 对象的 edit() 方法获取一个 SharedPreferences.Editor 对象。<br>③ 向 SharedPreferences.Editor 对象中添加数据，通过调用 getXXX() 方法。<br>④ 调用 Editor 对象的 commit() 方法，完成数据存储操作。</p>
+<h3 id="存数据"><a href="#存数据" class="headerlink" title="存数据"></a>存数据</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">saveData</span><span class="params">(View view)</span> </span>&#123;</div><div class="line">    SharedPreferences.Editor editor = getSharedPreferences(<span class="string">"data"</span>, MODE_PRIVATE).edit();</div><div class="line">    editor.putString(<span class="string">"name"</span>, <span class="string">"Tom"</span>);</div><div class="line">    editor.putInt(<span class="string">"age"</span>, <span class="number">20</span>);</div><div class="line">    editor.putBoolean(<span class="string">"married"</span>, <span class="keyword">false</span>);</div><div class="line">    editor.commit();</div><div class="line">    Toast.makeText(<span class="keyword">this</span>, <span class="string">"保存成功"</span>, Toast.LENGTH_SHORT).show();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="读数据"><a href="#读数据" class="headerlink" title="读数据"></a>读数据</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">getData</span><span class="params">(View view)</span> </span>&#123;</div><div class="line">    SharedPreferences sp = getSharedPreferences(<span class="string">"data"</span>, MODE_PRIVATE);</div><div class="line">    String name = sp.getString(<span class="string">"name"</span>, <span class="string">"null"</span>);</div><div class="line">    <span class="keyword">int</span> age = sp.getInt(<span class="string">"age"</span>, <span class="number">0</span>);</div><div class="line">    <span class="keyword">boolean</span> married = sp.getBoolean(<span class="string">"married"</span>, <span class="keyword">false</span>);</div><div class="line">    Log.d(TAG, name);</div><div class="line">    Log.d(TAG, age + <span class="string">""</span>);</div><div class="line">    Log.d(TAG, married + <span class="string">""</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="2-文件存储"><a href="#2-文件存储" class="headerlink" title="2. 文件存储"></a>2. 文件存储</h2><p>文件存储分为<strong>内存储（Internal）</strong> 和 <strong>外存储（External）</strong>，内存储指的是将文件存储在系统内存中，而外存储指的是将文件存储在 SD 卡中，文件存储采用流的方式。</p>
+<h3 id="内存储"><a href="#内存储" class="headerlink" title="内存储"></a>内存储</h3><p><strong>特点：</strong></p>
+<ul>
+<li>不需要声明权限</li>
+<li>只能在 APP 内部访问</li>
+<li>APP 被卸载，文件被移除</li>
+</ul>
+<p>内存储保存文件，默认保存在 <code>/data/data/&lt;packagename&gt;/files</code>目录下，使用 <code>openFileOutput()</code> 方法创建一个文件，并返回一个 FileOutputStream 对象，对文件进行数据存储操作</p>
+<p><strong>保存文件到内部存储空间</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">saveFile</span><span class="params">(String inputText)</span> </span>&#123;</div><div class="line">    FileOutputStream out;</div><div class="line">    BufferedWriter writer = <span class="keyword">null</span>;</div><div class="line">    <span class="keyword">try</span> &#123;</div><div class="line">    <span class="comment">// openFileOutput() 第一个参数为文件名，第二个参数指定操作文件的类型</span></div><div class="line">        out = openFileOutput(<span class="string">"data"</span>, Context.MODE_PRIVATE);</div><div class="line">        writer = <span class="keyword">new</span> BufferedWriter(newOutputStreamWriter(out));</div><div class="line">        writer.write(inputText);</div><div class="line">    &#125; <span class="keyword">catch</span> (IOException e) &#123;</div><div class="line">        e.printStackTrace();</div><div class="line">    &#125;<span class="keyword">finally</span> &#123;</div><div class="line">        <span class="keyword">try</span> &#123;</div><div class="line">            <span class="keyword">if</span> (writer != <span class="keyword">null</span>) &#123;</div><div class="line">                writer.close();</div><div class="line">            &#125;</div><div class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</div><div class="line">            e.printStackTrace();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>从内部存储空间读取文件</strong></p>
+<p>读取数据依据 <code>openFileInput()</code> 方法，返回一个 FileInputStream 对象<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> String <span class="title">load</span><span class="params">()</span> </span>&#123;</div><div class="line">    FileInputStream in;</div><div class="line">    BufferedReader reader = <span class="keyword">null</span>;</div><div class="line">    StringBuilder content = <span class="keyword">new</span> StringBuilder();</div><div class="line">    <span class="keyword">try</span> &#123;</div><div class="line">        in = openFileInput(<span class="string">"data"</span>);</div><div class="line">        reader = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(in));</div><div class="line">        String line = <span class="string">""</span>;</div><div class="line">        <span class="keyword">while</span> ((line = reader.readLine()) != <span class="keyword">null</span>) &#123;</div><div class="line">            content.append(line);</div><div class="line">        &#125;</div><div class="line">    &#125; <span class="keyword">catch</span> (IOException e) &#123;</div><div class="line">        e.printStackTrace();</div><div class="line">    &#125;<span class="keyword">finally</span> &#123;</div><div class="line">        <span class="keyword">if</span> (reader != <span class="keyword">null</span>) &#123;</div><div class="line">            <span class="keyword">try</span> &#123;</div><div class="line">                reader.close();</div><div class="line">            &#125; <span class="keyword">catch</span> (IOException e) &#123;</div><div class="line">                e.printStackTrace();</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> content.toString();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="外存储"><a href="#外存储" class="headerlink" title="外存储"></a>外存储</h3><p><strong>特点：</strong></p>
+<ul>
+<li>所有 APP 都可以访问</li>
+<li>需要声明权限</li>
+</ul>
+<p><strong>设置权限</strong><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.WRITE_EXTERNAL_STORAGE"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.READ_EXTERNAL_STORAGE"</span> /&gt;</span></div></pre></td></tr></table></figure></p>
+<p><strong>保存文件到外部存储空间</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">save2External</span><span class="params">(View view)</span> </span>&#123;</div><div class="line">    String inputText = medit.getText().toString();</div><div class="line">    FileOutputStream out = <span class="keyword">null</span>;</div><div class="line">    BufferedWriter writer = <span class="keyword">null</span>;</div><div class="line">    <span class="keyword">try</span> &#123;</div><div class="line">        File dir = getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS);</div><div class="line">        File file = <span class="keyword">new</span> File(dir,<span class="string">"data.txt"</span>);</div><div class="line">        out=<span class="keyword">new</span> FileOutputStream(file);</div><div class="line">        writer=<span class="keyword">new</span> BufferedWriter(<span class="keyword">new</span> OutputStreamWriter(out));</div><div class="line">        writer.write(inputText);</div><div class="line">        Toast.makeText(<span class="keyword">this</span>, <span class="string">"保存至SD卡成功"</span>, Toast.LENGTH_SHORT).show();</div><div class="line">    &#125; <span class="keyword">catch</span> (IOException e) &#123;</div><div class="line">        e.printStackTrace();</div><div class="line">    &#125;<span class="keyword">finally</span> &#123;</div><div class="line">        <span class="keyword">if</span> (writer != <span class="keyword">null</span>) &#123;</div><div class="line">            <span class="keyword">try</span> &#123;</div><div class="line">                writer.close();</div><div class="line">            &#125; <span class="keyword">catch</span> (IOException e) &#123;</div><div class="line">                e.printStackTrace();</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>从外部存储空间读取文件</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">read4External</span><span class="params">(View view)</span> </span>&#123;</div><div class="line">    FileInputStream in = <span class="keyword">null</span>;</div><div class="line">    BufferedReader reader = <span class="keyword">null</span>;</div><div class="line">    StringBuilder content = <span class="keyword">new</span> StringBuilder();</div><div class="line"></div><div class="line">    <span class="keyword">try</span> &#123;</div><div class="line">        File dir = getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS);</div><div class="line">        File file=<span class="keyword">new</span> File(dir,<span class="string">"data.txt"</span>);</div><div class="line">        in=<span class="keyword">new</span> FileInputStream(file);</div><div class="line">        reader = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(in));</div><div class="line">        String line = <span class="string">""</span>;</div><div class="line">        <span class="keyword">while</span> ((line = reader.readLine()) != <span class="keyword">null</span>) &#123;</div><div class="line">            content.append(line);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        String fileContent = content.toString();</div><div class="line">        <span class="keyword">if</span> (!TextUtils.isEmpty(fileContent)) &#123;</div><div class="line">            medit.setText(fileContent);</div><div class="line">            medit.setSelection(fileContent.length());</div><div class="line">            Toast.makeText(<span class="keyword">this</span>, <span class="string">"从SD卡读取成功"</span>, Toast.LENGTH_SHORT).show();</div><div class="line">        &#125;</div><div class="line">    &#125; <span class="keyword">catch</span> (IOException e) &#123;</div><div class="line">        e.printStackTrace();</div><div class="line">    &#125;<span class="keyword">finally</span> &#123;</div><div class="line">        <span class="keyword">if</span> (reader != <span class="keyword">null</span>) &#123;</div><div class="line">            <span class="keyword">try</span> &#123;</div><div class="line">                reader.close();</div><div class="line">            &#125; <span class="keyword">catch</span> (IOException e) &#123;</div><div class="line">                e.printStackTrace();</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="3-SQLite-数据库存储"><a href="#3-SQLite-数据库存储" class="headerlink" title="3. SQLite 数据库存储"></a>3. SQLite 数据库存储</h2><p>SQLite 是嵌入到 Android 系统中的轻量型数据库，SQLite 提供了 <code>SQLiteOpenHelper</code> 帮助类来操作数据库的 <strong>创建</strong> 和 <strong>升级</strong> 等操作， <code>SQLiteOpenHelper</code> 是一个抽象类，提供了 <code>onCreate()</code> 和 <code>onUpgrade()</code> 两个方法，由于创建和升级数据库。</p>
+<h3 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a><strong>创建数据库</strong></h3><p>创建的数据库会保存在 <code>/data/data/&lt;package name&gt;/databases/</code> 目录下</p>
+<p><strong>首先创建 <code>MyDatabaseHelper</code> 类继承  <code>SQLiteOpenHelper</code></strong> ，并在 <code>onCreate()</code> 方法中创建数表，这样在创建数库的时候数据表被一起创建<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyDatabaseHelper</span> <span class="keyword">extends</span> <span class="title">SQLiteOpenHelper</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> Context mContext;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String CREATE_BOOK = <span class="string">"create table Book ("</span></div><div class="line">            + <span class="string">"id integer primary key autoincrement,"</span></div><div class="line">            + <span class="string">"author text,"</span></div><div class="line">            + <span class="string">"price real,"</span></div><div class="line">            + <span class="string">"pages integer)"</span>;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyDatabaseHelper</span><span class="params">(Context context, String name, SQLiteDatabase.CursorFactory factory, <span class="keyword">int</span> version)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>(context, name, factory, version);</div><div class="line">        mContext = context;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(SQLiteDatabase sqLiteDatabase)</span> </span>&#123;</div><div class="line">        sqLiteDatabase.execSQL(CREATE_BOOK);</div><div class="line">        Toast.makeText(mContext, <span class="string">"创建成功"</span>, Toast.LENGTH_SHORT).show();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onUpgrade</span><span class="params">(SQLiteDatabase sqLiteDatabase, <span class="keyword">int</span> oldVersion, <span class="keyword">int</span> newVersion)</span> </span>&#123;&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>然后在 MainActivity 中的 Button 点击事件中调用 <code>getWritableDatabase()</code> 方法，来创建数据库</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> MyDatabaseHelper dbHelper;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</div><div class="line">        setContentView(R.layout.activity_main);</div><div class="line">        <span class="comment">// 参数说明:</span></div><div class="line">        <span class="comment">// 1. Context</span></div><div class="line">        <span class="comment">// 2. 数据库文件名</span></div><div class="line">        <span class="comment">// 3. 查询时返回一个自定义的 Cursor，一般设置为 null</span></div><div class="line">        <span class="comment">// 4. 数据库版本号，版本号发生变化会回调 onUpgrade() 方法</span></div><div class="line">        dbHelper = <span class="keyword">new</span> MyDatabaseHelper(<span class="keyword">this</span>, <span class="string">"BookStore.db"</span>, <span class="keyword">null</span>, <span class="number">1</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">createDatabase</span><span class="params">(View view)</span> </span>&#123;</div><div class="line">        dbHelper.getWritableDatabase();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="升级数据库"><a href="#升级数据库" class="headerlink" title="升级数据库"></a><strong>升级数据库</strong></h3><p>当数据版本发生变化时，<code>onUpgrade()</code> 方法会被回调，在 <code>onUpgrade()</code> 执行数据库更新的操作</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 数据库版本发生变化</span></div><div class="line"><span class="keyword">new</span> MyDatabaseHelper(<span class="keyword">this</span>, <span class="string">"BookStore.db"</span>, <span class="keyword">null</span>, <span class="number">3</span>);</div></pre></td></tr></table></figure>
+<p><code>onUpgrade()</code> 中的逻辑<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String CREATE_CATEGORY = <span class="string">"create table Catagory ("</span></div><div class="line">            + <span class="string">"id integer primary key autoincrement,"</span></div><div class="line">            + <span class="string">"category_name text,"</span></div><div class="line">            + <span class="string">"category_code integer)"</span>;</div><div class="line">            </div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onUpgrade</span><span class="params">(SQLiteDatabase sqLiteDatabase, <span class="keyword">int</span> oldVersion, <span class="keyword">int</span> newVersion)</span> </span>&#123;</div><div class="line">    <span class="comment">// 注意switch语句没有break,保证数据库永远是最新的</span></div><div class="line">    <span class="keyword">switch</span> (oldVersion) &#123;</div><div class="line">    <span class="comment">// 添加新的表Catagory</span></div><div class="line">        <span class="keyword">case</span> <span class="number">1</span>:</div><div class="line">            sqLiteDatabase.execSQL(CREATE_CATEGORY);</div><div class="line">    <span class="comment">// 给表 Book 添加 category_id 列</span></div><div class="line">        <span class="keyword">case</span> <span class="number">2</span>:</div><div class="line">            sqLiteDatabase.execSQL(<span class="string">"alter table Book add category_id integer"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="对数据表的-CRUD-操作"><a href="#对数据表的-CRUD-操作" class="headerlink" title="对数据表的 CRUD 操作"></a><strong>对数据表的 CRUD 操作</strong></h3><p><strong>C</strong> (Create)：添加<br><strong>R</strong> (Retrieve)：查询<br><strong>U</strong> (Update)：更新<br><strong>D</strong> (Delete)：删除</p>
+<h4 id="添加数据"><a href="#添加数据" class="headerlink" title="添加数据"></a><strong>添加数据</strong></h4><p><strong>1. 使用 Android 提供的辅助性方法实现</strong></p>
+<p>调用 SQLiteOpenHelper 的 getReadableDatabase() 或 getWritableDatabase() 方法可以创建数据库，并且返回一个 SQLiteDatabase 对象，通过这个对象可以对数据进行 CRUD 操作<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addData</span><span class="params">(View view)</span> </span>&#123;</div><div class="line">    SQLiteDatabase database = dbHelper.getWritableDatabase();</div><div class="line">    ContentValues values = <span class="keyword">new</span> ContentValues();</div><div class="line">    <span class="comment">// 添加第一条数据</span></div><div class="line">    values.put(<span class="string">"author"</span>, <span class="string">"Dan Brown"</span>);</div><div class="line">    values.put(<span class="string">"pages"</span>, <span class="number">454</span>);</div><div class="line">    values.put(<span class="string">"price"</span>, <span class="number">16.79</span>);</div><div class="line">    database.insert(<span class="string">"Book"</span>, <span class="keyword">null</span>, values);</div><div class="line"></div><div class="line">    <span class="comment">// 添加第二条数据</span></div><div class="line">    values.put(<span class="string">"author"</span>, <span class="string">"June"</span>);</div><div class="line">    values.put(<span class="string">"pages"</span>, <span class="number">100</span>);</div><div class="line">    values.put(<span class="string">"price"</span>, <span class="number">13.33</span>);</div><div class="line">    database.insert(<span class="string">"Book"</span>, <span class="keyword">null</span>, values);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>2. 使用SQL操作数据库</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">database.execSQL(<span class="string">"insert into Book (author,pages,price) values(?,?,?)"</span>,<span class="keyword">new</span> String[]&#123;<span class="string">"June"</span>,<span class="string">"459"</span>,<span class="string">"9.99"</span>&#125;);</div></pre></td></tr></table></figure></p>
+<h4 id="更新数据"><a href="#更新数据" class="headerlink" title="更新数据"></a><strong>更新数据</strong></h4><p><strong>1. 使用 Android 提供的辅助性方法实现</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">updateData</span><span class="params">(View view)</span> </span>&#123;</div><div class="line">    SQLiteDatabase database = dbHelper.getWritableDatabase();</div><div class="line">    ContentValues values=<span class="keyword">new</span> ContentValues();</div><div class="line">    values.put(<span class="string">"price"</span>, <span class="number">10.99</span>);</div><div class="line">    database.update(<span class="string">"Book"</span>, values, <span class="string">"author=?"</span>, <span class="keyword">new</span> String[]&#123;<span class="string">"Dan Brown"</span>&#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>2. 使用SQL操作数据库</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">database.execSQL(<span class="string">"updata Book set price = ? where author = ?"</span>, <span class="keyword">new</span> String[]&#123;<span class="string">"5.99"</span>, <span class="string">"June"</span>&#125;);</div></pre></td></tr></table></figure></p>
+<h4 id="删除数据"><a href="#删除数据" class="headerlink" title="删除数据"></a><strong>删除数据</strong></h4><p><strong>1. 使用 Android 提供的辅助性方法实现</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">deleteData</span><span class="params">(View view)</span> </span>&#123;</div><div class="line">    SQLiteDatabase database = dbHelper.getWritableDatabase();</div><div class="line">    database.delete(<span class="string">"Book"</span>, <span class="string">"author=?"</span>, <span class="keyword">new</span> String[]&#123;<span class="string">"Dan Brown"</span>&#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>2. 使用SQL操作数据库</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">database.execSQL(<span class="string">"delete from Book where pages &gt; ?"</span>, <span class="keyword">new</span> String[]&#123;<span class="string">"300"</span>&#125;);</div></pre></td></tr></table></figure></p>
+<h4 id="查询数据"><a href="#查询数据" class="headerlink" title="查询数据"></a><strong>查询数据</strong></h4><p><strong>1. 使用 Android 提供的辅助性方法实现</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">queryData</span><span class="params">(View view)</span> </span>&#123;</div><div class="line">    SQLiteDatabase database = dbHelper.getWritableDatabase();</div><div class="line">    <span class="comment">// 查询所有</span></div><div class="line">    Cursor cursor = database.query(<span class="string">"Book"</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div><div class="line">    <span class="keyword">while</span> (cursor.moveToNext())&#123;</div><div class="line">        <span class="comment">// 遍历Cursor对象，取出数据并打印</span></div><div class="line">        String author = cursor.getString(cursor.getColumnIndex(<span class="string">"author"</span>));</div><div class="line">        <span class="keyword">int</span> pages = cursor.getInt(cursor.getColumnIndex(<span class="string">"pages"</span>));</div><div class="line">        <span class="keyword">double</span> price = cursor.getDouble(cursor.getColumnIndex(<span class="string">"price"</span>));</div><div class="line"></div><div class="line">        Log.d(TAG, author);</div><div class="line">        Log.d(TAG, pages + <span class="string">""</span>);</div><div class="line">        Log.d(TAG, price + <span class="string">""</span>);</div><div class="line">    &#125;</div><div class="line">    cursor.close();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>2. 使用SQL操作数据库</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Cursor cursor = database.rawQuery(<span class="string">"select * from Book"</span>, <span class="keyword">null</span>);</div></pre></td></tr></table></figure></p>
+<h3 id="事务"><a href="#事务" class="headerlink" title="事务"></a><strong>事务</strong></h3><p><strong>特点：</strong>保证某一系列操作的操作要么全部完成，要么一个都不会完成。</p>
+<p>应用事务替换数据库所有数据，中途模拟出现异常，则替换不能执行，注释异常之后，替换完成执行。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">replaceData</span><span class="params">(View view)</span> </span>&#123;</div><div class="line">    database = dbHelper.getWritableDatabase();</div><div class="line">    database.beginTransaction();<span class="comment">// 开启事务</span></div><div class="line">    <span class="keyword">try</span> &#123;</div><div class="line">        database.delete(<span class="string">"Book"</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</div><div class="line">        <span class="comment">// 模拟出现异常</span></div><div class="line">        <span class="keyword">if</span> (<span class="keyword">true</span>) &#123;</div><div class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> NullPointerException();</div><div class="line">        &#125;</div><div class="line">        <span class="comment">// 写入新的数据</span></div><div class="line">        database.execSQL(<span class="string">"insert into Book (author,pages,price) values(?,?,?)"</span>, <span class="keyword">new</span> String[]&#123;<span class="string">"June"</span>, <span class="string">"1000"</span>, <span class="string">"25.99"</span>&#125;);</div><div class="line">        database.setTransactionSuccessful();<span class="comment">// 事务执行成功</span></div><div class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">        e.printStackTrace();</div><div class="line">    &#125;<span class="keyword">finally</span> &#123;</div><div class="line">        database.endTransaction();<span class="comment">// 结束事务</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android基础/">Android基础</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">下一页 &raquo;</a>
+  </nav>
+
+</section>
+        
+      </div>
+      
+        <div align="center" style="margin-top: 30px;"><hr class="hr" style="margin:0px; height:3px;"></div>
+      
+      <footer id="footer">
+  
+
+  <div class="container">
+      	<div class="row">
+	      <p> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/iTimeTraveler/hexo-theme-hiker" target="_blank">Hexo-theme-hiker</a> </p>
+	      <p id="copyRightEn">Copyright &copy; 2013 - 2018 HanderUp&#39;s Blog All Rights Reserved.</p>
+	      
+	      
+    		<p class="busuanzi_uv">
+				访客数 : <span id="busuanzi_value_site_uv"></span> |  
+				访问量 : <span id="busuanzi_value_site_pv"></span>
+		    </p>
+  		   
+		</div>
+
+		
+  </div>
 </footer>
 
-    </main>
-    <div class="mask" id="mask"></div>
-<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
+<!-- min height -->
 
-
-<div class="global-share" id="globalShare">
-    <ul class="reset share-icons">
-      <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/page/2/&title=HanderUp's Blog&pic=https://avatars2.githubusercontent.com/u/22523322?v=3&u=46aaa8d3f4583f2411b6a03632fa4272f7efe393&s=400" data-title="微博">
-          <i class="icon icon-weibo"></i>
-        </a>
-      </li>
-      <li>
-        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
-          <i class="icon icon-weixin"></i>
-        </a>
-      </li>
-      <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/page/2/&title=HanderUp's Blog&source=coding" data-title=" QQ">
-          <i class="icon icon-qq"></i>
-        </a>
-      </li>
-      <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/page/2/" data-title=" Facebook">
-          <i class="icon icon-facebook"></i>
-        </a>
-      </li>
-      <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=HanderUp's Blog&url=http://yoursite.com/page/2/&via=http://yoursite.com" data-title=" Twitter">
-          <i class="icon icon-twitter"></i>
-        </a>
-      </li>
-      <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/page/2/" data-title=" Google+">
-          <i class="icon icon-google-plus"></i>
-        </a>
-      </li>
-    </ul>
- </div>
-
-
-<div class="page-modal wx-share" id="wxShare">
-    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABx0lEQVR42u3aQW7DMAwEwP7/0y7QUw+1s2vJTAqMToGhSKMLQZH6+orH8TOuvx+/RvvfzQMXF3eZe1yOs6VX5iTfzw6Pi4s7yc2D1IvlLrn5UU+/4+Lifhj3+l/Xx2gDJS4u7n/hJpu1c3BxcT+Zm4DyLfOg9uBdDRcXd4HbFkyf+P1gfRcXF7fkHuVIglTeVql3x8XFHeHmJY8nZt67DuHi4s5zk0WT3GM9nYqarLi4uA9w86dUbWvk3vOLF7vj4uIOcvNQUjQ8brVMrpMeXFzcGW7bSmnLGW0Sk4RCXFzcGW6eymy4aZVdkqLDg4uLu4mbF0HapxJFATRvuOLi4o5w8+CyUmBtk5j2qLi4uHu57QUmL6PkGRYuLu7nc9fDWZv0JEVSXFzcSW6SlOT0e9ehvLSKi4s7w82D1Ia2R7z+6ZFwcXEHuUkLJAleLaWuguLi4g5y26JG+8yiDZF1JxYXF3crtw0obfE0mdm2e3FxcWe4efBaaZzkAfHFgXFxcQe5bfFipZC6OX3BxcV9Kzef0157HglkuLi4H8DN+7p5weWP9XFxcQe5bZE0b720bdptZRFcXNwF7sqNI39+0eJwcXHfxP0GEhklC9XK3vUAAAAASUVORK5CYII=" alt="微信分享二维码">
-</div>
-
-
-
-
-    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 <script>
-var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+    var allheader = document.getElementById("allheader");
 
+    wrapdiv.style.minHeight = document.body.offsetHeight + "px";
+    if (allheader != null) {
+      contentdiv.style.minHeight = document.body.offsetHeight - allheader.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    } else {
+      contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    }
+</script>
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
 
+<!-- mathjax config similar to math.stackexchange -->
 
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
 </script>
 
-<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
 
-
-<div class="search-panel" id="search-panel">
-    <ul class="search-result" id="search-result"></ul>
-</div>
-<template id="search-tpl">
-<li class="item">
-    <a href="{path}" class="waves-block waves-effect">
-        <div class="title ellipsis" title="{title}">{title}</div>
-        <div class="flex-row flex-middle">
-            <div class="tags ellipsis">
-                {tags}
-            </div>
-            <time class="flex-col time">{date}</time>
-        </div>
-    </a>
-</li>
-</template>
-
-<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
-
-
-
-
-
-
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-
-
-<script>
-(function() {
-    var OriginTitile = document.title, titleTime;
-    document.addEventListener('visibilitychange', function() {
-        if (document.hidden) {
-            document.title = 'HandlerUp's Bolg';
-            clearTimeout(titleTime);
-        } else {
-            document.title = '(つェ⊂)咦!又好了!';
-            titleTime = setTimeout(function() {
-                document.title = OriginTitile;
-            },2000);
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
         }
     });
-})();
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
 
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
+
+<script src="/js/scripts.js"></script>
+
+
+  <script src="/js/home.js"></script>
+
+
+
+
+
+
+
+
+
+
+	<div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="myModalLabel">设置</h2>
+      </div>
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+
+
+      <div class="modal-body">
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="javascript:setFontSize();" aria-expanded="true" aria-controls="collapseOne">
+              正文字号大小
+            </a>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            您已调整页面字体大小
+          </div>
+        </div>
+      
+
+
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" onclick="javascript:setBackground();" aria-expanded="true" aria-controls="collapseTwo">
+              夜间护眼模式
+            </a>
+        </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            夜间模式已经开启，再次单击按钮即可关闭 
+          </div>
+        </div>
+
+        <div>
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关 于&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </div>
+         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            HanderUp&#39;s Blog
+          </div>
+          <div class="panel-body">
+            Copyright © 2018 HanderUp All Rights Reserved.
+          </div>
+        </div>
+      </div>
+
+
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <div class="modal-footer">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+  
 </body>
 </html>
