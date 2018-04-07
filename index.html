@@ -259,6 +259,45 @@
         
           <section id="main" style="float:none;">
   
+    <article id="post-工作中遇到的 git 命令"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+    <div class="article-meta">
+      
+	<a href="/2018/04/07/工作中遇到的 git 命令/" class="article-date">
+	  <time datetime="2018-04-07T07:01:04.436Z" itemprop="datePublished">2018-04-07</time>
+	</a>
+
+      
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="工作中遇到的-git-命令"><a href="#工作中遇到的-git-命令" class="headerlink" title="工作中遇到的 git 命令"></a>工作中遇到的 git 命令</h1><p>标签（空格分隔）： git</p>
+<hr>
+<h2 id="2018年4月2日"><a href="#2018年4月2日" class="headerlink" title="2018年4月2日"></a><strong>2018年4月2日</strong></h2><p><strong>情景：</strong> 今天早上使用 <strong>git pull</strong> 命令拉取了最新代码，由于提前没有执行 <strong>git log</strong> 查看日志，结果上次的提交代码只能在生产环境运行，启动项目报错 W(￣_￣)W</p>
+<p><strong>处理</strong><br>只要撤销刚才的 <strong>git pull</strong> 就可以了</p>
+<p>首先使用 <strong>git log</strong> 查看提交日志<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">June@DESKTOP-2DT17LG MINGW64 /d/smartdotDevStudio/zye/las-jdjr (develop)</div><div class="line">$ git log</div><div class="line">commit 320aa631e3964f4039e6f86792f0405793794a01</div><div class="line">Author: yangbin &lt;yangbin@smartdot.com&gt;</div><div class="line">Date:   Sun Apr 1 22:02:34 2018 +0800 </div><div class="line">     </div><div class="line">     类型和待办修改</div><div class="line">......</div></pre></td></tr></table></figure></p>
+<p>使用 <strong>git reflog</strong> 查看之前的操作日志<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">$ git reflog</div><div class="line">320aa63 HEAD@&#123;0&#125;: pull: Fast-forward</div><div class="line">d1f8b3e HEAD@&#123;1&#125;: commit: 修改审批单-增加用印份数，履行期限的显示</div><div class="line">1b3cc7a HEAD@&#123;2&#125;: commit: 合同审批单加入各环节审批意见</div><div class="line">2118c3d HEAD@&#123;3&#125;: pull: Fast-forward</div><div class="line">b0a8a2d HEAD@&#123;4&#125;: pull: Merge made by the &apos;recursive&apos; strategy.</div><div class="line">8686d43 HEAD@&#123;5&#125;: commit: 修复签订打开为空白页面bug</div><div class="line">418c75d HEAD@&#123;6&#125;: commit: 修改下载审批单带条形码</div><div class="line">0bbdbff HEAD@&#123;7&#125;: checkout: moving from master to develop</div><div class="line">350acfb HEAD@&#123;8&#125;: clone: from http://172.20.90.141/las-project/las-jdjr.git</div></pre></td></tr></table></figure></p>
+<p>然后使用 <strong>git reset –hard HEAD@{n}</strong> ,（n 是你要退回的引用位置）回退<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git reset --hard HEAD@&#123;1&#125;</div><div class="line">HEAD is now at d1f8b3e 修改审批单-增加用印份数，履行期限的显示</div></pre></td></tr></table></figure></p>
+<p>再次查看日志<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">June@DESKTOP-2DT17LG MINGW64 /d/smartdotDevStudio/zye/las-jdjr (develop)</div><div class="line">$ git log</div><div class="line">commit d1f8b3e00e0dad17aa7fee6bf97ba4fe244d33bb</div><div class="line">Author: JUNE &lt;june929546724@gmail.com&gt;</div><div class="line">Date:   Sat Mar 31 19:37:47 2018 +0800</div><div class="line"></div><div class="line">    修改审批单-增加用印份数，履行期限的显示</div></pre></td></tr></table></figure></p>
+<p>成功退回 pull 之前的提交版本 (＾－＾)V</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
     <article id="post-Service初步总结"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
@@ -351,62 +390,6 @@
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/多线程编程/">多线程编程</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
-    <article id="post-启动同一应用中带返回值的另一个 Activity"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/05/19/启动同一应用中带返回值的另一个 Activity/">启动同一应用中带返回值的另一个 Activity</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/05/19/启动同一应用中带返回值的另一个 Activity/" class="article-date">
-	  <time datetime="2017-05-19T12:05:16.549Z" itemprop="datePublished">2017-05-19</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Activity/">Activity</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>通常在启动 <strong>带返回值的 Activity</strong> 时，我们使用 <code>StartActivityForResult()</code> 方法，然后通过 <code>Intent</code> 传递意图和数据，但是对于在同一应用中的 <strong>子 <code>Activity</code></strong> 要调用 <strong>父 <code>Acitivity</code></strong> 并返回数据给 <strong>父 <code>Activity</code></strong> 时，可利用 <strong><code>Activity</code> 的启动模式和 <code>Intent</code> 的Flag</strong> 来实现数据的传递。</p>
-<p><strong>注意：</strong> <code>StartActivityForResult()</code> 的方式更适合不同应用之间通信。</p>
-<h2 id="具体应用场景中如下图"><a href="#具体应用场景中如下图" class="headerlink" title="具体应用场景中如下图"></a>具体应用场景中如下图</h2><p><img src="https://raw.githubusercontent.com/HanderUp/SaveImg/4ffe12271217053455cf49c7d23ae08f618a6fc4/task.png" alt="task"></p>
-<p>在任务栈中，我们启动了 MainActivity 、Activity A 、SecondActivity 、Activity B ，现在需要在 SecondActivity 中启动 MainActivity ，并返回数据给 MainActivity ，具体做法如下：</p>
-<p><strong>1. 在 AndroidManifest 文件中将 MainActivity 的 launchMode 属性设置为 SingleTop</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;activity android:name=<span class="string">".MainActivity"</span></div><div class="line">           android:launchMode=<span class="string">"singleTop"</span>&gt;</div></pre></td></tr></table></figure>
-<p><strong>2. 在 SecondActivity 中启动 MainActivity ，并传递数据</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Intent intent = <span class="keyword">new</span> Intent(<span class="keyword">this</span>, MainActivity.class);</div><div class="line">        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);</div><div class="line">        intent.putExtra(<span class="string">"second_data"</span>, <span class="string">"Hello MainActivity"</span>);</div><div class="line">        startActivity(intent);</div></pre></td></tr></table></figure>
-<p><strong>3. 在 MainActivity 中接收数据</strong></p>
-<p>接收数据具体为重写 <code>onNewIntent()</code> 方法</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onNewIntent</span><span class="params">(Intent intent)</span> </span>&#123;</div><div class="line">    <span class="keyword">super</span>.onNewIntent(intent);</div><div class="line">    String  str = intent.getStringExtra(<span class="string">"second_data"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><strong>具体过程分析：</strong><br>SecondActivity 启动 MainActivity 时，给 Intent 设置 <code>FLAG_ACTIVITY_CLEAR_TOP</code> Flag，<code>FLAG_ACTIVITY_CLEAR_TOP</code> 的具体用法为：启动目标 Activity 时，目标 Activity 的 <strong>launchMode</strong> 属性为默认，或者设置为 <code>standard</code> 时，目标 Activity 会和目标 Activity 之上的所有 Activity 一起被销毁，然后创建目标 Activity 的新实例，这里我们将目标 Activity 的 <strong>launchMode</strong> 设置为 <code>singleTop</code> 就能保证当前的目标 Activity 实例不被销毁，同时使用 <code>onNewIntent()</code> 接收传递的数据。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Activity启动模式/">Activity启动模式</a></li></ul>
 
     </footer>
   </div>

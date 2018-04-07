@@ -259,6 +259,58 @@
         
           <section id="main" style="float:none;">
   
+    <article id="post-Android 中的布局"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/05/19/Android 中的布局/">Android 中的布局</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/05/19/Android 中的布局/" class="article-date">
+	  <time datetime="2017-05-19T12:05:16.524Z" itemprop="datePublished">2017-05-19</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/布局/">布局</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Android 中的布局由常用的频率排序，如下表<br>| 布局方式 | 使用频率等级 | 特点 |<br>|:—-:|:—-:|:—-:|<br>|LinearLayout(线性布局)|5| 顺序排列，纵横两个方向，实现简单，多屏适配|<br>|RelativeLayout(相对布局)|5| 位置相对，对齐方式丰富，可以重叠，嵌套少，多屏适配|<br>|FrameLayout(帧布局)|3|可以重叠，对齐方式丰富，多屏适配|<br>|TableLayout(表格布局)|2|多行多列，规则布局，简单的多屏适配|<br>|GridLayout(网格布局)|1|多行多列，不规则布局，可跨行列，多屏适配，SDK4.0出现|<br>|AbsoluteLayout(绝对布局)|0|绝对坐标，不利于多屏适配|</p>
+<p>由于 <code>RelativeLayout</code> 和 <code>FrameLayout</code> 没有 <code>layout_weight</code> 这个属性，因此 Android 团队提供了<strong>百分比布局</strong>，百分比布局对 <code>RelativeLayout</code> 和 <code>FrameLayout</code> 进行了功能的扩展。提供了 <code>PercentRelativeLayout</code> 和 <code>PercentFrameLayout</code> 两种布局</p>
+<p><strong>使用百分比布局注意事项：</strong><br>在项目 <code>build.gradle</code> 中添加以下依赖包<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">dependencies</span>&#123;</div><div class="line">    <span class="keyword">compile</span> <span class="string">'com.android.support:percent:25.2.0'</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="一、-LinearLayout-中注意的事项："><a href="#一、-LinearLayout-中注意的事项：" class="headerlink" title="一、 LinearLayout 中注意的事项："></a>一、 LinearLayout 中注意的事项：</h2><ol>
+<li>LinearLayout 中的属性 <code>Layout_gravity</code> 和 <code>gravity</code>的区别： <code>Layout_gravity</code>：表示组件相对于父容器的位置 。<br><code>gravity</code>：表示组件内部内容相对于组件的位置 。</li>
+<li>当属性 <code>orientation=&quot;horizontal&quot;</code> 时，只有垂直方向上的属性有效，同样的 <code>orientation=&quot;vertical&quot;</code> 时，只有水平方向上的属性有效 。</li>
+</ol>
+<h2 id="二、-RelativeLayout-中的属性"><a href="#二、-RelativeLayout-中的属性" class="headerlink" title="二、 RelativeLayout 中的属性"></a>二、 RelativeLayout 中的属性</h2><p><strong>第一类：属性值为 <code>true</code> 或 <code>false</code></strong><br>|属性|说明|<br>|:—-:|:—-:|<br>|android:layout_centerHrizontal|水平居中|<br>|android:layout_centerVertical|垂直居中|<br>|android:layout_centerInparent|相对父元素完全居中|<br>|android:layout_alignParentTop|贴紧父元素的上边缘|<br>|android:layout_alignParentBottom|贴紧父元素的下边缘|<br>|android:layout_alignParentLeft|贴紧父元素的左边缘|<br>|android:layout_alignParentRight|贴紧父元素的右边缘|<br><strong>第二类：属性值必须为id的引用名 “@id/id-name”</strong><br>|属性|说明|<br>|:—-:|:—-:|<br>|android:layout_above|在某元素的上方|<br>|android:layout_below|在某元素的下方|<br>|android:layout_toLeftOf|在某元素的左方|<br>|android:layout_toRightOf|在某元素的右方|<br>|android:layout_alignTop|本元素的上边缘和某元素的上边缘对齐|<br>|android:layout_alignBottom|本元素的下边缘和某元素的下边缘对齐|<br>|android:layout_alignLeft|本元素的左边缘和某元素的左边缘对齐|<br>|android:layout_alignRight|本元素的右边缘和某元素的右边缘对齐|<br><strong>第三类：属性值为具体的像素值，如 30 dip，40 px</strong><br>|属性|说明|<br>|:—-:|:—-:|<br>|android:layout_marginTop|距离某元素上边缘的距离|<br>|android:layout_marginBottom|距离某元素下边缘的距离|<br>|android:layout_marginLeft|距离某元素左边缘的距离|<br>|android:layout_marginRight|距离某元素右边缘的距离|</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android基础/">Android基础</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
     <article id="post-Intent 初级"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
